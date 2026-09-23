@@ -1,0 +1,1685 @@
+# Journal GitHub Actions, run 35880776817 (commit 874903f), téléchargé le 2026-09-23 via l API GitHub.
+# Machine Linux neuve : 2 cœurs, 7 Go ; lake comparator avec bac à sable bwrap.
+﻿2026-09-23T15:20:11.3344660Z Current runner version: '2.337.0'
+2026-09-23T15:20:11.3423087Z ##[group]Runner Image Provisioner
+2026-09-23T15:20:11.3424852Z Hosted Compute Agent
+2026-09-23T15:20:11.3425900Z Version: 20260828.587
+2026-09-23T15:20:11.3427496Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-23T15:20:11.3428929Z Build Date: 2026-08-28T16:44:25Z
+2026-09-23T15:20:11.3430134Z Worker ID: {3e3f67b8-3b30-44b8-bc3a-400dd51a54b9}
+2026-09-23T15:20:11.3431606Z Azure Region: eastus
+2026-09-23T15:20:11.3432704Z ##[endgroup]
+2026-09-23T15:20:11.3435331Z ##[group]Operating System
+2026-09-23T15:20:11.3436468Z Ubuntu
+2026-09-23T15:20:11.3458495Z 24.04.5
+2026-09-23T15:20:11.3459499Z LTS
+2026-09-23T15:20:11.3460389Z ##[endgroup]
+2026-09-23T15:20:11.3461581Z ##[group]Runner Image
+2026-09-23T15:20:11.3462677Z Image: ubuntu-24.04
+2026-09-23T15:20:11.3463687Z Version: 20260920.314.1
+2026-09-23T15:20:11.3465990Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-23T15:20:11.3469285Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-23T15:20:11.3470950Z ##[endgroup]
+2026-09-23T15:20:11.3473128Z ##[group]GITHUB_TOKEN Permissions
+2026-09-23T15:20:11.3476051Z Contents: read
+2026-09-23T15:20:11.3497509Z Metadata: read
+2026-09-23T15:20:11.3498619Z Packages: read
+2026-09-23T15:20:11.3499729Z ##[endgroup]
+2026-09-23T15:20:11.3502940Z Secret source: Actions
+2026-09-23T15:20:11.3504566Z Cache mode: write
+2026-09-23T15:20:11.3506106Z Prepare workflow directory
+2026-09-23T15:20:11.4191423Z Prepare all required actions
+2026-09-23T15:20:11.4263241Z Getting action download info
+2026-09-23T15:20:11.6886661Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-23T15:20:11.8970203Z Complete job name: verify
+2026-09-23T15:20:11.9773518Z ##[group]Run actions/checkout@v4
+2026-09-23T15:20:11.9774424Z with:
+2026-09-23T15:20:11.9774952Z   repository: amazing-source/conway99-c3-experimental
+2026-09-23T15:20:11.9779262Z   token: ***
+2026-09-23T15:20:11.9779776Z   ssh-strict: true
+2026-09-23T15:20:11.9780276Z   ssh-user: git
+2026-09-23T15:20:11.9780791Z   persist-credentials: true
+2026-09-23T15:20:11.9781343Z   clean: true
+2026-09-23T15:20:11.9781857Z   sparse-checkout-cone-mode: true
+2026-09-23T15:20:11.9782440Z   fetch-depth: 1
+2026-09-23T15:20:11.9782938Z   fetch-tags: false
+2026-09-23T15:20:11.9783438Z   show-progress: true
+2026-09-23T15:20:11.9783941Z   lfs: false
+2026-09-23T15:20:11.9784417Z   submodules: false
+2026-09-23T15:20:11.9784922Z   set-safe-directory: true
+2026-09-23T15:20:11.9785497Z   allow-unsafe-pr-checkout: false
+2026-09-23T15:20:11.9786640Z ##[endgroup]
+2026-09-23T15:20:12.1004868Z Syncing repository: amazing-source/conway99-c3-experimental
+2026-09-23T15:20:12.1008380Z ##[group]Getting Git version info
+2026-09-23T15:20:12.1009859Z Working directory is '/home/runner/work/conway99-c3-experimental/conway99-c3-experimental'
+2026-09-23T15:20:12.1029107Z [command]/usr/bin/git version
+2026-09-23T15:20:12.1152008Z git version 2.55.0
+2026-09-23T15:20:12.1215782Z ##[endgroup]
+2026-09-23T15:20:12.1224353Z Temporarily overriding HOME='/home/runner/work/_temp/eddb8bc6-ccd9-4fec-b5a8-7865dfc6964f' before making global git config changes
+2026-09-23T15:20:12.1226766Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-23T15:20:12.1229927Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/conway99-c3-experimental/conway99-c3-experimental
+2026-09-23T15:20:12.1289966Z Deleting the contents of '/home/runner/work/conway99-c3-experimental/conway99-c3-experimental'
+2026-09-23T15:20:12.1302640Z ##[group]Initializing the repository
+2026-09-23T15:20:12.1317953Z [command]/usr/bin/git init /home/runner/work/conway99-c3-experimental/conway99-c3-experimental
+2026-09-23T15:20:12.1469088Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-23T15:20:12.1479679Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-23T15:20:12.1493280Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-23T15:20:12.1494719Z hint: call:
+2026-09-23T15:20:12.1495501Z hint:
+2026-09-23T15:20:12.1496423Z hint: 	git config --global init.defaultBranch <name>
+2026-09-23T15:20:12.1497896Z hint:
+2026-09-23T15:20:12.1498974Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-23T15:20:12.1500810Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-23T15:20:12.1502227Z hint:
+2026-09-23T15:20:12.1502992Z hint: 	git branch -m <name>
+2026-09-23T15:20:12.1503855Z hint:
+2026-09-23T15:20:12.1504960Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-23T15:20:12.1507595Z Initialized empty Git repository in /home/runner/work/conway99-c3-experimental/conway99-c3-experimental/.git/
+2026-09-23T15:20:12.1512932Z [command]/usr/bin/git remote add origin https://github.com/amazing-source/conway99-c3-experimental
+2026-09-23T15:20:12.1580781Z ##[endgroup]
+2026-09-23T15:20:12.1582440Z ##[group]Disabling automatic garbage collection
+2026-09-23T15:20:12.1584339Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-23T15:20:12.1635346Z ##[endgroup]
+2026-09-23T15:20:12.1636890Z ##[group]Setting up auth
+2026-09-23T15:20:12.1639247Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-23T15:20:12.1684316Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-23T15:20:12.2291366Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-23T15:20:12.2627063Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-23T15:20:12.3765716Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-23T15:20:12.3769309Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-23T15:20:12.3773007Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-23T15:20:12.3776423Z ##[endgroup]
+2026-09-23T15:20:12.3778013Z ##[group]Fetching the repository
+2026-09-23T15:20:12.3780089Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +874903ff9e6fc7775ab63f4fb30ae5b8c594783a:refs/remotes/origin/main
+2026-09-23T15:20:14.1460094Z From https://github.com/amazing-source/conway99-c3-experimental
+2026-09-23T15:20:14.1462898Z  * [new ref]         874903ff9e6fc7775ab63f4fb30ae5b8c594783a -> origin/main
+2026-09-23T15:20:14.1473959Z ##[endgroup]
+2026-09-23T15:20:14.1476160Z ##[group]Determining the checkout info
+2026-09-23T15:20:14.1479018Z ##[endgroup]
+2026-09-23T15:20:14.1481013Z [command]/usr/bin/git sparse-checkout disable
+2026-09-23T15:20:14.1524614Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-23T15:20:14.1565510Z ##[group]Checking out the ref
+2026-09-23T15:20:14.1569433Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-23T15:20:14.4690266Z Switched to a new branch 'main'
+2026-09-23T15:20:14.4696576Z branch 'main' set up to track 'origin/main'.
+2026-09-23T15:20:14.4713248Z ##[endgroup]
+2026-09-23T15:20:14.4765579Z [command]/usr/bin/git log -1 --format=%H
+2026-09-23T15:20:14.4797999Z 874903ff9e6fc7775ab63f4fb30ae5b8c594783a
+2026-09-23T15:20:14.5028123Z ##[group]Run curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+2026-09-23T15:20:14.5029160Z [36;1mcurl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh[0m
+2026-09-23T15:20:14.5029815Z [36;1msh elan-init.sh -y --default-toolchain none[0m
+2026-09-23T15:20:14.5030425Z [36;1mecho "$HOME/.elan/bin" >> "$GITHUB_PATH"[0m
+2026-09-23T15:20:14.5305156Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:20:14.5305590Z ##[endgroup]
+2026-09-23T15:20:14.5892721Z info: downloading installer
+2026-09-23T15:20:14.8550282Z ##[group]Run sudo apt-get update -q
+2026-09-23T15:20:14.8550676Z [36;1msudo apt-get update -q[0m
+2026-09-23T15:20:14.8550971Z [36;1msudo apt-get install -y -q bubblewrap[0m
+2026-09-23T15:20:14.8551456Z [36;1m# Ubuntu 24.04 forbids unprivileged user namespaces by default; bwrap needs them.[0m
+2026-09-23T15:20:14.8552002Z [36;1msudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0[0m
+2026-09-23T15:20:14.8621283Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:20:14.8621571Z ##[endgroup]
+2026-09-23T15:20:14.9509003Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-23T15:20:15.0061548Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-09-23T15:20:15.0208227Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-09-23T15:20:15.0235791Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-09-23T15:20:15.0288108Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-09-23T15:20:15.0398789Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-09-23T15:20:15.2155001Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [482 kB]
+2026-09-23T15:20:15.2358823Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [431 kB]
+2026-09-23T15:20:15.3554311Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1308 kB]
+2026-09-23T15:20:15.3852575Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [298 kB]
+2026-09-23T15:20:15.3928198Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+2026-09-23T15:20:15.3956740Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1697 kB]
+2026-09-23T15:20:15.4278782Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [340 kB]
+2026-09-23T15:20:15.4301054Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+2026-09-23T15:20:15.4404775Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1635 kB]
+2026-09-23T15:20:15.4628315Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [372 kB]
+2026-09-23T15:20:15.4728341Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2026-09-23T15:20:15.4948487Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [40.6 kB]
+2026-09-23T15:20:15.5782453Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5740 B]
+2026-09-23T15:20:15.5827712Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [31.0 kB]
+2026-09-23T15:20:15.5889125Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [18.6 kB]
+2026-09-23T15:20:15.5918355Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+2026-09-23T15:20:15.6852701Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1028 kB]
+2026-09-23T15:20:15.6948359Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [216 kB]
+2026-09-23T15:20:15.6990966Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [46.4 kB]
+2026-09-23T15:20:15.7028828Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1217 kB]
+2026-09-23T15:20:15.7163223Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [244 kB]
+2026-09-23T15:20:15.7208576Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.4 kB]
+2026-09-23T15:20:15.7238789Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1496 kB]
+2026-09-23T15:20:15.7318166Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [343 kB]
+2026-09-23T15:20:20.1374418Z Fetched 12.3 MB in 2s (6938 kB/s)
+2026-09-23T15:20:20.9236465Z Reading package lists...
+2026-09-23T15:20:20.9578608Z Reading package lists...
+2026-09-23T15:20:21.1370097Z Building dependency tree...
+2026-09-23T15:20:21.1377540Z Reading state information...
+2026-09-23T15:20:21.2897514Z The following NEW packages will be installed:
+2026-09-23T15:20:21.2903568Z   bubblewrap
+2026-09-23T15:20:21.3074154Z 0 upgraded, 1 newly installed, 0 to remove and 19 not upgraded.
+2026-09-23T15:20:21.3075170Z Need to get 50.4 kB of archives.
+2026-09-23T15:20:21.3080453Z After this operation, 133 kB of additional disk space will be used.
+2026-09-23T15:20:21.3087959Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-23T15:20:21.3334737Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 bubblewrap amd64 0.9.0-1ubuntu0.3 [50.4 kB]
+2026-09-23T15:20:21.5881905Z Fetched 50.4 kB in 0s (1318 kB/s)
+2026-09-23T15:20:21.6114291Z Selecting previously unselected package bubblewrap.
+2026-09-23T15:20:21.6414905Z (Reading database ... 
+2026-09-23T15:20:21.6417491Z (Reading database ... 5%
+2026-09-23T15:20:21.6418382Z (Reading database ... 10%
+2026-09-23T15:20:21.6418977Z (Reading database ... 15%
+2026-09-23T15:20:21.6419388Z (Reading database ... 20%
+2026-09-23T15:20:21.6419801Z (Reading database ... 25%
+2026-09-23T15:20:21.6420250Z (Reading database ... 30%
+2026-09-23T15:20:21.6420691Z (Reading database ... 35%
+2026-09-23T15:20:21.6421126Z (Reading database ... 40%
+2026-09-23T15:20:21.6421571Z (Reading database ... 45%
+2026-09-23T15:20:21.6422015Z (Reading database ... 50%
+2026-09-23T15:20:21.6488540Z (Reading database ... 55%
+2026-09-23T15:20:21.7928391Z (Reading database ... 60%
+2026-09-23T15:20:21.9910073Z (Reading database ... 65%
+2026-09-23T15:20:22.1808469Z (Reading database ... 70%
+2026-09-23T15:20:22.3495312Z (Reading database ... 75%
+2026-09-23T15:20:22.5006830Z (Reading database ... 80%
+2026-09-23T15:20:22.6993262Z (Reading database ... 85%
+2026-09-23T15:20:22.8446836Z (Reading database ... 90%
+2026-09-23T15:20:22.9588751Z (Reading database ... 95%
+2026-09-23T15:20:22.9589730Z (Reading database ... 100%
+2026-09-23T15:20:22.9590715Z (Reading database ... 202190 files and directories currently installed.)
+2026-09-23T15:20:22.9624846Z Preparing to unpack .../bubblewrap_0.9.0-1ubuntu0.3_amd64.deb ...
+2026-09-23T15:20:22.9657102Z Unpacking bubblewrap (0.9.0-1ubuntu0.3) ...
+2026-09-23T15:20:23.0114249Z Setting up bubblewrap (0.9.0-1ubuntu0.3) ...
+2026-09-23T15:20:23.0172338Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-09-23T15:20:23.0198410Z Not building database; man-db/auto-update is not 'true'.
+2026-09-23T15:20:24.3638224Z 
+2026-09-23T15:20:24.3639008Z Running kernel seems to be up-to-date.
+2026-09-23T15:20:24.3639609Z 
+2026-09-23T15:20:24.3640105Z No services need to be restarted.
+2026-09-23T15:20:24.3640598Z 
+2026-09-23T15:20:24.3640912Z No containers need to be restarted.
+2026-09-23T15:20:24.3641401Z 
+2026-09-23T15:20:24.3641738Z No user sessions are running outdated binaries.
+2026-09-23T15:20:24.3642299Z 
+2026-09-23T15:20:24.3642769Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-09-23T15:20:25.2421299Z kernel.apparmor_restrict_unprivileged_userns = 0
+2026-09-23T15:20:25.2507641Z ##[group]Run nproc
+2026-09-23T15:20:25.2508083Z [36;1mnproc[0m
+2026-09-23T15:20:25.2508423Z [36;1mfree -g[0m
+2026-09-23T15:20:25.2508762Z [36;1mdf -h .[0m
+2026-09-23T15:20:25.2585099Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:20:25.2585374Z ##[endgroup]
+2026-09-23T15:20:25.2727171Z 2
+2026-09-23T15:20:25.2745903Z                total        used        free      shared  buff/cache   available
+2026-09-23T15:20:25.2746378Z Mem:               7           1           4           0           2           6
+2026-09-23T15:20:25.2747439Z Swap:              2           0           2
+2026-09-23T15:20:25.2771214Z Filesystem      Size  Used Avail Use% Mounted on
+2026-09-23T15:20:25.2772152Z /dev/root        72G   59G   14G  82% /
+2026-09-23T15:20:25.2802946Z ##[group]Run lake exe cache get
+2026-09-23T15:20:25.2803226Z [36;1mlake exe cache get[0m
+2026-09-23T15:20:25.2865927Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:20:25.2866187Z ##[endgroup]
+2026-09-23T15:20:25.5414620Z info: downloading https://releases.lean-lang.org/lean4/v4.35.0-rc2/lean-4.35.0-rc2-linux.tar.zst
+2026-09-23T15:20:31.4288861Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.35.0-rc2
+2026-09-23T15:20:43.3926493Z info: mathlib: materializing new dependency
+2026-09-23T15:20:44.3959913Z info: mathlib: fetching revision '065356127b1dc0016f66b7283ce0ce2c4055aa55' from https://github.com/leanprover-community/mathlib4
+2026-09-23T15:20:46.3409485Z info: mathlib: checking out revision '065356127b1dc0016f66b7283ce0ce2c4055aa55'
+2026-09-23T15:20:59.2233096Z info: plausible: materializing new dependency
+2026-09-23T15:20:59.2458691Z info: plausible: fetching revision 'e50948299c4dc4a4c21b1c34b6a6a4fddc19f912' from https://github.com/leanprover-community/plausible
+2026-09-23T15:20:59.5174069Z info: plausible: checking out revision 'e50948299c4dc4a4c21b1c34b6a6a4fddc19f912'
+2026-09-23T15:21:00.1066610Z info: LeanSearchClient: materializing new dependency
+2026-09-23T15:21:00.1268568Z info: LeanSearchClient: fetching revision '95e037bfdc31d3916ac615446847fb01960e2719' from https://github.com/leanprover-community/LeanSearchClient
+2026-09-23T15:21:00.4550009Z info: LeanSearchClient: checking out revision '95e037bfdc31d3916ac615446847fb01960e2719'
+2026-09-23T15:21:00.9547745Z info: importGraph: materializing new dependency
+2026-09-23T15:21:00.9725285Z info: importGraph: fetching revision '10930f8138f0462dbd744a91fc03a16fae0e046f' from https://github.com/leanprover-community/import-graph
+2026-09-23T15:21:01.2665082Z info: importGraph: checking out revision '10930f8138f0462dbd744a91fc03a16fae0e046f'
+2026-09-23T15:21:01.8738409Z info: proofwidgets: materializing new dependency
+2026-09-23T15:21:01.8908791Z info: proofwidgets: fetching revision '4c70ac059693669e5756e32a7a94b57ee1e99dc5' from https://github.com/leanprover-community/ProofWidgets4
+2026-09-23T15:21:02.7465266Z info: proofwidgets: checking out revision '4c70ac059693669e5756e32a7a94b57ee1e99dc5'
+2026-09-23T15:21:05.4765953Z info: aesop: materializing new dependency
+2026-09-23T15:21:05.5018695Z info: aesop: fetching revision '75d936c7af167cc93fac0d31237682fc2204591d' from https://github.com/leanprover-community/aesop
+2026-09-23T15:21:05.8098658Z info: aesop: checking out revision '75d936c7af167cc93fac0d31237682fc2204591d'
+2026-09-23T15:21:06.4112654Z info: Qq: materializing new dependency
+2026-09-23T15:21:06.4318673Z info: Qq: fetching revision '786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334' from https://github.com/leanprover-community/quote4
+2026-09-23T15:21:06.7163113Z info: Qq: checking out revision '786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334'
+2026-09-23T15:21:08.6386733Z info: batteries: materializing new dependency
+2026-09-23T15:21:08.6568738Z info: batteries: fetching revision 'ed9b316aabe389fec1ef43c3326ab48c7e59be42' from https://github.com/leanprover-community/batteries
+2026-09-23T15:21:09.2808546Z info: batteries: checking out revision 'ed9b316aabe389fec1ef43c3326ab48c7e59be42'
+2026-09-23T15:21:10.0107042Z info: Cli: materializing new dependency
+2026-09-23T15:21:10.0287041Z info: Cli: fetching revision '2842b9871b04862f944c032e34052cb9448ccb71' from https://github.com/leanprover/lean4-cli
+2026-09-23T15:21:10.3398582Z info: Cli: checking out revision '2842b9871b04862f944c032e34052cb9448ccb71'
+2026-09-23T15:21:11.6878682Z ✔ [2/6] Built Cache.Cli (360ms)
+2026-09-23T15:21:12.1865458Z ✔ [3/6] Built Cache.Lean (453ms)
+2026-09-23T15:21:16.1934358Z ✔ [7/13] Built Cache.Env (574ms)
+2026-09-23T15:21:16.9969761Z ✔ [9/43] Built Cache.Infra (769ms)
+2026-09-23T15:21:17.1978749Z ✔ [10/43] Built Cache.Cli:c.o (217ms)
+2026-09-23T15:21:17.3978753Z ✔ [11/43] Built Cache.Lean:c.o (245ms)
+2026-09-23T15:21:17.7028466Z ✔ [13/43] Built Cache.Env:c.o (301ms)
+2026-09-23T15:21:18.1048451Z ✔ [14/43] Built Cache.IO (2.5s)
+2026-09-23T15:21:18.1080035Z ✔ [15/43] Built Cache.Infra:c.o (340ms)
+2026-09-23T15:21:19.5078698Z ✔ [16/43] Built Cache.Hashing (1.4s)
+2026-09-23T15:21:20.2079117Z ✔ [17/43] Built Cache.Hashing:c.o (672ms)
+2026-09-23T15:21:20.5063090Z ✔ [18/43] Built Cache.IO:c.o (2.4s)
+2026-09-23T15:21:22.3108229Z ✔ [19/43] Built Cache.Requests (2.1s)
+2026-09-23T15:21:23.3128459Z ✔ [20/43] Built Cache.Marker (967ms)
+2026-09-23T15:21:23.5125933Z ✔ [21/43] Built Cache.Marker:c.o (189ms)
+2026-09-23T15:21:24.8178954Z ✔ [22/43] Built Cache.Query (1.3s)
+2026-09-23T15:21:25.8198799Z ✔ [23/43] Built Cache.Upload.Dest (1.0s)
+2026-09-23T15:21:26.3218401Z ✔ [24/43] Built Cache.Requests:c.o (4.0s)
+2026-09-23T15:21:26.3237901Z ✔ [25/43] Built Cache.Query:c.o (466ms)
+2026-09-23T15:21:26.5214466Z ✔ [26/43] Built Cache.Upload.Dest:c.o (179ms)
+2026-09-23T15:21:27.4293761Z ✔ [27/43] Built Cache.Upload.Rclone (1.0s)
+2026-09-23T15:21:27.4337695Z ✔ [28/43] Built Cache.Warning (1.1s)
+2026-09-23T15:21:27.9288690Z ✔ [29/43] Built Cache.Warning:c.o (417ms)
+2026-09-23T15:21:28.1281164Z ✔ [30/43] Built Cache.Upload.Rclone:c.o (275ms)
+2026-09-23T15:21:28.3288450Z ✔ [31/43] Built Cache.Upload.Curl (905ms)
+2026-09-23T15:21:28.6320863Z ✔ [32/43] Built Cache.Upload.Curl:c.o (311ms)
+2026-09-23T15:21:29.2318146Z ✔ [33/43] Built Cache.Upload.Azure (906ms)
+2026-09-23T15:21:29.4310399Z ✔ [34/43] Built Cache.Upload.Azure:c.o (223ms)
+2026-09-23T15:21:29.6339885Z ✔ [35/43] Built Cache.Upload.S3 (1.0s)
+2026-09-23T15:21:30.1380479Z ✔ [36/43] Built Cache.Upload.S3:c.o (463ms)
+2026-09-23T15:21:30.4389188Z ✔ [37/43] Built Cache.Upload.Defs (810ms)
+2026-09-23T15:21:30.7401943Z ✔ [38/43] Built Cache.Upload.Defs:c.o (220ms)
+2026-09-23T15:21:31.1438819Z ✔ [39/43] Built Cache.Upload (673ms)
+2026-09-23T15:21:31.3440236Z ✔ [40/43] Built Cache.Upload:c.o (164ms)
+2026-09-23T15:21:32.3453674Z ✔ [41/43] Built Cache.Main (1.2s)
+2026-09-23T15:21:33.2465924Z ✔ [42/43] Built Cache.Main:c.o (875ms)
+2026-09-23T15:21:34.0501563Z ✔ [43/43] Built cache:exe (847ms)
+2026-09-23T15:21:36.9098868Z Current branch: HEAD
+2026-09-23T15:21:36.9099694Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-09-23T15:21:36.9101032Z Attempting to download 8915 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-09-23T15:21:37.0092928Z 
+2026-09-23T15:21:37.1130784Z Downloaded: 16 file(s) [attempted 16/8915 = 0%, 1403 KB/s], Decompressed: 1
+2026-09-23T15:21:37.2169078Z Downloaded: 124 file(s) [attempted 124/8915 = 1%, 1389 KB/s], Decompressed: 8
+2026-09-23T15:21:37.3166593Z Downloaded: 239 file(s) [attempted 239/8915 = 2%, 3124 KB/s], Decompressed: 8
+2026-09-23T15:21:37.4168498Z Downloaded: 336 file(s) [attempted 336/8915 = 3%, 3390 KB/s], Decompressed: 8
+2026-09-23T15:21:37.5167596Z Downloaded: 448 file(s) [attempted 448/8915 = 5%, 1407 KB/s], Decompressed: 59
+2026-09-23T15:21:37.6237134Z Downloaded: 553 file(s) [attempted 553/8915 = 6%, 1092 KB/s], Decompressed: 59
+2026-09-23T15:21:37.7251930Z Downloaded: 616 file(s) [attempted 616/8915 = 6%, 55 KB/s], Decompressed: 59
+2026-09-23T15:21:37.8258617Z Downloaded: 714 file(s) [attempted 714/8915 = 8%, 561 KB/s], Decompressed: 59
+2026-09-23T15:21:37.9258520Z Downloaded: 821 file(s) [attempted 821/8915 = 9%, 2460 KB/s], Decompressed: 59
+2026-09-23T15:21:38.0260783Z Downloaded: 923 file(s) [attempted 923/8915 = 10%, 429 KB/s], Decompressed: 59
+2026-09-23T15:21:38.1334485Z Downloaded: 1013 file(s) [attempted 1013/8915 = 11%, 177 KB/s], Decompressed: 59
+2026-09-23T15:21:38.2441026Z Downloaded: 1115 file(s) [attempted 1115/8915 = 12%, 2504 KB/s], Decompressed: 59
+2026-09-23T15:21:38.3499446Z Downloaded: 1210 file(s) [attempted 1210/8915 = 13%, 1884 KB/s], Decompressed: 59
+2026-09-23T15:21:38.4495508Z Downloaded: 1327 file(s) [attempted 1327/8915 = 14%, 875 KB/s], Decompressed: 59
+2026-09-23T15:21:38.5499112Z Downloaded: 1424 file(s) [attempted 1424/8915 = 15%, 257 KB/s], Decompressed: 59
+2026-09-23T15:21:38.6518648Z Downloaded: 1527 file(s) [attempted 1527/8915 = 17%, 443 KB/s], Decompressed: 59
+2026-09-23T15:21:38.7518886Z Downloaded: 1592 file(s) [attempted 1592/8915 = 17%, 501 KB/s], Decompressed: 59
+2026-09-23T15:21:38.8499517Z Downloaded: 1728 file(s) [attempted 1728/8915 = 19%, 160 KB/s], Decompressed: 59
+2026-09-23T15:21:38.9508690Z Downloaded: 1829 file(s) [attempted 1829/8915 = 20%, 3515 KB/s], Decompressed: 59
+2026-09-23T15:21:39.0499522Z Downloaded: 1894 file(s) [attempted 1894/8915 = 21%, 375 KB/s], Decompressed: 59
+2026-09-23T15:21:39.1518726Z Downloaded: 1958 file(s) [attempted 1958/8915 = 21%, 2296 KB/s], Decompressed: 59
+2026-09-23T15:21:39.2798659Z Downloaded: 2089 file(s) [attempted 2089/8915 = 23%, 147 KB/s], Decompressed: 59
+2026-09-23T15:21:39.3788873Z Downloaded: 2195 file(s) [attempted 2195/8915 = 24%, 997 KB/s], Decompressed: 59
+2026-09-23T15:21:39.4828369Z Downloaded: 2290 file(s) [attempted 2290/8915 = 25%, 282 KB/s], Decompressed: 59
+2026-09-23T15:21:39.6138676Z Downloaded: 2363 file(s) [attempted 2363/8915 = 26%, 737 KB/s], Decompressed: 59
+2026-09-23T15:21:39.7126176Z Downloaded: 2462 file(s) [attempted 2462/8915 = 27%, 778 KB/s], Decompressed: 375
+2026-09-23T15:21:39.8146379Z Downloaded: 2567 file(s) [attempted 2567/8915 = 28%, 2958 KB/s], Decompressed: 375
+2026-09-23T15:21:39.9148724Z Downloaded: 2715 file(s) [attempted 2715/8915 = 30%, 3213 KB/s], Decompressed: 375
+2026-09-23T15:21:40.0198512Z Downloaded: 2832 file(s) [attempted 2832/8915 = 31%, 1741 KB/s], Decompressed: 375
+2026-09-23T15:21:40.1184331Z Downloaded: 2922 file(s) [attempted 2922/8915 = 32%, 893 KB/s], Decompressed: 375
+2026-09-23T15:21:40.2438579Z Downloaded: 3024 file(s) [attempted 3024/8915 = 33%, 354 KB/s], Decompressed: 375
+2026-09-23T15:21:40.3438917Z Downloaded: 3124 file(s) [attempted 3124/8915 = 35%, 205 KB/s], Decompressed: 375
+2026-09-23T15:21:40.4548992Z Downloaded: 3208 file(s) [attempted 3208/8915 = 35%, 3754 KB/s], Decompressed: 375
+2026-09-23T15:21:40.7924500Z Downloaded: 3338 file(s) [attempted 3338/8915 = 37%, 136 KB/s], Decompressed: 375
+2026-09-23T15:21:40.8938931Z Downloaded: 3413 file(s) [attempted 3413/8915 = 38%, 1348 KB/s], Decompressed: 375
+2026-09-23T15:21:40.9949767Z Downloaded: 3543 file(s) [attempted 3543/8915 = 39%, 2154 KB/s], Decompressed: 375
+2026-09-23T15:21:41.0958922Z Downloaded: 3661 file(s) [attempted 3661/8915 = 41%, 1178 KB/s], Decompressed: 375
+2026-09-23T15:21:41.2088646Z Downloaded: 3773 file(s) [attempted 3773/8915 = 42%, 436 KB/s], Decompressed: 375
+2026-09-23T15:21:41.3100342Z Downloaded: 3870 file(s) [attempted 3870/8915 = 43%, 606 KB/s], Decompressed: 375
+2026-09-23T15:21:41.4150804Z Downloaded: 3977 file(s) [attempted 3977/8915 = 44%, 344 KB/s], Decompressed: 375
+2026-09-23T15:21:41.5504396Z Downloaded: 4070 file(s) [attempted 4070/8915 = 45%, 439 KB/s], Decompressed: 375
+2026-09-23T15:21:41.6668633Z Downloaded: 4133 file(s) [attempted 4133/8915 = 46%, 678 KB/s], Decompressed: 375
+2026-09-23T15:21:41.7648307Z Downloaded: 4235 file(s) [attempted 4235/8915 = 47%, 795 KB/s], Decompressed: 375
+2026-09-23T15:21:41.8630629Z Downloaded: 4339 file(s) [attempted 4339/8915 = 48%, 1046 KB/s], Decompressed: 375
+2026-09-23T15:21:41.9672305Z Downloaded: 4459 file(s) [attempted 4459/8915 = 50%, 1760 KB/s], Decompressed: 375
+2026-09-23T15:21:42.0701986Z Downloaded: 4566 file(s) [attempted 4566/8915 = 51%, 141 KB/s], Decompressed: 375
+2026-09-23T15:21:42.2029374Z Downloaded: 4709 file(s) [attempted 4709/8915 = 52%, 568 KB/s], Decompressed: 375
+2026-09-23T15:21:42.3048545Z Downloaded: 4828 file(s) [attempted 4828/8915 = 54%, 1152 KB/s], Decompressed: 375
+2026-09-23T15:21:42.4058900Z Downloaded: 4952 file(s) [attempted 4952/8915 = 55%, 1376 KB/s], Decompressed: 375
+2026-09-23T15:21:42.5408564Z Downloaded: 5073 file(s) [attempted 5073/8915 = 56%, 730 KB/s], Decompressed: 375
+2026-09-23T15:21:42.9378485Z Downloaded: 5159 file(s) [attempted 5159/8915 = 57%, 7131 KB/s], Decompressed: 375
+2026-09-23T15:21:43.0932105Z Downloaded: 5234 file(s) [attempted 5234/8915 = 58%, 1350 KB/s], Decompressed: 375
+2026-09-23T15:21:43.2528463Z Downloaded: 5278 file(s) [attempted 5278/8915 = 59%, 92 KB/s], Decompressed: 375
+2026-09-23T15:21:43.3641452Z Downloaded: 5322 file(s) [attempted 5322/8915 = 59%, 189 KB/s], Decompressed: 375
+2026-09-23T15:21:43.4753008Z Downloaded: 5439 file(s) [attempted 5439/8915 = 61%, 152 KB/s], Decompressed: 375
+2026-09-23T15:21:43.6175451Z Downloaded: 5519 file(s) [attempted 5519/8915 = 61%, 250 KB/s], Decompressed: 375
+2026-09-23T15:21:43.7268870Z Downloaded: 5621 file(s) [attempted 5621/8915 = 63%, 3673 KB/s], Decompressed: 375
+2026-09-23T15:21:43.8258304Z Downloaded: 5740 file(s) [attempted 5740/8915 = 64%, 987 KB/s], Decompressed: 375
+2026-09-23T15:21:43.9288517Z Downloaded: 5890 file(s) [attempted 5890/8915 = 66%, 472 KB/s], Decompressed: 375
+2026-09-23T15:21:44.0565059Z Downloaded: 5957 file(s) [attempted 5957/8915 = 66%, 2519 KB/s], Decompressed: 375
+2026-09-23T15:21:44.1562601Z Downloaded: 5991 file(s) [attempted 5991/8915 = 67%, 524 KB/s], Decompressed: 375
+2026-09-23T15:21:44.2559895Z Downloaded: 6115 file(s) [attempted 6115/8915 = 68%, 2220 KB/s], Decompressed: 375
+2026-09-23T15:21:44.3635386Z Downloaded: 6227 file(s) [attempted 6227/8915 = 69%, 4109 KB/s], Decompressed: 375
+2026-09-23T15:21:44.4708834Z Downloaded: 6336 file(s) [attempted 6336/8915 = 71%, 425 KB/s], Decompressed: 375
+2026-09-23T15:21:44.5898734Z Downloaded: 6429 file(s) [attempted 6429/8915 = 72%, 3914 KB/s], Decompressed: 375
+2026-09-23T15:21:44.7158567Z Downloaded: 6550 file(s) [attempted 6550/8915 = 73%, 414 KB/s], Decompressed: 375
+2026-09-23T15:21:44.8123166Z Downloaded: 6657 file(s) [attempted 6657/8915 = 74%, 662 KB/s], Decompressed: 375
+2026-09-23T15:21:44.9158739Z Downloaded: 6757 file(s) [attempted 6757/8915 = 75%, 898 KB/s], Decompressed: 375
+2026-09-23T15:21:45.0203206Z Downloaded: 6869 file(s) [attempted 6869/8915 = 77%, 638 KB/s], Decompressed: 375
+2026-09-23T15:21:45.1219469Z Downloaded: 6985 file(s) [attempted 6985/8915 = 78%, 2437 KB/s], Decompressed: 375
+2026-09-23T15:21:45.2574972Z Downloaded: 7061 file(s) [attempted 7061/8915 = 79%, 4128 KB/s], Decompressed: 375
+2026-09-23T15:21:45.3594021Z Downloaded: 7063 file(s) [attempted 7063/8915 = 79%, 1525 KB/s], Decompressed: 375
+2026-09-23T15:21:45.4598463Z Downloaded: 7182 file(s) [attempted 7182/8915 = 80%, 6683 KB/s], Decompressed: 375
+2026-09-23T15:21:45.5619590Z Downloaded: 7304 file(s) [attempted 7304/8915 = 81%, 1385 KB/s], Decompressed: 375
+2026-09-23T15:21:45.6618595Z Downloaded: 7435 file(s) [attempted 7435/8915 = 83%, 2335 KB/s], Decompressed: 375
+2026-09-23T15:21:45.7638414Z Downloaded: 7513 file(s) [attempted 7513/8915 = 84%, 304 KB/s], Decompressed: 375
+2026-09-23T15:21:45.8648398Z Downloaded: 7624 file(s) [attempted 7624/8915 = 85%, 425 KB/s], Decompressed: 375
+2026-09-23T15:21:45.9669052Z Downloaded: 7716 file(s) [attempted 7716/8915 = 86%, 447 KB/s], Decompressed: 375
+2026-09-23T15:21:46.0718590Z Downloaded: 7819 file(s) [attempted 7819/8915 = 87%, 562 KB/s], Decompressed: 375
+2026-09-23T15:21:46.1838551Z Downloaded: 7931 file(s) [attempted 7931/8915 = 88%, 510 KB/s], Decompressed: 375
+2026-09-23T15:21:46.2819034Z Downloaded: 8002 file(s) [attempted 8002/8915 = 89%, 45 KB/s], Decompressed: 375
+2026-09-23T15:21:46.4238645Z Downloaded: 8093 file(s) [attempted 8093/8915 = 90%, 1833 KB/s], Decompressed: 375
+2026-09-23T15:21:46.5368561Z Downloaded: 8155 file(s) [attempted 8155/8915 = 91%, 517 KB/s], Decompressed: 375
+2026-09-23T15:21:46.6350309Z Downloaded: 8260 file(s) [attempted 8260/8915 = 92%, 3766 KB/s], Decompressed: 375
+2026-09-23T15:21:46.7418489Z Downloaded: 8355 file(s) [attempted 8355/8915 = 93%, 159 KB/s], Decompressed: 375
+2026-09-23T15:21:46.8549115Z Downloaded: 8452 file(s) [attempted 8452/8915 = 94%, 2249 KB/s], Decompressed: 375
+2026-09-23T15:21:46.9603463Z Downloaded: 8557 file(s) [attempted 8557/8915 = 95%, 2889 KB/s], Decompressed: 375
+2026-09-23T15:21:47.0606561Z Downloaded: 8666 file(s) [attempted 8666/8915 = 97%, 2877 KB/s], Decompressed: 375
+2026-09-23T15:21:47.1640826Z Downloaded: 8780 file(s) [attempted 8780/8915 = 98%, 278 KB/s], Decompressed: 375
+2026-09-23T15:21:47.7828562Z Downloaded: 8877 file(s) [attempted 8877/8915 = 99%, 1438 KB/s], Decompressed: 375
+2026-09-23T15:21:47.7848414Z Downloaded: 8914 file(s) [attempted 8914/8915 = 99%, 1260 KB/s], Decompressed: 375
+2026-09-23T15:21:47.7858013Z Downloaded: 8915 file(s) [attempted 8915/8915 = 100%, 1260 KB/s], Decompressed: 375
+2026-09-23T15:22:30.2652338Z Decompressed 8915 file(s)
+2026-09-23T15:22:30.2653086Z Already decompressed 8915 file(s)
+2026-09-23T15:22:30.3408129Z ##[group]Run lake build C3formal Challenge Solution
+2026-09-23T15:22:30.3408573Z [36;1mlake build C3formal Challenge Solution[0m
+2026-09-23T15:22:30.4129572Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:22:30.4129876Z ##[endgroup]
+2026-09-23T15:22:42.0699294Z ⚠ [1791/1795] Built C3formal.Eis (7.9s)
+2026-09-23T15:22:42.0717734Z warning: C3formal/Eis.lean:1:1: * `-/`:
+2026-09-23T15:22:42.0718230Z Copyright too short!
+2026-09-23T15:22:42.0718473Z 
+2026-09-23T15:22:42.0718526Z 
+2026-09-23T15:22:42.0718899Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:22:42.4698619Z ⚠ [1792/1795] Built C3formal.Saturated (7.6s)
+2026-09-23T15:22:42.4711220Z warning: C3formal/Saturated.lean:1:1: * `-/`:
+2026-09-23T15:22:42.4727707Z Copyright too short!
+2026-09-23T15:22:42.4747463Z 
+2026-09-23T15:22:42.4757642Z 
+2026-09-23T15:22:42.4767952Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:22:47.8833302Z ⚠ [1793/1799] Built C3formal.Step5 (5.5s)
+2026-09-23T15:22:47.8835838Z warning: C3formal/Step5.lean:1:1: * `-/`:
+2026-09-23T15:22:47.8843379Z Copyright too short!
+2026-09-23T15:22:47.8844112Z 
+2026-09-23T15:22:47.8845148Z 
+2026-09-23T15:22:47.8845816Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:22:51.5968665Z ⚠ [2201/2208] Built C3formal.NumberTheory (3.0s)
+2026-09-23T15:22:51.6041065Z warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+2026-09-23T15:22:51.6057654Z Copyright too short!
+2026-09-23T15:22:51.6069315Z 
+2026-09-23T15:22:51.6079043Z 
+2026-09-23T15:22:51.6107966Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:22:51.6986602Z ⚠ [2203/2208] Built C3formal.EisEuclid (9.6s)
+2026-09-23T15:22:51.7038097Z warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+2026-09-23T15:22:51.7071426Z Copyright too short!
+2026-09-23T15:22:51.7109617Z 
+2026-09-23T15:22:51.7127406Z 
+2026-09-23T15:22:51.7138031Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:22:57.4071346Z ⚠ [2204/2226] Built C3formal.EisComplex (5.8s)
+2026-09-23T15:22:57.4073185Z warning: C3formal/EisComplex.lean:1:1: * `-/`:
+2026-09-23T15:22:57.4074595Z Copyright too short!
+2026-09-23T15:22:57.4074992Z 
+2026-09-23T15:22:57.4075134Z 
+2026-09-23T15:22:57.4076350Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:00.7142691Z ⚠ [2219/2247] Built C3formal.IntPart (9.1s)
+2026-09-23T15:23:00.7144070Z warning: C3formal/IntPart.lean:1:1: * `-/`:
+2026-09-23T15:23:00.7144999Z Copyright too short!
+2026-09-23T15:23:00.7145526Z 
+2026-09-23T15:23:00.7145723Z 
+2026-09-23T15:23:00.7146335Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:00.7147953Z warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:00.7148922Z 
+2026-09-23T15:23:00.7149569Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:00.7150914Z warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:00.7151866Z 
+2026-09-23T15:23:00.7152495Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:00.7153848Z warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:00.7154803Z 
+2026-09-23T15:23:00.7155400Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:00.7157021Z warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:00.7158262Z 
+2026-09-23T15:23:00.7158877Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:00.7160224Z warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:00.7161143Z 
+2026-09-23T15:23:00.7162059Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:01.6183371Z ⚠ [2231/2249] Built C3formal.SaturatedGen (4.1s)
+2026-09-23T15:23:01.6208309Z warning: C3formal/SaturatedGen.lean:1:1: * `-/`:
+2026-09-23T15:23:01.6227888Z Copyright too short!
+2026-09-23T15:23:01.6237519Z 
+2026-09-23T15:23:01.6247619Z 
+2026-09-23T15:23:01.6269417Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:01.6290138Z warning: C3formal/SaturatedGen.lean:16:0: `exists_kernel_basis'` does not use the following hypothesis in its type:
+2026-09-23T15:23:01.6307903Z   • [DecidableEq ι] (#7)
+2026-09-23T15:23:01.6337741Z 
+2026-09-23T15:23:01.6348544Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:01.6367640Z 
+2026-09-23T15:23:01.6398013Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:03.9258744Z ⚠ [2233/2249] Built Challenge (2.3s)
+2026-09-23T15:23:03.9287980Z warning: Challenge.lean:32:8: declaration uses `sorry`
+2026-09-23T15:23:03.9307853Z warning: Challenge.lean:39:8: declaration uses `sorry`
+2026-09-23T15:23:03.9327836Z warning: Challenge.lean:45:8: declaration uses `sorry`
+2026-09-23T15:23:03.9347818Z warning: Challenge.lean:56:8: declaration uses `sorry`
+2026-09-23T15:23:03.9358038Z warning: Challenge.lean:73:8: declaration uses `sorry`
+2026-09-23T15:23:03.9367850Z warning: Challenge.lean:80:8: declaration uses `sorry`
+2026-09-23T15:23:03.9377984Z warning: Challenge.lean:86:8: declaration uses `sorry`
+2026-09-23T15:23:04.5268470Z ⚠ [2235/2249] Built C3formal.Main (3.5s)
+2026-09-23T15:23:04.5287661Z warning: C3formal/Main.lean:1:1: * `-/`:
+2026-09-23T15:23:04.5307554Z Copyright too short!
+2026-09-23T15:23:04.5327344Z 
+2026-09-23T15:23:04.5347364Z 
+2026-09-23T15:23:04.5367741Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:09.8384195Z ⚠ [2236/2249] Built C3formal.Bridge (5.3s)
+2026-09-23T15:23:09.8385344Z warning: C3formal/Bridge.lean:1:1: * `-/`:
+2026-09-23T15:23:09.8407698Z Copyright too short!
+2026-09-23T15:23:09.8427465Z 
+2026-09-23T15:23:09.8437422Z 
+2026-09-23T15:23:09.8447969Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:09.8467964Z warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:09.8487475Z 
+2026-09-23T15:23:09.8488044Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:09.8508085Z warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:09.8527542Z 
+2026-09-23T15:23:09.8547844Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:10.0389688Z ⚠ [2237/2249] Built C3formal.GenLemmas (5.5s)
+2026-09-23T15:23:10.0402457Z warning: C3formal/GenLemmas.lean:1:1: * `-/`:
+2026-09-23T15:23:10.0417606Z Copyright too short!
+2026-09-23T15:23:10.0427621Z 
+2026-09-23T15:23:10.0447495Z 
+2026-09-23T15:23:10.0448080Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:13.5468639Z ⚠ [2238/2249] Built C3formal.TriangleMatrix (3.5s)
+2026-09-23T15:23:13.5487744Z warning: C3formal/TriangleMatrix.lean:1:1: * `-/`:
+2026-09-23T15:23:13.5507668Z Copyright too short!
+2026-09-23T15:23:13.5517457Z 
+2026-09-23T15:23:13.5527400Z 
+2026-09-23T15:23:13.5541848Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:13.6468487Z ⚠ [2239/2249] Built C3formal.Graph (3.8s)
+2026-09-23T15:23:13.6497846Z warning: C3formal/Graph.lean:1:1: * `-/`:
+2026-09-23T15:23:13.6522080Z Copyright too short!
+2026-09-23T15:23:13.6537574Z 
+2026-09-23T15:23:13.6549758Z 
+2026-09-23T15:23:13.6567841Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:13.6588328Z warning: C3formal/Graph.lean:28:0: automatically included section variable(s) unused in theorem `C3.iter_mod`:
+2026-09-23T15:23:13.6589224Z   [Fintype V]
+2026-09-23T15:23:13.6607516Z   [DecidableEq V]
+2026-09-23T15:23:13.6623410Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:13.6647729Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:13.6658042Z 
+2026-09-23T15:23:13.6680477Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:13.6697809Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6699014Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6699262Z 
+2026-09-23T15:23:13.6700375Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6701632Z 
+2026-09-23T15:23:13.6704519Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6709096Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6710080Z   • [Fintype V] (#2)
+2026-09-23T15:23:13.6710303Z 
+2026-09-23T15:23:13.6711075Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:13.6712027Z 
+2026-09-23T15:23:13.6712429Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:13.6713390Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6714444Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6714682Z 
+2026-09-23T15:23:13.6715589Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6716655Z 
+2026-09-23T15:23:13.6717049Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6718243Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6719019Z   • [Fintype V] (#2)
+2026-09-23T15:23:13.6719233Z 
+2026-09-23T15:23:13.6719992Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:13.6720934Z 
+2026-09-23T15:23:13.6721320Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:13.6722988Z warning: C3formal/Graph.lean:44:0: automatically included section variable(s) unused in theorem `C3.sp_zero`:
+2026-09-23T15:23:13.6723988Z   [Fintype V]
+2026-09-23T15:23:13.6724299Z   [DecidableEq V]
+2026-09-23T15:23:13.6804058Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:13.6805192Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:13.6805568Z 
+2026-09-23T15:23:13.6805946Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:13.6806936Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6808022Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6808279Z 
+2026-09-23T15:23:13.6809192Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6810552Z 
+2026-09-23T15:23:13.6811419Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6812421Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6813215Z   • [Fintype V] (#2)
+2026-09-23T15:23:13.6813435Z 
+2026-09-23T15:23:13.6814390Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:13.6815340Z 
+2026-09-23T15:23:13.6815724Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:13.6816813Z warning: C3formal/Graph.lean:46:0: automatically included section variable(s) unused in theorem `C3.sp_one`:
+2026-09-23T15:23:13.6837912Z   [Fintype V]
+2026-09-23T15:23:13.6838241Z   [DecidableEq V]
+2026-09-23T15:23:13.6839013Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:13.6839968Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:13.6840321Z 
+2026-09-23T15:23:13.6840684Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:13.6841647Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6842452Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6842681Z 
+2026-09-23T15:23:13.6843576Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6844631Z 
+2026-09-23T15:23:13.6845018Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6845986Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6846748Z   • [Fintype V] (#2)
+2026-09-23T15:23:13.6846960Z 
+2026-09-23T15:23:13.6847904Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:13.6848827Z 
+2026-09-23T15:23:13.6849209Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:13.6850306Z warning: C3formal/Graph.lean:49:0: automatically included section variable(s) unused in theorem `C3.sp_eq_self`:
+2026-09-23T15:23:13.6851146Z   [Fintype V]
+2026-09-23T15:23:13.6851454Z   [DecidableEq V]
+2026-09-23T15:23:13.6852219Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:13.6853138Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:13.6853488Z 
+2026-09-23T15:23:13.6853848Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:13.6854821Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6855616Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6855843Z 
+2026-09-23T15:23:13.6856736Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6878184Z 
+2026-09-23T15:23:13.6878599Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6879616Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6880433Z   • [Fintype V] (#2)
+2026-09-23T15:23:13.6880652Z 
+2026-09-23T15:23:13.6881427Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:13.6882350Z 
+2026-09-23T15:23:13.6882937Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:13.6883958Z warning: C3formal/Graph.lean:75:0: `exists_relabel` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6884793Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6885026Z 
+2026-09-23T15:23:13.6885912Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6886964Z 
+2026-09-23T15:23:13.6887693Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:13.6888734Z warning: C3formal/Graph.lean:113:0: `no_free_order3` does not use the following hypothesis in its type:
+2026-09-23T15:23:13.6889582Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:13.6889809Z 
+2026-09-23T15:23:13.6890704Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:13.6891772Z 
+2026-09-23T15:23:13.6892163Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:15.7509132Z ⚠ [2240/2249] Built C3formal.TriangleMain (2.2s)
+2026-09-23T15:23:15.7510350Z warning: C3formal/TriangleMain.lean:1:1: * `-/`:
+2026-09-23T15:23:15.7511035Z Copyright too short!
+2026-09-23T15:23:15.7511423Z 
+2026-09-23T15:23:15.7511576Z 
+2026-09-23T15:23:15.7512099Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:15.7513384Z warning: C3formal/TriangleMain.lean:78:0: automatically included section variable(s) unused in theorem `C3.Tri.X_mul_Nt`:
+2026-09-23T15:23:15.7514423Z   hQs
+2026-09-23T15:23:15.7515294Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:15.7516315Z   omit hQs in theorem ...
+2026-09-23T15:23:15.7516711Z 
+2026-09-23T15:23:15.7517455Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:15.7518836Z warning: C3formal/TriangleMain.lean:86:0: automatically included section variable(s) unused in theorem `C3.Tri.Jw_mul_eig`:
+2026-09-23T15:23:15.7519888Z   hsq
+2026-09-23T15:23:15.7520764Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:15.7521759Z   omit hsq in theorem ...
+2026-09-23T15:23:15.7522150Z 
+2026-09-23T15:23:15.7522664Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:20.0558418Z ⚠ [2241/2249] Built C3formal.TriangleStep5 (4.3s)
+2026-09-23T15:23:20.0559596Z warning: C3formal/TriangleStep5.lean:1:1: * `-/`:
+2026-09-23T15:23:20.0560472Z Copyright too short!
+2026-09-23T15:23:20.0560911Z 
+2026-09-23T15:23:20.0561089Z 
+2026-09-23T15:23:20.0561640Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:25.4632504Z ⚠ [2242/2249] Built C3formal.TriangleStep4 (5.4s)
+2026-09-23T15:23:25.4633763Z warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+2026-09-23T15:23:25.4634466Z Copyright too short!
+2026-09-23T15:23:25.4634852Z 
+2026-09-23T15:23:25.4635007Z 
+2026-09-23T15:23:25.4635491Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:25.4636637Z warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:25.4637728Z 
+2026-09-23T15:23:25.4638254Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:25.4639324Z warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+2026-09-23T15:23:25.4640060Z 
+2026-09-23T15:23:25.4640858Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+2026-09-23T15:23:25.4641956Z   [apply] _hCB
+2026-09-23T15:23:25.4642286Z 
+2026-09-23T15:23:25.4643115Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+2026-09-23T15:23:29.3708454Z ⚠ [2243/2249] Built C3formal.TriangleBridge (3.9s)
+2026-09-23T15:23:29.3717861Z warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+2026-09-23T15:23:29.3738027Z Copyright too short!
+2026-09-23T15:23:29.3738562Z 
+2026-09-23T15:23:29.3738766Z 
+2026-09-23T15:23:29.3739329Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:29.3741023Z warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:29.3741950Z 
+2026-09-23T15:23:29.3742499Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:31.9809675Z ⚠ [2244/2249] Built C3formal.TriangleGraph (2.7s)
+2026-09-23T15:23:31.9818174Z warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+2026-09-23T15:23:31.9818966Z Copyright too short!
+2026-09-23T15:23:31.9819368Z 
+2026-09-23T15:23:31.9819521Z 
+2026-09-23T15:23:31.9820070Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:31.9821276Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:23:31.9822390Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:31.9822794Z 
+2026-09-23T15:23:31.9823805Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:31.9825019Z 
+2026-09-23T15:23:31.9825567Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:31.9826825Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:23:31.9828252Z   • [Fintype V] (#2)
+2026-09-23T15:23:31.9828631Z 
+2026-09-23T15:23:31.9829512Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:31.9830580Z 
+2026-09-23T15:23:31.9831104Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:31.9832456Z warning: C3formal/TriangleGraph.lean:59:0: automatically included section variable(s) unused in theorem `C3.not_fixed_iff`:
+2026-09-23T15:23:31.9833512Z   [Fintype V]
+2026-09-23T15:23:31.9833976Z   [DecidableEq V]
+2026-09-23T15:23:31.9834876Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:31.9835944Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:31.9836442Z 
+2026-09-23T15:23:31.9836955Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:31.9838474Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:23:31.9839715Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:31.9840125Z 
+2026-09-23T15:23:31.9841183Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:31.9842420Z 
+2026-09-23T15:23:31.9842972Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:31.9844252Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:23:31.9845312Z   • [Fintype V] (#2)
+2026-09-23T15:23:31.9845702Z 
+2026-09-23T15:23:31.9846626Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:31.9848040Z 
+2026-09-23T15:23:31.9848584Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:31.9849868Z warning: C3formal/TriangleGraph.lean:116:0: `common_nbr_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:23:31.9851314Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:31.9851718Z 
+2026-09-23T15:23:31.9852770Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:31.9854007Z 
+2026-09-23T15:23:31.9854560Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:31.9856024Z warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:31.9856910Z 
+2026-09-23T15:23:31.9857648Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:35.3069417Z ⚠ [2245/2249] Built C3formal.FixLemma (3.3s)
+2026-09-23T15:23:35.3258389Z warning: C3formal/FixLemma.lean:1:1: * `-/`:
+2026-09-23T15:23:35.3451241Z Copyright too short!
+2026-09-23T15:23:35.3498215Z 
+2026-09-23T15:23:35.3498468Z 
+2026-09-23T15:23:35.3499587Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:35.3500816Z warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:35.3502145Z 
+2026-09-23T15:23:35.3502716Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:35.3518229Z warning: C3formal/FixLemma.lean:43:0: automatically included section variable(s) unused in theorem `C3.mem_fixF`:
+2026-09-23T15:23:35.3519292Z   [DecidableRel G.Adj]
+2026-09-23T15:23:35.3522054Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:35.3523023Z   omit [DecidableRel G.Adj] in theorem ...
+2026-09-23T15:23:35.3523327Z 
+2026-09-23T15:23:35.3523691Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:35.3524646Z warning: C3formal/FixLemma.lean:43:0: `mem_fixF` does not use the following hypothesis in its type:
+2026-09-23T15:23:35.3525645Z   • [DecidableRel G.Adj] (#5)
+2026-09-23T15:23:35.3525910Z 
+2026-09-23T15:23:35.3526782Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:35.3528004Z 
+2026-09-23T15:23:35.3528380Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:35.3529517Z warning: C3formal/FixLemma.lean:47:0: automatically included section variable(s) unused in theorem `C3.card_le_common`:
+2026-09-23T15:23:35.3530384Z   [DecidableEq V]
+2026-09-23T15:23:35.3531119Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:35.3531981Z   omit [DecidableEq V] in theorem ...
+2026-09-23T15:23:35.3532273Z 
+2026-09-23T15:23:35.3532615Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:35.3533582Z warning: C3formal/FixLemma.lean:46:0: `card_le_common` does not use the following hypothesis in its type:
+2026-09-23T15:23:35.3534336Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:35.3534550Z 
+2026-09-23T15:23:35.3535388Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:35.3536801Z 
+2026-09-23T15:23:35.3537617Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:35.3539216Z warning: C3formal/FixLemma.lean:55:0: `fixed_of_two_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:23:35.3540494Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:35.3540807Z 
+2026-09-23T15:23:35.3541999Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:35.3543317Z 
+2026-09-23T15:23:35.3543679Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:35.3562911Z warning: C3formal/FixLemma.lean:103:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:35.3563757Z 
+2026-09-23T15:23:35.3564219Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:35.3565365Z warning: C3formal/FixLemma.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:35.3566106Z 
+2026-09-23T15:23:35.3566863Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:35.3568218Z warning: C3formal/FixLemma.lean:315:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:35.3568960Z 
+2026-09-23T15:23:35.3569381Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:35.3570475Z warning: C3formal/FixLemma.lean:359:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:35.3571693Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:35.3572485Z ```
+2026-09-23T15:23:35.3572857Z open Lean.Parser.Tactic in
+2026-09-23T15:23:35.3573442Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:35.3574124Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:35.3574668Z ```
+2026-09-23T15:23:35.3575444Z warning: C3formal/FixLemma.lean:374:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:35.3576658Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:35.3597741Z ```
+2026-09-23T15:23:35.3598082Z open Lean.Parser.Tactic in
+2026-09-23T15:23:35.3598708Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:35.3599314Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:35.3599752Z ```
+2026-09-23T15:23:35.3600419Z warning: C3formal/FixLemma.lean:382:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:35.3601624Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:35.3602315Z ```
+2026-09-23T15:23:35.3602638Z open Lean.Parser.Tactic in
+2026-09-23T15:23:35.3603159Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:35.3603740Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:35.3604194Z ```
+2026-09-23T15:23:35.3604846Z warning: C3formal/FixLemma.lean:390:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:35.3606214Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:35.3607065Z ```
+2026-09-23T15:23:35.3607578Z open Lean.Parser.Tactic in
+2026-09-23T15:23:35.3608010Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:35.3608528Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:35.3608928Z ```
+2026-09-23T15:23:35.3609501Z warning: C3formal/FixLemma.lean:352:0: `no_order3` does not use the following hypothesis in its type:
+2026-09-23T15:23:35.3610373Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:35.3610606Z 
+2026-09-23T15:23:35.3611492Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:35.3612537Z 
+2026-09-23T15:23:35.3612921Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:37.7938540Z ✔ [2246/2249] Built C3formal (2.4s)
+2026-09-23T15:23:38.5928812Z ✔ [2248/2249] Built Solution (3.2s)
+2026-09-23T15:23:38.5966926Z Build completed successfully (2249 jobs).
+2026-09-23T15:23:38.6364939Z ##[group]Run lake env lean C3formal/Check.lean
+2026-09-23T15:23:38.6365317Z [36;1mlake env lean C3formal/Check.lean[0m
+2026-09-23T15:23:38.6428190Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:23:38.6428446Z ##[endgroup]
+2026-09-23T15:23:41.2518808Z 'C3.no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2520547Z 'C3.no_free_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2521846Z @C3.no_free_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+2026-09-23T15:23:41.2522627Z   [inst_2 : DecidableRel G.Adj],
+2026-09-23T15:23:41.2523483Z   G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → (∀ (v : V), σ v ≠ v) → False
+2026-09-23T15:23:41.2524410Z 'C3.Tri.no_triangle_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2525338Z 'C3.no_triangle_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2526657Z @C3.no_triangle_order3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+2026-09-23T15:23:41.2527733Z   [inst_2 : DecidableRel G.Adj],
+2026-09-23T15:23:41.2528609Z   G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } = 3 → False
+2026-09-23T15:23:41.2529558Z 'C3.no_order3_fix_le3' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2530626Z @C3.no_order3_fix_le3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+2026-09-23T15:23:41.2531412Z   [inst_2 : DecidableRel G.Adj],
+2026-09-23T15:23:41.2532243Z   G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } ≤ 3 → False
+2026-09-23T15:23:41.2533134Z 'C3.no_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-09-23T15:23:41.2534237Z @C3.no_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+2026-09-23T15:23:41.2535346Z   G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → ∀ (v : V), σ v = v
+2026-09-23T15:23:41.3883711Z ##[group]Run /usr/bin/time -v lake comparator
+2026-09-23T15:23:41.3884097Z [36;1m/usr/bin/time -v lake comparator[0m
+2026-09-23T15:23:41.3945983Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:23:41.3946268Z ##[endgroup]
+2026-09-23T15:23:42.5277588Z Resolving dependencies
+2026-09-23T15:23:42.5278134Z Building Challenge
+2026-09-23T15:23:44.2768339Z ⚠ [1367/1368] Replayed Challenge
+2026-09-23T15:23:44.2769082Z warning: Challenge.lean:32:8: declaration uses `sorry`
+2026-09-23T15:23:44.2769877Z warning: Challenge.lean:39:8: declaration uses `sorry`
+2026-09-23T15:23:44.2770659Z warning: Challenge.lean:45:8: declaration uses `sorry`
+2026-09-23T15:23:44.2771415Z warning: Challenge.lean:56:8: declaration uses `sorry`
+2026-09-23T15:23:44.2772188Z warning: Challenge.lean:73:8: declaration uses `sorry`
+2026-09-23T15:23:44.2772931Z warning: Challenge.lean:80:8: declaration uses `sorry`
+2026-09-23T15:23:44.2773569Z warning: Challenge.lean:86:8: declaration uses `sorry`
+2026-09-23T15:23:44.2810239Z Build completed successfully (1368 jobs).
+2026-09-23T15:23:46.7641877Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+2026-09-23T15:23:46.7646849Z Building Solution
+2026-09-23T15:23:48.2223552Z ⚠ [1175/1272] Replayed C3formal.Eis
+2026-09-23T15:23:48.2225134Z warning: C3formal/Eis.lean:1:1: * `-/`:
+2026-09-23T15:23:48.2226435Z Copyright too short!
+2026-09-23T15:23:48.2226917Z 
+2026-09-23T15:23:48.2227125Z 
+2026-09-23T15:23:48.2228579Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.5234276Z ⚠ [1791/1825] Replayed C3formal.Step5
+2026-09-23T15:23:48.5248644Z warning: C3formal/Step5.lean:1:1: * `-/`:
+2026-09-23T15:23:48.5250378Z Copyright too short!
+2026-09-23T15:23:48.5250953Z 
+2026-09-23T15:23:48.5251430Z 
+2026-09-23T15:23:48.5253465Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.5255692Z ⚠ [1793/1825] Replayed C3formal.Saturated
+2026-09-23T15:23:48.5256705Z warning: C3formal/Saturated.lean:1:1: * `-/`:
+2026-09-23T15:23:48.5268855Z Copyright too short!
+2026-09-23T15:23:48.5269607Z 
+2026-09-23T15:23:48.5270231Z 
+2026-09-23T15:23:48.5271168Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.5280801Z ⚠ [1804/1825] Replayed C3formal.NumberTheory
+2026-09-23T15:23:48.5299960Z warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+2026-09-23T15:23:48.5302746Z Copyright too short!
+2026-09-23T15:23:48.5305359Z 
+2026-09-23T15:23:48.5306343Z 
+2026-09-23T15:23:48.5307998Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.6228060Z ⚠ [1886/2038] Replayed C3formal.IntPart
+2026-09-23T15:23:48.6228895Z warning: C3formal/IntPart.lean:1:1: * `-/`:
+2026-09-23T15:23:48.6231537Z Copyright too short!
+2026-09-23T15:23:48.6231797Z 
+2026-09-23T15:23:48.6231804Z 
+2026-09-23T15:23:48.6232165Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.6237736Z warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.6241413Z 
+2026-09-23T15:23:48.6241817Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.6242871Z warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.6243527Z 
+2026-09-23T15:23:48.6243905Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.6245291Z warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.6245954Z 
+2026-09-23T15:23:48.6246320Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.6247623Z warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.6248338Z 
+2026-09-23T15:23:48.6248712Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.6249907Z warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.6250666Z 
+2026-09-23T15:23:48.6251179Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.6252052Z ⚠ [1887/2038] Replayed C3formal.EisEuclid
+2026-09-23T15:23:48.6252709Z warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+2026-09-23T15:23:48.6253230Z Copyright too short!
+2026-09-23T15:23:48.6253468Z 
+2026-09-23T15:23:48.6253486Z 
+2026-09-23T15:23:48.6253825Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7230159Z ⚠ [2205/2245] Replayed C3formal.EisComplex
+2026-09-23T15:23:48.7230836Z warning: C3formal/EisComplex.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7232473Z Copyright too short!
+2026-09-23T15:23:48.7237620Z 
+2026-09-23T15:23:48.7238793Z 
+2026-09-23T15:23:48.7239662Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7240565Z ⚠ [2206/2245] Replayed C3formal.Main
+2026-09-23T15:23:48.7243441Z warning: C3formal/Main.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7243857Z Copyright too short!
+2026-09-23T15:23:48.7244055Z 
+2026-09-23T15:23:48.7244060Z 
+2026-09-23T15:23:48.7244375Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7245062Z ⚠ [2207/2245] Replayed C3formal.GenLemmas
+2026-09-23T15:23:48.7245500Z warning: C3formal/GenLemmas.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7245935Z Copyright too short!
+2026-09-23T15:23:48.7246136Z 
+2026-09-23T15:23:48.7246141Z 
+2026-09-23T15:23:48.7246441Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7247675Z ⚠ [2208/2245] Replayed C3formal.SaturatedGen
+2026-09-23T15:23:48.7248165Z warning: C3formal/SaturatedGen.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7248608Z Copyright too short!
+2026-09-23T15:23:48.7248804Z 
+2026-09-23T15:23:48.7248808Z 
+2026-09-23T15:23:48.7249117Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7250056Z warning: C3formal/SaturatedGen.lean:16:0: `exists_kernel_basis'` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7250878Z   • [DecidableEq ι] (#7)
+2026-09-23T15:23:48.7251091Z 
+2026-09-23T15:23:48.7251881Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7252803Z 
+2026-09-23T15:23:48.7253164Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7253916Z ⚠ [2209/2245] Replayed C3formal.TriangleMatrix
+2026-09-23T15:23:48.7254401Z warning: C3formal/TriangleMatrix.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7254838Z Copyright too short!
+2026-09-23T15:23:48.7255029Z 
+2026-09-23T15:23:48.7255034Z 
+2026-09-23T15:23:48.7255331Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7256011Z ⚠ [2210/2245] Replayed C3formal.TriangleMain
+2026-09-23T15:23:48.7256505Z warning: C3formal/TriangleMain.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7256939Z Copyright too short!
+2026-09-23T15:23:48.7257331Z 
+2026-09-23T15:23:48.7257336Z 
+2026-09-23T15:23:48.7257651Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7258648Z warning: C3formal/TriangleMain.lean:78:0: automatically included section variable(s) unused in theorem `C3.Tri.X_mul_Nt`:
+2026-09-23T15:23:48.7259450Z   hQs
+2026-09-23T15:23:48.7260339Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7261144Z   omit hQs in theorem ...
+2026-09-23T15:23:48.7261374Z 
+2026-09-23T15:23:48.7261701Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7262723Z warning: C3formal/TriangleMain.lean:86:0: automatically included section variable(s) unused in theorem `C3.Tri.Jw_mul_eig`:
+2026-09-23T15:23:48.7263542Z   hsq
+2026-09-23T15:23:48.7264269Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7265043Z   omit hsq in theorem ...
+2026-09-23T15:23:48.7265253Z 
+2026-09-23T15:23:48.7265588Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7266321Z ⚠ [2211/2245] Replayed C3formal.TriangleStep5
+2026-09-23T15:23:48.7266817Z warning: C3formal/TriangleStep5.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7267460Z Copyright too short!
+2026-09-23T15:23:48.7267667Z 
+2026-09-23T15:23:48.7267673Z 
+2026-09-23T15:23:48.7267982Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7268699Z ⚠ [2212/2245] Replayed C3formal.TriangleStep4
+2026-09-23T15:23:48.7269185Z warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7269624Z Copyright too short!
+2026-09-23T15:23:48.7269819Z 
+2026-09-23T15:23:48.7269824Z 
+2026-09-23T15:23:48.7270120Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7270998Z warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7271595Z 
+2026-09-23T15:23:48.7271912Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7272749Z warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+2026-09-23T15:23:48.7273281Z 
+2026-09-23T15:23:48.7273902Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+2026-09-23T15:23:48.7274963Z   [apply] _hCB
+2026-09-23T15:23:48.7275137Z 
+2026-09-23T15:23:48.7275456Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+2026-09-23T15:23:48.7276129Z ⚠ [2213/2245] Replayed C3formal.Bridge
+2026-09-23T15:23:48.7276535Z warning: C3formal/Bridge.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7276941Z Copyright too short!
+2026-09-23T15:23:48.7277306Z 
+2026-09-23T15:23:48.7277310Z 
+2026-09-23T15:23:48.7277624Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7278478Z warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7279035Z 
+2026-09-23T15:23:48.7279339Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7280279Z warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7280844Z 
+2026-09-23T15:23:48.7281167Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7281886Z ⚠ [2214/2245] Replayed C3formal.TriangleBridge
+2026-09-23T15:23:48.7282371Z warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7282823Z Copyright too short!
+2026-09-23T15:23:48.7283031Z 
+2026-09-23T15:23:48.7283036Z 
+2026-09-23T15:23:48.7283332Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7284232Z warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7284856Z 
+2026-09-23T15:23:48.7285165Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7285825Z ⚠ [2240/2245] Replayed C3formal.Graph
+2026-09-23T15:23:48.7286242Z warning: C3formal/Graph.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7286817Z Copyright too short!
+2026-09-23T15:23:48.7287017Z 
+2026-09-23T15:23:48.7287022Z 
+2026-09-23T15:23:48.7287515Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7288463Z warning: C3formal/Graph.lean:28:0: automatically included section variable(s) unused in theorem `C3.iter_mod`:
+2026-09-23T15:23:48.7289193Z   [Fintype V]
+2026-09-23T15:23:48.7289477Z   [DecidableEq V]
+2026-09-23T15:23:48.7290150Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7290986Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7291293Z 
+2026-09-23T15:23:48.7291621Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7292483Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7293194Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7293406Z 
+2026-09-23T15:23:48.7294199Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7295151Z 
+2026-09-23T15:23:48.7295494Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7296361Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7297065Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7297420Z 
+2026-09-23T15:23:48.7298101Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7298918Z 
+2026-09-23T15:23:48.7299259Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7300120Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7300823Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7301035Z 
+2026-09-23T15:23:48.7301813Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7302931Z 
+2026-09-23T15:23:48.7303290Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7304159Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7304842Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7305029Z 
+2026-09-23T15:23:48.7305693Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7306529Z 
+2026-09-23T15:23:48.7306862Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7308019Z warning: C3formal/Graph.lean:44:0: automatically included section variable(s) unused in theorem `C3.sp_zero`:
+2026-09-23T15:23:48.7308750Z   [Fintype V]
+2026-09-23T15:23:48.7309037Z   [DecidableEq V]
+2026-09-23T15:23:48.7309721Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7310546Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7310853Z 
+2026-09-23T15:23:48.7311179Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7312017Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7312714Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7312927Z 
+2026-09-23T15:23:48.7313712Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7314650Z 
+2026-09-23T15:23:48.7315227Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7316111Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7316790Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7316977Z 
+2026-09-23T15:23:48.7317824Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7318638Z 
+2026-09-23T15:23:48.7318971Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7319928Z warning: C3formal/Graph.lean:46:0: automatically included section variable(s) unused in theorem `C3.sp_one`:
+2026-09-23T15:23:48.7320655Z   [Fintype V]
+2026-09-23T15:23:48.7320942Z   [DecidableEq V]
+2026-09-23T15:23:48.7321620Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7322464Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7322774Z 
+2026-09-23T15:23:48.7323110Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7323937Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7324641Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7324864Z 
+2026-09-23T15:23:48.7325648Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7326575Z 
+2026-09-23T15:23:48.7326924Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7327967Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7328651Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7328835Z 
+2026-09-23T15:23:48.7329524Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7330345Z 
+2026-09-23T15:23:48.7330676Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7331813Z warning: C3formal/Graph.lean:49:0: automatically included section variable(s) unused in theorem `C3.sp_eq_self`:
+2026-09-23T15:23:48.7332567Z   [Fintype V]
+2026-09-23T15:23:48.7332849Z   [DecidableEq V]
+2026-09-23T15:23:48.7333531Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7334443Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7334750Z 
+2026-09-23T15:23:48.7335080Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7335938Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7336654Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7336866Z 
+2026-09-23T15:23:48.7337835Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7338791Z 
+2026-09-23T15:23:48.7339146Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7340039Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7340744Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7340931Z 
+2026-09-23T15:23:48.7341622Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7342442Z 
+2026-09-23T15:23:48.7342786Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7343697Z warning: C3formal/Graph.lean:75:0: `exists_relabel` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7344444Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7344815Z 
+2026-09-23T15:23:48.7345600Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7346544Z 
+2026-09-23T15:23:48.7346892Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7347990Z warning: C3formal/Graph.lean:113:0: `no_free_order3` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7348740Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7348951Z 
+2026-09-23T15:23:48.7349726Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7350664Z 
+2026-09-23T15:23:48.7351013Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7351754Z ⚠ [2241/2245] Replayed C3formal.TriangleGraph
+2026-09-23T15:23:48.7352239Z warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7352677Z Copyright too short!
+2026-09-23T15:23:48.7352866Z 
+2026-09-23T15:23:48.7352871Z 
+2026-09-23T15:23:48.7353177Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7354123Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7354940Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7355151Z 
+2026-09-23T15:23:48.7355941Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7356874Z 
+2026-09-23T15:23:48.7357399Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7358404Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7359231Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7359417Z 
+2026-09-23T15:23:48.7360085Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7361069Z 
+2026-09-23T15:23:48.7361407Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7362447Z warning: C3formal/TriangleGraph.lean:59:0: automatically included section variable(s) unused in theorem `C3.not_fixed_iff`:
+2026-09-23T15:23:48.7363273Z   [Fintype V]
+2026-09-23T15:23:48.7363555Z   [DecidableEq V]
+2026-09-23T15:23:48.7364233Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7365067Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7365384Z 
+2026-09-23T15:23:48.7365723Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7366671Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7367640Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7367862Z 
+2026-09-23T15:23:48.7368657Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7369641Z 
+2026-09-23T15:23:48.7369985Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7370945Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7371711Z   • [Fintype V] (#2)
+2026-09-23T15:23:48.7371905Z 
+2026-09-23T15:23:48.7372574Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:23:48.7373409Z 
+2026-09-23T15:23:48.7373911Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:23:48.7374896Z warning: C3formal/TriangleGraph.lean:116:0: `common_nbr_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7375713Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7375925Z 
+2026-09-23T15:23:48.7376688Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7377805Z 
+2026-09-23T15:23:48.7378153Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7379133Z warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7379734Z 
+2026-09-23T15:23:48.7380054Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7380725Z ⚠ [2242/2245] Replayed C3formal.FixLemma
+2026-09-23T15:23:48.7381165Z warning: C3formal/FixLemma.lean:1:1: * `-/`:
+2026-09-23T15:23:48.7381585Z Copyright too short!
+2026-09-23T15:23:48.7381786Z 
+2026-09-23T15:23:48.7381791Z 
+2026-09-23T15:23:48.7382083Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:23:48.7382962Z warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7383534Z 
+2026-09-23T15:23:48.7383855Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7384815Z warning: C3formal/FixLemma.lean:43:0: automatically included section variable(s) unused in theorem `C3.mem_fixF`:
+2026-09-23T15:23:48.7385596Z   [DecidableRel G.Adj]
+2026-09-23T15:23:48.7386304Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7387285Z   omit [DecidableRel G.Adj] in theorem ...
+2026-09-23T15:23:48.7387580Z 
+2026-09-23T15:23:48.7387912Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7388796Z warning: C3formal/FixLemma.lean:43:0: `mem_fixF` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7389715Z   • [DecidableRel G.Adj] (#5)
+2026-09-23T15:23:48.7389954Z 
+2026-09-23T15:23:48.7390748Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7391696Z 
+2026-09-23T15:23:48.7392046Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7393088Z warning: C3formal/FixLemma.lean:47:0: automatically included section variable(s) unused in theorem `C3.card_le_common`:
+2026-09-23T15:23:48.7393900Z   [DecidableEq V]
+2026-09-23T15:23:48.7394581Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:23:48.7395394Z   omit [DecidableEq V] in theorem ...
+2026-09-23T15:23:48.7395675Z 
+2026-09-23T15:23:48.7396007Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:23:48.7396923Z warning: C3formal/FixLemma.lean:46:0: `card_le_common` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7397874Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7398085Z 
+2026-09-23T15:23:48.7398898Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7399835Z 
+2026-09-23T15:23:48.7400193Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7401151Z warning: C3formal/FixLemma.lean:55:0: `fixed_of_two_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7401924Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7402140Z 
+2026-09-23T15:23:48.7403091Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7404032Z 
+2026-09-23T15:23:48.7404388Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.7405329Z warning: C3formal/FixLemma.lean:103:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7405909Z 
+2026-09-23T15:23:48.7406219Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7407361Z warning: C3formal/FixLemma.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7408047Z 
+2026-09-23T15:23:48.7408401Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7409403Z warning: C3formal/FixLemma.lean:315:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:23:48.7410334Z 
+2026-09-23T15:23:48.7410703Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:23:48.7411703Z warning: C3formal/FixLemma.lean:359:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:48.7412874Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:48.7413620Z ```
+2026-09-23T15:23:48.7413994Z open Lean.Parser.Tactic in
+2026-09-23T15:23:48.7414671Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:48.7415306Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:48.7428677Z ```
+2026-09-23T15:23:48.7429354Z warning: C3formal/FixLemma.lean:374:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:48.7430347Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:48.7430980Z ```
+2026-09-23T15:23:48.7431267Z open Lean.Parser.Tactic in
+2026-09-23T15:23:48.7431711Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:48.7432245Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:48.7432640Z ```
+2026-09-23T15:23:48.7433211Z warning: C3formal/FixLemma.lean:382:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:48.7434454Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:48.7435083Z ```
+2026-09-23T15:23:48.7435371Z open Lean.Parser.Tactic in
+2026-09-23T15:23:48.7435807Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:48.7436349Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:48.7436746Z ```
+2026-09-23T15:23:48.7444387Z warning: C3formal/FixLemma.lean:390:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:23:48.7445422Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:23:48.7446057Z ```
+2026-09-23T15:23:48.7446343Z open Lean.Parser.Tactic in
+2026-09-23T15:23:48.7446803Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:23:48.7447628Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:23:48.7448033Z ```
+2026-09-23T15:23:48.7448592Z warning: C3formal/FixLemma.lean:352:0: `no_order3` does not use the following hypothesis in its type:
+2026-09-23T15:23:48.7449393Z   • [DecidableEq V] (#3)
+2026-09-23T15:23:48.7449614Z 
+2026-09-23T15:23:48.7450410Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:23:48.7451345Z 
+2026-09-23T15:23:48.7451708Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:23:48.8297440Z Build completed successfully (2245 jobs).
+2026-09-23T15:24:04.4468630Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+2026-09-23T15:24:04.4473408Z Running Lean default kernel on solution
+2026-09-23T15:24:25.3518340Z Lean default kernel accepts the solution
+2026-09-23T15:24:25.3519229Z Your solution is okay!
+2026-09-23T15:24:25.3554913Z 	Command being timed: "lake comparator"
+2026-09-23T15:24:25.3555613Z 	User time (seconds): 7.16
+2026-09-23T15:24:25.3556162Z 	System time (seconds): 0.20
+2026-09-23T15:24:25.3556732Z 	Percent of CPU this job got: 16%
+2026-09-23T15:24:25.3557773Z 	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:43.93
+2026-09-23T15:24:25.3558457Z 	Average shared text size (kbytes): 0
+2026-09-23T15:24:25.3559105Z 	Average unshared data size (kbytes): 0
+2026-09-23T15:24:25.3559712Z 	Average stack size (kbytes): 0
+2026-09-23T15:24:25.3560355Z 	Average total size (kbytes): 0
+2026-09-23T15:24:25.3560944Z 	Maximum resident set size (kbytes): 362172
+2026-09-23T15:24:25.3561587Z 	Average resident set size (kbytes): 0
+2026-09-23T15:24:25.3562186Z 	Major (requiring I/O) page faults: 2
+2026-09-23T15:24:25.3562798Z 	Minor (reclaiming a frame) page faults: 9379
+2026-09-23T15:24:25.3563433Z 	Voluntary context switches: 41262
+2026-09-23T15:24:25.3564028Z 	Involuntary context switches: 119
+2026-09-23T15:24:25.3564591Z 	Swaps: 0
+2026-09-23T15:24:25.3565046Z 	File system inputs: 264
+2026-09-23T15:24:25.3565705Z 	File system outputs: 330824
+2026-09-23T15:24:25.3569848Z 	Socket messages sent: 0
+2026-09-23T15:24:25.3570425Z 	Socket messages received: 0
+2026-09-23T15:24:25.3570990Z 	Signals delivered: 0
+2026-09-23T15:24:25.3571531Z 	Page size (bytes): 4096
+2026-09-23T15:24:25.3572128Z 	Exit status: 0
+2026-09-23T15:24:25.3608765Z ##[group]Run /usr/bin/time -v lake comparator --paranoid
+2026-09-23T15:24:25.3609185Z [36;1m/usr/bin/time -v lake comparator --paranoid[0m
+2026-09-23T15:24:25.3671842Z shell: /usr/bin/bash -e {0}
+2026-09-23T15:24:25.3672279Z ##[endgroup]
+2026-09-23T15:24:26.4608654Z Resolving dependencies
+2026-09-23T15:24:26.4609180Z Building Challenge
+2026-09-23T15:24:28.0267019Z ⚠ [1367/1368] Replayed Challenge
+2026-09-23T15:24:28.0268537Z warning: Challenge.lean:32:8: declaration uses `sorry`
+2026-09-23T15:24:28.0269552Z warning: Challenge.lean:39:8: declaration uses `sorry`
+2026-09-23T15:24:28.0270377Z warning: Challenge.lean:45:8: declaration uses `sorry`
+2026-09-23T15:24:28.0273396Z warning: Challenge.lean:56:8: declaration uses `sorry`
+2026-09-23T15:24:28.0274407Z warning: Challenge.lean:73:8: declaration uses `sorry`
+2026-09-23T15:24:28.0275173Z warning: Challenge.lean:80:8: declaration uses `sorry`
+2026-09-23T15:24:28.0275798Z warning: Challenge.lean:86:8: declaration uses `sorry`
+2026-09-23T15:24:28.0291908Z Build completed successfully (1368 jobs).
+2026-09-23T15:24:30.4824459Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+2026-09-23T15:24:30.4829440Z Building Solution
+2026-09-23T15:24:31.9394709Z ⚠ [1175/1274] Replayed C3formal.Eis
+2026-09-23T15:24:31.9395882Z warning: C3formal/Eis.lean:1:1: * `-/`:
+2026-09-23T15:24:31.9396872Z Copyright too short!
+2026-09-23T15:24:31.9397743Z 
+2026-09-23T15:24:31.9397936Z 
+2026-09-23T15:24:31.9398614Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.2395422Z ⚠ [1791/1992] Replayed C3formal.Step5
+2026-09-23T15:24:32.2405324Z warning: C3formal/Step5.lean:1:1: * `-/`:
+2026-09-23T15:24:32.2406063Z Copyright too short!
+2026-09-23T15:24:32.2406636Z 
+2026-09-23T15:24:32.2406866Z 
+2026-09-23T15:24:32.2407723Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.2408775Z ⚠ [1793/1992] Replayed C3formal.Saturated
+2026-09-23T15:24:32.2409490Z warning: C3formal/Saturated.lean:1:1: * `-/`:
+2026-09-23T15:24:32.2410175Z Copyright too short!
+2026-09-23T15:24:32.2412277Z 
+2026-09-23T15:24:32.2412533Z 
+2026-09-23T15:24:32.2413208Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.2414960Z ⚠ [1804/1992] Replayed C3formal.NumberTheory
+2026-09-23T15:24:32.2423781Z warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+2026-09-23T15:24:32.2427639Z Copyright too short!
+2026-09-23T15:24:32.2428016Z 
+2026-09-23T15:24:32.2428216Z 
+2026-09-23T15:24:32.2435329Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.2439908Z ⚠ [1886/1992] Replayed C3formal.IntPart
+2026-09-23T15:24:32.2440405Z warning: C3formal/IntPart.lean:1:1: * `-/`:
+2026-09-23T15:24:32.2440905Z Copyright too short!
+2026-09-23T15:24:32.2441132Z 
+2026-09-23T15:24:32.2441138Z 
+2026-09-23T15:24:32.2441481Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.2442135Z warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.2442532Z 
+2026-09-23T15:24:32.2442741Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.2443298Z warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.2443660Z 
+2026-09-23T15:24:32.2443855Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.2444853Z warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.2445234Z 
+2026-09-23T15:24:32.2445442Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.2446172Z warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.2446536Z 
+2026-09-23T15:24:32.2446740Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.2447697Z warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.2450305Z 
+2026-09-23T15:24:32.2450695Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.2451538Z ⚠ [1887/1992] Replayed C3formal.EisEuclid
+2026-09-23T15:24:32.2452080Z warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+2026-09-23T15:24:32.2453541Z Copyright too short!
+2026-09-23T15:24:32.2453813Z 
+2026-09-23T15:24:32.2453832Z 
+2026-09-23T15:24:32.2454205Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3396863Z ⚠ [2204/2233] Replayed C3formal.EisComplex
+2026-09-23T15:24:32.3402801Z warning: C3formal/EisComplex.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3404015Z Copyright too short!
+2026-09-23T15:24:32.3405041Z 
+2026-09-23T15:24:32.3405199Z 
+2026-09-23T15:24:32.3405753Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3406751Z ⚠ [2205/2233] Replayed C3formal.Main
+2026-09-23T15:24:32.3407607Z warning: C3formal/Main.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3408199Z Copyright too short!
+2026-09-23T15:24:32.3408557Z 
+2026-09-23T15:24:32.3408705Z 
+2026-09-23T15:24:32.3410293Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3411274Z ⚠ [2206/2233] Replayed C3formal.GenLemmas
+2026-09-23T15:24:32.3411913Z warning: C3formal/GenLemmas.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3412550Z Copyright too short!
+2026-09-23T15:24:32.3412911Z 
+2026-09-23T15:24:32.3413048Z 
+2026-09-23T15:24:32.3413521Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3414448Z ⚠ [2207/2233] Replayed C3formal.SaturatedGen
+2026-09-23T15:24:32.3416067Z warning: C3formal/SaturatedGen.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3416765Z Copyright too short!
+2026-09-23T15:24:32.3417408Z 
+2026-09-23T15:24:32.3417582Z 
+2026-09-23T15:24:32.3418106Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3420614Z warning: C3formal/SaturatedGen.lean:16:0: `exists_kernel_basis'` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.3433782Z   • [DecidableEq ι] (#7)
+2026-09-23T15:24:32.3434349Z 
+2026-09-23T15:24:32.3439727Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.3441380Z 
+2026-09-23T15:24:32.3442068Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.3443190Z ⚠ [2208/2233] Replayed C3formal.TriangleMatrix
+2026-09-23T15:24:32.3443956Z warning: C3formal/TriangleMatrix.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3444769Z Copyright too short!
+2026-09-23T15:24:32.3445202Z 
+2026-09-23T15:24:32.3445354Z 
+2026-09-23T15:24:32.3445878Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3446872Z ⚠ [2209/2233] Replayed C3formal.TriangleMain
+2026-09-23T15:24:32.3447884Z warning: C3formal/TriangleMain.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3448681Z Copyright too short!
+2026-09-23T15:24:32.3449080Z 
+2026-09-23T15:24:32.3449233Z 
+2026-09-23T15:24:32.3449742Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3451050Z warning: C3formal/TriangleMain.lean:78:0: automatically included section variable(s) unused in theorem `C3.Tri.X_mul_Nt`:
+2026-09-23T15:24:32.3456332Z   hQs
+2026-09-23T15:24:32.3457572Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.3458703Z   omit hQs in theorem ...
+2026-09-23T15:24:32.3459123Z 
+2026-09-23T15:24:32.3460157Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.3461550Z warning: C3formal/TriangleMain.lean:86:0: automatically included section variable(s) unused in theorem `C3.Tri.Jw_mul_eig`:
+2026-09-23T15:24:32.3462655Z   hsq
+2026-09-23T15:24:32.3463607Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.3472596Z   omit hsq in theorem ...
+2026-09-23T15:24:32.3472853Z 
+2026-09-23T15:24:32.3473243Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.3474120Z ⚠ [2210/2233] Replayed C3formal.TriangleStep5
+2026-09-23T15:24:32.3474686Z warning: C3formal/TriangleStep5.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3475184Z Copyright too short!
+2026-09-23T15:24:32.3475407Z 
+2026-09-23T15:24:32.3475412Z 
+2026-09-23T15:24:32.3475751Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3476399Z ⚠ [2211/2233] Replayed C3formal.TriangleStep4
+2026-09-23T15:24:32.3476760Z warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3477054Z Copyright too short!
+2026-09-23T15:24:32.3477463Z 
+2026-09-23T15:24:32.3477469Z 
+2026-09-23T15:24:32.3487930Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3488891Z warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.3489499Z 
+2026-09-23T15:24:32.3489807Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.3490661Z warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+2026-09-23T15:24:32.3491209Z 
+2026-09-23T15:24:32.3491822Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+2026-09-23T15:24:32.3492704Z   [apply] _hCB
+2026-09-23T15:24:32.3492880Z 
+2026-09-23T15:24:32.3493197Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+2026-09-23T15:24:32.3493903Z ⚠ [2212/2233] Replayed C3formal.Bridge
+2026-09-23T15:24:32.3494314Z warning: C3formal/Bridge.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3494715Z Copyright too short!
+2026-09-23T15:24:32.3494910Z 
+2026-09-23T15:24:32.3494914Z 
+2026-09-23T15:24:32.3495210Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3496062Z warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.3496613Z 
+2026-09-23T15:24:32.3496925Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.3498048Z warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.3498599Z 
+2026-09-23T15:24:32.3498927Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.3499651Z ⚠ [2213/2233] Replayed C3formal.TriangleBridge
+2026-09-23T15:24:32.3500146Z warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+2026-09-23T15:24:32.3500601Z Copyright too short!
+2026-09-23T15:24:32.3500795Z 
+2026-09-23T15:24:32.3500799Z 
+2026-09-23T15:24:32.3501095Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.3502002Z warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.3502608Z 
+2026-09-23T15:24:32.3502919Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4399044Z ⚠ [2240/2245] Replayed C3formal.Graph
+2026-09-23T15:24:32.4400201Z warning: C3formal/Graph.lean:1:1: * `-/`:
+2026-09-23T15:24:32.4403991Z Copyright too short!
+2026-09-23T15:24:32.4404514Z 
+2026-09-23T15:24:32.4411033Z 
+2026-09-23T15:24:32.4411913Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.4428944Z warning: C3formal/Graph.lean:28:0: automatically included section variable(s) unused in theorem `C3.iter_mod`:
+2026-09-23T15:24:32.4431753Z   [Fintype V]
+2026-09-23T15:24:32.4432573Z   [DecidableEq V]
+2026-09-23T15:24:32.4433486Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4434778Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4435360Z 
+2026-09-23T15:24:32.4436125Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4437441Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4438706Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4439218Z 
+2026-09-23T15:24:32.4440464Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4441785Z 
+2026-09-23T15:24:32.4442654Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4444012Z warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4445361Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4445863Z 
+2026-09-23T15:24:32.4447104Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4449748Z 
+2026-09-23T15:24:32.4450341Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4451901Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4453006Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4453740Z 
+2026-09-23T15:24:32.4454929Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4456487Z 
+2026-09-23T15:24:32.4458785Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4460037Z warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4461400Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4461965Z 
+2026-09-23T15:24:32.4463220Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4464384Z 
+2026-09-23T15:24:32.4465235Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4466480Z warning: C3formal/Graph.lean:44:0: automatically included section variable(s) unused in theorem `C3.sp_zero`:
+2026-09-23T15:24:32.4468139Z   [Fintype V]
+2026-09-23T15:24:32.4468740Z   [DecidableEq V]
+2026-09-23T15:24:32.4470007Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4471191Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4472021Z 
+2026-09-23T15:24:32.4472614Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4474095Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4476480Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4476935Z 
+2026-09-23T15:24:32.4478533Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4481748Z 
+2026-09-23T15:24:32.4482361Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4483374Z warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4484176Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4484382Z 
+2026-09-23T15:24:32.4485428Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4486383Z 
+2026-09-23T15:24:32.4486772Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4488061Z warning: C3formal/Graph.lean:46:0: automatically included section variable(s) unused in theorem `C3.sp_one`:
+2026-09-23T15:24:32.4488882Z   [Fintype V]
+2026-09-23T15:24:32.4489192Z   [DecidableEq V]
+2026-09-23T15:24:32.4489959Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4490868Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4491229Z 
+2026-09-23T15:24:32.4491596Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4492538Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4493331Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4493563Z 
+2026-09-23T15:24:32.4494450Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4495503Z 
+2026-09-23T15:24:32.4495883Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4496838Z warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4497768Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4497975Z 
+2026-09-23T15:24:32.4498716Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4499640Z 
+2026-09-23T15:24:32.4500010Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4501092Z warning: C3formal/Graph.lean:49:0: automatically included section variable(s) unused in theorem `C3.sp_eq_self`:
+2026-09-23T15:24:32.4501940Z   [Fintype V]
+2026-09-23T15:24:32.4502257Z   [DecidableEq V]
+2026-09-23T15:24:32.4503063Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4504030Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4504390Z 
+2026-09-23T15:24:32.4504760Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4505715Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4506510Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4506746Z 
+2026-09-23T15:24:32.4507905Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4508977Z 
+2026-09-23T15:24:32.4509362Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4510369Z warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4511165Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4511371Z 
+2026-09-23T15:24:32.4512108Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4513018Z 
+2026-09-23T15:24:32.4513387Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4514404Z warning: C3formal/Graph.lean:75:0: `exists_relabel` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4515462Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4515707Z 
+2026-09-23T15:24:32.4516596Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4517966Z 
+2026-09-23T15:24:32.4518363Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4519378Z warning: C3formal/Graph.lean:113:0: `no_free_order3` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4520202Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4520437Z 
+2026-09-23T15:24:32.4521351Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4522434Z 
+2026-09-23T15:24:32.4522821Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4523666Z ⚠ [2241/2245] Replayed C3formal.TriangleGraph
+2026-09-23T15:24:32.4524210Z warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+2026-09-23T15:24:32.4524705Z Copyright too short!
+2026-09-23T15:24:32.4524922Z 
+2026-09-23T15:24:32.4524927Z 
+2026-09-23T15:24:32.4525266Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.4526357Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4527447Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4527678Z 
+2026-09-23T15:24:32.4528566Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4529619Z 
+2026-09-23T15:24:32.4530014Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4531124Z warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4532015Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4532223Z 
+2026-09-23T15:24:32.4532992Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4533922Z 
+2026-09-23T15:24:32.4534286Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4535447Z warning: C3formal/TriangleGraph.lean:59:0: automatically included section variable(s) unused in theorem `C3.not_fixed_iff`:
+2026-09-23T15:24:32.4536361Z   [Fintype V]
+2026-09-23T15:24:32.4536676Z   [DecidableEq V]
+2026-09-23T15:24:32.4537622Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4538550Z   omit [Fintype V] [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4538887Z 
+2026-09-23T15:24:32.4539252Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4540375Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4541272Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4541502Z 
+2026-09-23T15:24:32.4542381Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4543431Z 
+2026-09-23T15:24:32.4543824Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4544902Z warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4545767Z   • [Fintype V] (#2)
+2026-09-23T15:24:32.4545974Z 
+2026-09-23T15:24:32.4546731Z Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+2026-09-23T15:24:32.4547904Z 
+2026-09-23T15:24:32.4548441Z Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+2026-09-23T15:24:32.4549525Z warning: C3formal/TriangleGraph.lean:116:0: `common_nbr_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4550419Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4550796Z 
+2026-09-23T15:24:32.4551665Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4552703Z 
+2026-09-23T15:24:32.4553080Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4554138Z warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.4554834Z 
+2026-09-23T15:24:32.4555183Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4555927Z ⚠ [2242/2245] Replayed C3formal.FixLemma
+2026-09-23T15:24:32.4556399Z warning: C3formal/FixLemma.lean:1:1: * `-/`:
+2026-09-23T15:24:32.4556851Z Copyright too short!
+2026-09-23T15:24:32.4557062Z 
+2026-09-23T15:24:32.4557067Z 
+2026-09-23T15:24:32.4557587Z Note: This linter can be disabled with `set_option linter.style.header false`
+2026-09-23T15:24:32.4558624Z warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.4559283Z 
+2026-09-23T15:24:32.4559644Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4560715Z warning: C3formal/FixLemma.lean:43:0: automatically included section variable(s) unused in theorem `C3.mem_fixF`:
+2026-09-23T15:24:32.4561573Z   [DecidableRel G.Adj]
+2026-09-23T15:24:32.4562354Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4563236Z   omit [DecidableRel G.Adj] in theorem ...
+2026-09-23T15:24:32.4563559Z 
+2026-09-23T15:24:32.4563930Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4564906Z warning: C3formal/FixLemma.lean:43:0: `mem_fixF` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4565737Z   • [DecidableRel G.Adj] (#5)
+2026-09-23T15:24:32.4565993Z 
+2026-09-23T15:24:32.4566894Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4568116Z 
+2026-09-23T15:24:32.4568517Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4569631Z warning: C3formal/FixLemma.lean:47:0: automatically included section variable(s) unused in theorem `C3.card_le_common`:
+2026-09-23T15:24:32.4570531Z   [DecidableEq V]
+2026-09-23T15:24:32.4571286Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-09-23T15:24:32.4572186Z   omit [DecidableEq V] in theorem ...
+2026-09-23T15:24:32.4572478Z 
+2026-09-23T15:24:32.4572838Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-09-23T15:24:32.4573843Z warning: C3formal/FixLemma.lean:46:0: `card_le_common` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4574694Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4574934Z 
+2026-09-23T15:24:32.4575857Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4576945Z 
+2026-09-23T15:24:32.4577510Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4578596Z warning: C3formal/FixLemma.lean:55:0: `fixed_of_two_fixed` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4579473Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4579703Z 
+2026-09-23T15:24:32.4580756Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4581811Z 
+2026-09-23T15:24:32.4582200Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4583378Z warning: C3formal/FixLemma.lean:103:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.4584032Z 
+2026-09-23T15:24:32.4584383Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4585402Z warning: C3formal/FixLemma.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.4586032Z 
+2026-09-23T15:24:32.4586378Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4587608Z warning: C3formal/FixLemma.lean:315:100: This line exceeds the 100 character limit, please shorten it!
+2026-09-23T15:24:32.4588260Z 
+2026-09-23T15:24:32.4588606Z Note: This linter can be disabled with `set_option linter.style.longLine false`
+2026-09-23T15:24:32.4589575Z warning: C3formal/FixLemma.lean:359:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:24:32.4590628Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:24:32.4591329Z ```
+2026-09-23T15:24:32.4591639Z open Lean.Parser.Tactic in
+2026-09-23T15:24:32.4592112Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:24:32.4592672Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:24:32.4593115Z ```
+2026-09-23T15:24:32.4593796Z warning: C3formal/FixLemma.lean:374:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:24:32.4594871Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:24:32.4595564Z ```
+2026-09-23T15:24:32.4595865Z open Lean.Parser.Tactic in
+2026-09-23T15:24:32.4596338Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:24:32.4596896Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:24:32.4597506Z ```
+2026-09-23T15:24:32.4598139Z warning: C3formal/FixLemma.lean:382:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:24:32.4599164Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:24:32.4599881Z ```
+2026-09-23T15:24:32.4600172Z open Lean.Parser.Tactic in
+2026-09-23T15:24:32.4600641Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:24:32.4601197Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:24:32.4601626Z ```
+2026-09-23T15:24:32.4602247Z warning: C3formal/FixLemma.lean:390:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-09-23T15:24:32.4603253Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-09-23T15:24:32.4603937Z ```
+2026-09-23T15:24:32.4604228Z open Lean.Parser.Tactic in
+2026-09-23T15:24:32.4604702Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-09-23T15:24:32.4605247Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-09-23T15:24:32.4605679Z ```
+2026-09-23T15:24:32.4606284Z warning: C3formal/FixLemma.lean:352:0: `no_order3` does not use the following hypothesis in its type:
+2026-09-23T15:24:32.4607274Z   • [DecidableEq V] (#3)
+2026-09-23T15:24:32.4607522Z 
+2026-09-23T15:24:32.4608420Z Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+2026-09-23T15:24:32.4609479Z 
+2026-09-23T15:24:32.4609858Z Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+2026-09-23T15:24:32.4610583Z Build completed successfully (2245 jobs).
+2026-09-23T15:24:47.9713102Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+2026-09-23T15:24:47.9720221Z Running Lean paranoid kernel on solution
+2026-09-23T15:25:13.1241584Z Lean paranoid kernel accepts the solution
+2026-09-23T15:25:13.1249864Z Running lean4lean kernel on solution
+2026-09-23T15:25:39.1981928Z checked 26553 declarations
+2026-09-23T15:25:39.2046880Z lean4lean kernel accepts the solution
+2026-09-23T15:25:39.2048372Z Running nanoda kernel on solution
+2026-09-23T15:25:47.1983459Z nanoda kernel accepts the solution
+2026-09-23T15:25:47.1984261Z Running con-leche kernel on solution
+2026-09-23T15:25:48.1599875Z con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+2026-09-23T15:25:48.1601365Z con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+2026-09-23T15:26:17.1481750Z con-leche: accepted 26552 declarations (--verified)
+2026-09-23T15:26:17.1590027Z con-leche kernel accepts the solution
+2026-09-23T15:26:17.1602563Z Running con-ron kernel on solution
+2026-09-23T15:26:17.9233075Z con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+2026-09-23T15:26:17.9234787Z con-ron: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+2026-09-23T15:26:46.7076223Z con-ron: accepted 26552 declarations (--verified)
+2026-09-23T15:26:46.9874807Z con-ron kernel accepts the solution
+2026-09-23T15:26:46.9875587Z Running Lean default kernel on solution
+2026-09-23T15:27:07.9015069Z Lean default kernel accepts the solution
+2026-09-23T15:27:07.9037830Z Your solution is okay!
+2026-09-23T15:27:07.9080981Z 	Command being timed: "lake comparator --paranoid"
+2026-09-23T15:27:07.9088660Z 	User time (seconds): 7.10
+2026-09-23T15:27:07.9089244Z 	System time (seconds): 0.40
+2026-09-23T15:27:07.9089889Z 	Percent of CPU this job got: 4%
+2026-09-23T15:27:07.9090571Z 	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:42.53
+2026-09-23T15:27:07.9093263Z 	Average shared text size (kbytes): 0
+2026-09-23T15:27:07.9093959Z 	Average unshared data size (kbytes): 0
+2026-09-23T15:27:07.9094608Z 	Average stack size (kbytes): 0
+2026-09-23T15:27:07.9095218Z 	Average total size (kbytes): 0
+2026-09-23T15:27:07.9095834Z 	Maximum resident set size (kbytes): 362048
+2026-09-23T15:27:07.9096503Z 	Average resident set size (kbytes): 0
+2026-09-23T15:27:07.9097387Z 	Major (requiring I/O) page faults: 0
+2026-09-23T15:27:07.9098248Z 	Minor (reclaiming a frame) page faults: 12026
+2026-09-23T15:27:07.9099030Z 	Voluntary context switches: 41412
+2026-09-23T15:27:07.9099664Z 	Involuntary context switches: 182
+2026-09-23T15:27:07.9100261Z 	Swaps: 0
+2026-09-23T15:27:07.9100760Z 	File system inputs: 0
+2026-09-23T15:27:07.9101331Z 	File system outputs: 330864
+2026-09-23T15:27:07.9101915Z 	Socket messages sent: 0
+2026-09-23T15:27:07.9102502Z 	Socket messages received: 0
+2026-09-23T15:27:07.9103078Z 	Signals delivered: 0
+2026-09-23T15:27:07.9103624Z 	Page size (bytes): 4096
+2026-09-23T15:27:07.9104174Z 	Exit status: 0
+2026-09-23T15:27:07.9290808Z Post job cleanup.
+2026-09-23T15:27:08.1577130Z [command]/usr/bin/git version
+2026-09-23T15:27:08.1697241Z git version 2.55.0
+2026-09-23T15:27:08.1842680Z Temporarily overriding HOME='/home/runner/work/_temp/c28376c5-ff47-4d45-862b-ea0bedb755d9' before making global git config changes
+2026-09-23T15:27:08.1843950Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-23T15:27:08.1859194Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/conway99-c3-experimental/conway99-c3-experimental
+2026-09-23T15:27:08.1972104Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-23T15:27:08.2076769Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-23T15:27:08.2415549Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-23T15:27:08.2467916Z http.https://github.com/.extraheader
+2026-09-23T15:27:08.2508312Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-23T15:27:08.2531815Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-23T15:27:08.2958861Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-23T15:27:08.3039306Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-23T15:27:08.3517042Z Cleaning up orphan processes
+2026-09-23T15:27:08.3904662Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

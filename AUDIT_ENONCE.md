@@ -134,9 +134,21 @@ aucune constante de type `False`. `con-ron`, son portage, reprend le même mode.
 
 Sous Windows, le bac à sable de `lake comparator` (`bwrap`) n'existe pas. Il faut donc `--inadvisably-no-sandbox`, et Lake
 prévient que le verdict « n'est pas fiable ». Le bac à sable protège contre du code malveillant *exécuté pendant la
-compilation* ; les contrôles eux-mêmes sont identiques. La même vérification, avec bac à sable, tourne sur GitHub Actions
-sur une machine Linux neuve, à partir du seul contenu du dépôt : voir `.github/workflows/lean-verify.yml` et l'onglet
-Actions du dépôt.
+compilation* ; les contrôles eux-mêmes sont identiques. D'où la seconde exécution :
+
+**Machine Linux neuve de GitHub, avec bac à sable** (2026-09-23, run 35880776817 : 2 cœurs, 7 Go de RAM), à partir du
+seul contenu du dépôt (commit `874903f`, workflow `.github/workflows/lean-verify.yml`). Journal :
+`logs/github_actions_run_35880776817.log`.
+
+| étape | résultat | durée |
+|---|---|---|
+| cache Mathlib, puis compilation de `C3formal`, `Challenge` et `Solution` | OK | 3 min 13 |
+| `C3formal/Check.lean` (axiomes des énoncés intermédiaires) | `propext`, `Classical.choice`, `Quot.sound` | 3 s |
+| `lake comparator` | **« Your solution is okay! »** | 44 s |
+| `lake comparator --paranoid` | les six vérificateurs acceptent ; `con-leche` et `con-ron` : 26 552 déclarations (`--verified`) ; **« Your solution is okay! »** | 2 min 43 |
+
+Le nombre de déclarations acceptées est le même que sur la machine d'origine : la compilation propre a produit la même
+preuve.
 
 Un premier passage (17:01, `logs/comparateur_local_2026-09-23_essai1.log`) s'était arrêté sur `con-leche` : le lanceur
 limitait alors la mémoire *engagée* à 5 Go. Or `con-leche` engage environ 5,6 Go (1 Gio de pile réservée par travailleur)
@@ -163,4 +175,5 @@ lake build C3formal Challenge Solution
 lake comparator --paranoid          # attendu : « Your solution is okay! »
 ```
 
-Le même contrôle tourne sur GitHub Actions, sur une machine Linux neuve (`.github/workflows/lean-verify.yml`).
+Le même contrôle tourne sur GitHub Actions, sur une machine Linux neuve, à chaque modification de `c3formal/`
+(`.github/workflows/lean-verify.yml`).

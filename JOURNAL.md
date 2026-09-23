@@ -111,7 +111,10 @@
   dépendances) est accepté par le noyau de Lean, `leanchecker-paranoid`, `lean4lean`, `nanoda`, `con-leche` et `con-ron`.
   Journal : `logs/comparateur_local_2026-09-23.log`. Premier essai arrêté par mon plafond sur la mémoire *engagée* (voir
   `logs/con-leche_local_2026-09-23.log`) ; RAM réelle maximale de la vérification complète : 1,2 Go.
-- Vérification avec bac à sable sur machine Linux neuve : `.github/workflows/lean-verify.yml` (GitHub Actions).
+- Vérification avec bac à sable sur machine Linux neuve : `.github/workflows/lean-verify.yml`, run GitHub Actions
+  35880776817 (2 cœurs, 7 Go ; commit `874903f`). Recompilation depuis le dépôt OK ; `lake comparator` puis
+  `lake comparator --paranoid` : **« Your solution is okay! »**, six vérificateurs, 26 552 déclarations comme en local.
+  Journal : `logs/github_actions_run_35880776817.log`.
 - Document pour le relecteur : `AUDIT_ENONCE.md`.
 - Statut : l'énoncé Lean est contrôlé par machine (énoncé isolé, comparateur, six noyaux, non-vacuité). Le résultat
   mathématique reste DÉRIVÉ + vérifié par machine ; aucune relecture humaine indépendante à ce jour.
