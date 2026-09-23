@@ -6,14 +6,21 @@
 
 **Statut.** Preuve candidate, pas encore relue par un tiers. Elle est entièrement vérifiée en Lean 4 / Mathlib, à partir de la
 définition de Mathlib d'un graphe fortement régulier, sans `sorry` ni axiome supplémentaire, et sans entrée extérieure.
+L'énoncé est isolé dans un fichier qui n'importe que Mathlib, et `lake comparator` contrôle que la preuve démontre exactement
+cet énoncé (voir `AUDIT_ENONCE.md`).
 
 **Par où commencer.**
-1. `pdf/preuve_c3.pdf` : la preuve mathématique (6 pages, en français).
-2. `c3formal/README.md` : la formalisation Lean. L'énoncé final est `C3.no_order3` (`c3formal/C3formal/FixLemma.lean`) :
-   tout automorphisme σ tel que σ³ = 1 est l'identité. Un relecteur n'a à contrôler que cet énoncé ; tout le reste est
-   vérifié par le noyau de Lean.
-3. `ENVIRONNEMENT.md` : versions exactes, reproduction de la vérification, contrôle d'intégrité (`SHA256SUMS`).
-4. `JOURNAL.md`, `IDEES.md`, `notes/` : le déroulé de la recherche, y compris les pistes abandonnées ; `scripts/`, `logs/`,
+1. `c3formal/Challenge.lean` : **l'énoncé, et rien d'autre**. 98 lignes, n'importe que Mathlib, aucune définition, preuves
+   `sorry`. C'est le seul fichier Lean à lire. On y trouve la forme « graphe » (`G.IsSRGWith 99 14 1 2`, σ³ = 1 ⇒ σ = 1), les
+   formes « groupe » (aucun élément d'ordre 3 ; 3 ne divise pas |Aut|), une forme élémentaire en matrice booléenne sans
+   bibliothèque de graphes, et un test de non-vacuité sur srg(9, 4, 1, 2).
+2. `AUDIT_ENONCE.md` : ce que garantit `lake comparator`, les définitions de Mathlib citées textuellement, les résultats des
+   vérifications (noyau de Lean et vérificateurs indépendants) et ce qui reste à contrôler par un humain.
+3. `pdf/preuve_c3.pdf` : la preuve mathématique (6 pages, en français).
+4. `c3formal/README.md` : la formalisation Lean, fichier par fichier. Le théorème principal du projet est `C3.no_order3`
+   (`c3formal/C3formal/FixLemma.lean`) ; `c3formal/Solution.lean` en déduit les énoncés de `Challenge.lean`.
+5. `ENVIRONNEMENT.md` : versions exactes, reproduction de la vérification, contrôle d'intégrité (`SHA256SUMS`).
+6. `JOURNAL.md`, `IDEES.md`, `notes/` : le déroulé de la recherche, y compris les pistes abandonnées ; `scripts/`, `logs/`,
    `data/` : les calculs exploratoires et leurs sorties.
 
 Ce dossier est l'état exact du laboratoire sur la machine d'origine. Seuls l'environnement Python (`.venv/`) et le cache

@@ -1,0 +1,3 @@
+leanchecker found a problem in C3formal
+uncaught exception: failed to read file 'C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\batteries\.lake\build\lib\lean\Batteries\Data\List\Basic.olean'
+exit=1

@@ -35,9 +35,12 @@ Remarques :
 - L'identité d'Ishida n'intervient nulle part (voir `TriangleMatrix.lean`).
 
 ## Ce qu'un relecteur doit contrôler (la « base de confiance »)
-L'énoncé de `C3.no_order3` ci-dessus. Il n'emploie que des définitions de Mathlib (`SimpleGraph`, `IsSRGWith`, `≃g`).
-Tout le reste est vérifié par le noyau de Lean. (Pour les énoncés matriciels intermédiaires : `Eis.lean`, `J`, `φ3`, `At`,
-`Jw`, `wt`.)
+Le fichier `Challenge.lean`, et lui seul. Il n'importe que Mathlib, ne contient aucune définition, et énonce le résultat
+sous plusieurs formes (graphe, groupe, matrice booléenne sans Mathlib), plus un test de non-vacuité sur srg(9, 4, 1, 2).
+`Solution.lean` démontre ces énoncés à partir de `C3.no_order3`. `lake comparator` (configuration `comparator.json`)
+vérifie que les énoncés sont identiques, que les axiomes sont standard, et que le noyau de Lean et cinq vérificateurs
+indépendants acceptent les preuves. Détails et résultats : `../AUDIT_ENONCE.md`. (Pour les énoncés matriciels
+intermédiaires : `Eis.lean`, `J`, `φ3`, `At`, `Jw`, `wt`.)
 
 ## Fichiers (dans l'ordre logique)
 | fichier | contenu |
@@ -61,6 +64,9 @@ Tout le reste est vérifié par le noyau de Lean. (Pour les énoncés matriciels
 | `TriangleGraph.lean` | réétiquetage `V ≃ (Fin 32 × ZMod 3) ⊕ Fin 3`, `fixed_adj`, **proposition 2**, `no_order3_fix_le3` |
 | `FixLemma.lean` | lemme des points fixes (au plus 3) et **énoncé final `no_order3`** |
 | `Check.lean` | `#print axioms` des énoncés |
+| `../Challenge.lean` | **l'énoncé seul** (n'importe que Mathlib, preuves `sorry`) |
+| `../Solution.lean` | les mêmes théorèmes, démontrés à partir de `C3.no_order3` |
+| `../comparator.json` | la configuration de `lake comparator` : les 7 théorèmes, les axiomes permis |
 
 ## Reproduire
 ```
@@ -68,4 +74,6 @@ cd c3formal
 lake exe cache get      # cache Mathlib
 lake build              # compile tout (~2240 tâches ; quelques minutes une fois le cache présent)
 lake env lean C3formal/Check.lean   # affiche les axiomes utilisés
+lake build Challenge Solution
+lake comparator --paranoid          # Linux (bac à sable bwrap) ; attendu : « Your solution is okay! »
 ```

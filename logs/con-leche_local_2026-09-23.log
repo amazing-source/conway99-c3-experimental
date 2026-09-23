@@ -1,0 +1,87 @@
+# con-leche sur l'export de Solution (145 Mo, 26582 enregistrements), machine d'origine.
+# Essais 1 à 5 : plafond sur la mémoire ENGAGÉE à 5000 Mo ; con-leche s'arrête (« out of memory » ou « Stack overflow »)
+# alors que sa RAM réelle reste vers 450 Mo (essai conleche_mesure). Essai 6 : plafond sur la RAM réelle (4000 Mo),
+# garde-fou de 10 Go sur la mémoire engagée : « accepted 26552 declarations (--verified) », 943 Mo de RAM au maximum.
+
+## conleche_j2
+17:04:55  START cap=5000MB timeout=5400s minfree=2000MB avail=5888MB | C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe --jobs=2 --progress C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+con-leche: parse done: 26582 fold records — 26574 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=0.6s (parse 0.6s)
+(dernières lignes de progression :)
+con-leche: check 25870/25872 theorem String.mk._proof_1 t=25.8s
+con-leche: check 25871/25872 definition String.mk t=25.8s
+(sortie standard :)
+
+## conleche_j2b
+17:07:51  START pid=23924 cap=5000MB timeout=5400s minfree=2000MB avail=5784MB | "C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe" --jobs=2 --progress C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+17:08:21  running 30s  job now 4968MB  max 4968MB  machine avail 5129MB
+17:08:24  END exit=1 time=33s max=4968MB peak=5000MB (cap 5000MB)
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+con-leche: parse done: 26582 fold records — 26574 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=0.6s (parse 0.6s)
+INTERNAL PANIC: out of memory
+(dernières lignes de progression :)
+con-leche: check 25870/25872 theorem String.mk._proof_1 t=17.3s
+con-leche: check 25871/25872 definition String.mk t=17.3s
+(sortie standard :)
+
+## conleche_j1
+17:08:52  START pid=30600 cap=5000MB timeout=3600s minfree=2000MB avail=5798MB | "C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe" --jobs=1 --progress C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+17:09:22  running 30s  job now 4550MB  max 4551MB  machine avail 5364MB
+17:09:30  END exit=1 time=37s max=4968MB peak=5000MB (cap 5000MB)
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+con-leche: parse done: 26582 fold records — 26574 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=0.6s (parse 0.6s)
+INTERNAL PANIC: out of memory
+(dernières lignes de progression :)
+con-leche: check 24582/25872 theorem C3.Tri.step4_tri t=33.1s
+con-leche: check 24583/25872 theorem C3.Tri.no_triangle_pair t=33.1s
+(sortie standard :)
+
+## conleche_trusted
+17:10:16  START pid=12568 cap=5000MB timeout=3600s minfree=2000MB avail=5793MB | "C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe" --trusted --jobs=1 --progress C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+17:10:46  running 30s  job now 4775MB  max 4775MB  machine avail 5269MB
+17:10:51  END exit=1 time=34s max=4968MB peak=5000MB (cap 5000MB)
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+con-leche: parse done: 26582 fold records — 26574 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=0.6s (parse 0.6s)
+INTERNAL PANIC: out of memory
+(dernières lignes de progression :)
+con-leche: check 24582/25872 theorem C3.Tri.step4_tri t=31.2s
+con-leche: check 24583/25872 theorem C3.Tri.no_triangle_pair t=31.2s
+(sortie standard :)
+
+## conleche_mesure
+17:12:51  START pid=26688 cap=5000MB timeout=600s minfree=2000MB avail=5650MB | "C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe" --jobs=1 C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+17:12:57  running 6s  commit 4999MB  RAM(private WS) 451MB  WS 472MB  | max commit 4999MB  max RAM 451MB  machine avail 5228MB
+17:13:01  running 11s  commit 4999MB  RAM(private WS) 454MB  WS 475MB  | max commit 4999MB  max RAM 454MB  machine avail 5204MB
+17:13:06  running 15s  commit 4999MB  RAM(private WS) 454MB  WS 475MB  | max commit 4999MB  max RAM 454MB  machine avail 5202MB
+17:13:12  running 21s  commit 4999MB  RAM(private WS) 455MB  WS 476MB  | max commit 4999MB  max RAM 455MB  machine avail 5214MB
+17:13:16  running 26s  commit 4999MB  RAM(private WS) 455MB  WS 476MB  | max commit 4999MB  max RAM 455MB  machine avail 5164MB
+17:13:21  running 30s  commit 4999MB  RAM(private WS) 455MB  WS 476MB  | max commit 4999MB  max RAM 455MB  machine avail 5198MB
+17:13:23  END exit=3221226505 time=33s max commit=4999MB max RAM=455MB peak=5000MB (cap 5000MB)
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+
+Stack overflow detected. Aborting.
+(dernières lignes de progression :)
+(sortie standard :)
+
+## conleche_ram
+17:14:55  START pid=27916 RAM cap=4000MB commit cap=10000MB timeout=3600s minfree RAM=2000MB commit=3000MB | avail RAM=5734MB commit=13769MB | "C:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\con-leche.exe" --jobs=2 --progress C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\solution.ndjson
+17:15:05  running 10s  RAM 480MB (max 480)  commit 4191MB (max 4191)  | machine: RAM avail 5236MB, commit headroom 9574MB
+17:15:14  END exit=0 time=19s max RAM=943MB max commit=4797MB peak commit=4797MB (RAM cap 4000MB, commit cap 10000MB)
+con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+con-leche: parse done: 26582 fold records — 26574 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=0.6s (parse 0.6s)
+con-leche: done: parse 0.6s, install 6.3s, check 12.0s, 2 workers t=19.1s
+(dernières lignes de progression :)
+con-leche: check 25872/25872 theorem C3.Tri.no_tri_shift_invariant t=19.0s
+con-leche: check done: 25872/25872 t=19.1s (check 12.0s)
+(sortie standard :)
+con-leche: accepted 26552 declarations (--verified)
+
+## Note sur conleche_j2
+Le lanceur de l'époque était lui-même dans le job plafonné ; il est mort d'OutOfMemoryException à 17:05:20
+(journal d'événements Windows) et a entraîné con-leche avec lui. Lanceur corrigé ensuite (hors du job).

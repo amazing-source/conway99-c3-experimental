@@ -16,3 +16,11 @@ rev = "v4.35.0-rc2"
 
 [[lean_lib]]
 name = "C3formal"
+
+# The statement alone (imports Mathlib only; every proof is `sorry`), and its proofs.
+# `lake comparator` (config: comparator.json) checks that the two state exactly the same theorems.
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"

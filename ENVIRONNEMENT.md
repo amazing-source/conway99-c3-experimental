@@ -36,8 +36,20 @@ cd c3formal
 lake exe cache get
 lake build                          # ~2240 tâches
 lake env lean C3formal/Check.lean   # axiomes : [propext, Classical.choice, Quot.sound]
+lake build Challenge Solution
+lake comparator --paranoid          # Linux ; attendu : « Your solution is okay! »
 ```
-Sortie de référence sur la machine d'origine : `logs/lean_axioms_final.log`.
+Sorties de référence sur la machine d'origine : `logs/lean_axioms_final.log`, `logs/comparateur_local_2026-09-23.log`.
+`lake comparator` isole la compilation et l'export dans un bac à sable `bwrap`, qui n'existe que sous Linux ; sous Windows il
+faut `--inadvisably-no-sandbox`, et Lake prévient alors que le verdict n'est pas fiable. La vérification complète, avec bac à
+sable, tourne sur GitHub Actions à chaque modification de `c3formal/` (`.github/workflows/lean-verify.yml`).
+
+Mémoire, pour qui relance sur une petite machine : un processus `lean` qui importe le projet occupe quelques centaines de Mo de
+RAM réelle, mais engage environ 3 Go (fichiers `.olean` de Mathlib chargés en mémoire). `con-leche` engage environ 5 Go pour
+moins de 1 Go de RAM réelle. Un plafond sur la mémoire engagée (et non sur la RAM) le fait donc échouer sans raison. Avec
+`--paranoid`, il lance un travailleur par fil du processeur ; seul, on peut le limiter : `con-leche --jobs=2 export.ndjson`.
+Enfin, `lake env leanchecker C3formal` rejoue les 22 modules en parallèle, chacun avec sa propre copie de Mathlib : environ
+8 Go de RAM ; il faut vérifier les modules un par un, ou passer par `lake comparator`.
 
 ## Recompiler le PDF
 ```

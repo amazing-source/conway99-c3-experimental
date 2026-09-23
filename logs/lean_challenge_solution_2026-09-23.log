@@ -1,0 +1,33 @@
+# Compilation de Challenge.lean et Solution.lean (lean -j4, options du lakefile), plafond 4000 Mo
+16:59:00  START cap=4000MB timeout=1500s minfree=2000MB avail=5724MB | powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\leanfiles.ps1 -List Challenge.lean,Solution.lean
+16:59:17  END exit=0 time=17s max=3209MB peak=3232MB (cap 4000MB)
+===== Challenge.lean
+Challenge.lean:32:8: warning: declaration uses `sorry`
+Challenge.lean:39:8: warning: declaration uses `sorry`
+Challenge.lean:45:8: warning: declaration uses `sorry`
+Challenge.lean:56:8: warning: declaration uses `sorry`
+Challenge.lean:73:8: warning: declaration uses `sorry`
+Challenge.lean:80:8: warning: declaration uses `sorry`
+Challenge.lean:86:8: warning: declaration uses `sorry`
+===== Challenge.lean : exit=0 in 7 s
+===== Solution.lean
+===== Solution.lean : exit=0 in 8 s
+
+# lake build Challenge, puis lake build Solution, plafond 5000 Mo
+16:59:41  START cap=5000MB timeout=1500s minfree=2000MB avail=5731MB | powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\lakebuild.ps1 -List Challenge,Solution
+17:00:02  END exit=0 time=21s max=4283MB peak=4315MB (cap 5000MB)
+===== lake build Challenge
+⚠ [1367/1368] Built Challenge (6.5s)
+warning: Challenge.lean:32:8: declaration uses `sorry`
+warning: Challenge.lean:39:8: declaration uses `sorry`
+warning: Challenge.lean:45:8: declaration uses `sorry`
+warning: Challenge.lean:56:8: declaration uses `sorry`
+warning: Challenge.lean:73:8: declaration uses `sorry`
+warning: Challenge.lean:80:8: declaration uses `sorry`
+warning: Challenge.lean:86:8: declaration uses `sorry`
+Build completed successfully (1368 jobs).
+===== lake build Challenge : exit=0 in 9 s
+===== lake build Solution
+✔ [2244/2245] Built Solution (8.4s)
+Build completed successfully (2245 jobs).
+===== lake build Solution : exit=0 in 11 s

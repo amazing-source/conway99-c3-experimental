@@ -1,0 +1,388 @@
+# lake comparator --paranoid, machine d'origine (Windows 11), 2026-09-23 17:15 : RÉFÉRENCE
+# Sans bac à sable (bwrap n'existe que sous Linux) : --inadvisably-no-sandbox.
+# Lancé par run_capped.ps1 : plafond de 4000 Mo sur la RAM réelle du job (colonne « Mémoire » du Gestionnaire des
+# tâches), garde-fou de 10 Go sur la mémoire engagée. Lignes du lanceur (RAM = RAM réelle ; commit = mémoire engagée) :
+17:15:40  START pid=4436 RAM cap=4000MB commit cap=10000MB timeout=5400s minfree RAM=2000MB commit=3000MB | avail RAM=5703MB commit=13761MB | "powershell.exe" -NoProfile -ExecutionPolicy Bypass -File C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\e4a713ae-3339-49d5-8f99-4e0d7c67b7e3\scratchpad\comparator.ps1 -Extra --paranoid
+17:15:50  running 10s  RAM 108MB (max 387)  commit 1085MB (max 2699)  | machine: RAM avail 5146MB, commit headroom 12636MB
+17:16:00  running 20s  RAM 65MB (max 482)  commit 109MB (max 3437)  | machine: RAM avail 5506MB, commit headroom 13660MB
+17:16:10  running 30s  RAM 462MB (max 497)  commit 524MB (max 3437)  | machine: RAM avail 5244MB, commit headroom 13276MB
+17:16:20  running 40s  RAM 470MB (max 497)  commit 537MB (max 3437)  | machine: RAM avail 5232MB, commit headroom 13244MB
+17:16:30  running 50s  RAM 223MB (max 497)  commit 277MB (max 3437)  | machine: RAM avail 5486MB, commit headroom 13492MB
+17:16:40  running 60s  RAM 226MB (max 497)  commit 284MB (max 3437)  | machine: RAM avail 5576MB, commit headroom 13531MB
+17:16:50  running 70s  RAM 234MB (max 497)  commit 719MB (max 3437)  | machine: RAM avail 5529MB, commit headroom 13066MB
+17:17:00  running 80s  RAM 1018MB (max 1018)  commit 5572MB (max 5572)  | machine: RAM avail 4746MB, commit headroom 8212MB
+17:17:10  running 90s  RAM 474MB (max 1187)  commit 539MB (max 5892)  | machine: RAM avail 5270MB, commit headroom 13235MB
+17:17:20  running 100s  RAM 60MB (max 1187)  commit 120MB (max 5892)  | machine: RAM avail 5733MB, commit headroom 13690MB
+17:17:30  running 110s  RAM 229MB (max 1187)  commit 285MB (max 5892)  | machine: RAM avail 5496MB, commit headroom 13478MB
+17:17:36  END exit=0 time=116s max RAM=1187MB max commit=5892MB peak commit=5893MB (RAM cap 4000MB, commit cap 10000MB)
+# Sortie de lake comparator (horodatée) :
+17:15:40  lake comparator --inadvisably-no-sandbox --paranoid
+17:15:40  WARNING: Sandbox disabled, this run is not trustworthy.
+17:15:42  Resolving dependencies
+17:15:42  Building Challenge
+17:15:44  ⚠ [1367/1368] Replayed Challenge
+17:15:44  warning: Challenge.lean:32:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:39:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:45:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:56:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:73:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:80:8: declaration uses `sorry`
+17:15:44  warning: Challenge.lean:86:8: declaration uses `sorry`
+17:15:44  Build completed successfully (1368 jobs).
+17:15:48  Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+17:15:48  Building Solution
+17:15:51  ⚠ [1791/2004] Replayed C3formal.Step5
+17:15:51  warning: C3formal/Step5.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [1793/2004] Replayed C3formal.Saturated
+17:15:51  warning: C3formal/Saturated.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [1804/2004] Replayed C3formal.NumberTheory
+17:15:51  warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [1886/2004] Replayed C3formal.IntPart
+17:15:51  warning: C3formal/IntPart.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  ⚠ [1887/2004] Replayed C3formal.EisEuclid
+17:15:51  warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [2205/2245] Replayed C3formal.EisComplex
+17:15:51  warning: C3formal/EisComplex.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [2206/2245] Replayed C3formal.Main
+17:15:51  warning: C3formal/Main.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  ⚠ [2208/2245] Replayed C3formal.SaturatedGen
+17:15:51  warning: C3formal/SaturatedGen.lean:16:0: `exists_kernel_basis'` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq ι] (#7)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  ⚠ [2210/2245] Replayed C3formal.TriangleMain
+17:15:51  warning: C3formal/TriangleMain.lean:78:0: automatically included section variable(s) unused in theorem `C3.Tri.X_mul_Nt`:
+17:15:51    hQs
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit hQs in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/TriangleMain.lean:86:0: automatically included section variable(s) unused in theorem `C3.Tri.Jw_mul_eig`:
+17:15:51    hsq
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit hsq in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  ⚠ [2212/2245] Replayed C3formal.TriangleStep4
+17:15:51  warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+17:15:51  
+17:15:51  Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+17:15:51    [apply] _hCB
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedVariables false`
+17:15:51  ⚠ [2213/2245] Replayed C3formal.Bridge
+17:15:51  warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  ⚠ [2214/2245] Replayed C3formal.TriangleBridge
+17:15:51  warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  ⚠ [2240/2245] Replayed C3formal.Graph
+17:15:51  warning: C3formal/Graph.lean:28:0: automatically included section variable(s) unused in theorem `C3.iter_mod`:
+17:15:51    [Fintype V]
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [Fintype V] [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/Graph.lean:44:0: automatically included section variable(s) unused in theorem `C3.sp_zero`:
+17:15:51    [Fintype V]
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [Fintype V] [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/Graph.lean:46:0: automatically included section variable(s) unused in theorem `C3.sp_one`:
+17:15:51    [Fintype V]
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [Fintype V] [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/Graph.lean:49:0: automatically included section variable(s) unused in theorem `C3.sp_eq_self`:
+17:15:51    [Fintype V]
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [Fintype V] [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/Graph.lean:75:0: `exists_relabel` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/Graph.lean:113:0: `no_free_order3` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  ⚠ [2241/2245] Replayed C3formal.TriangleGraph
+17:15:51  warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+17:15:51  Copyright too short!
+17:15:51  
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.header false`
+17:15:51  warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/TriangleGraph.lean:27:0: `exists_relabel_free` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/TriangleGraph.lean:59:0: automatically included section variable(s) unused in theorem `C3.not_fixed_iff`:
+17:15:51    [Fintype V]
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [Fintype V] [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/TriangleGraph.lean:58:0: `not_fixed_iff` does not use the following hypothesis in its type:
+17:15:51    • [Fintype V] (#2)
+17:15:51  
+17:15:51  Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+17:15:51  warning: C3formal/TriangleGraph.lean:116:0: `common_nbr_fixed` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  ⚠ [2242/2245] Replayed C3formal.FixLemma
+17:15:51  warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/FixLemma.lean:43:0: automatically included section variable(s) unused in theorem `C3.mem_fixF`:
+17:15:51    [DecidableRel G.Adj]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [DecidableRel G.Adj] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/FixLemma.lean:43:0: `mem_fixF` does not use the following hypothesis in its type:
+17:15:51    • [DecidableRel G.Adj] (#5)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/FixLemma.lean:47:0: automatically included section variable(s) unused in theorem `C3.card_le_common`:
+17:15:51    [DecidableEq V]
+17:15:51  consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+17:15:51    omit [DecidableEq V] in theorem ...
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+17:15:51  warning: C3formal/FixLemma.lean:46:0: `card_le_common` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/FixLemma.lean:55:0: `fixed_of_two_fixed` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  warning: C3formal/FixLemma.lean:103:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/FixLemma.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/FixLemma.lean:315:100: This line exceeds the 100 character limit, please shorten it!
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.style.longLine false`
+17:15:51  warning: C3formal/FixLemma.lean:359:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+17:15:51  If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+17:15:51  ```
+17:15:51  open Lean.Parser.Tactic in
+17:15:51  macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+17:15:51    `(tactic| push $cfg:optConfig Not $[$loc]?)
+17:15:51  ```
+17:15:51  warning: C3formal/FixLemma.lean:374:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+17:15:51  If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+17:15:51  ```
+17:15:51  open Lean.Parser.Tactic in
+17:15:51  macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+17:15:51    `(tactic| push $cfg:optConfig Not $[$loc]?)
+17:15:51  ```
+17:15:51  warning: C3formal/FixLemma.lean:382:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+17:15:51  If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+17:15:51  ```
+17:15:51  open Lean.Parser.Tactic in
+17:15:51  macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+17:15:51    `(tactic| push $cfg:optConfig Not $[$loc]?)
+17:15:51  ```
+17:15:51  warning: C3formal/FixLemma.lean:390:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+17:15:51  If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+17:15:51  ```
+17:15:51  open Lean.Parser.Tactic in
+17:15:51  macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+17:15:51    `(tactic| push $cfg:optConfig Not $[$loc]?)
+17:15:51  ```
+17:15:51  warning: C3formal/FixLemma.lean:352:0: `no_order3` does not use the following hypothesis in its type:
+17:15:51    • [DecidableEq V] (#3)
+17:15:51  
+17:15:51  Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+17:15:51  
+17:15:51  Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+17:15:51  Build completed successfully (2245 jobs).
+17:16:05  Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Conway99.srg99_aut_cube, Conway99.srg99_no_orderOf_three, Conway99.srg99_three_not_dvd_card_aut, Conway99.srg99_elementary, Conway99.srg9_aut_cube_false, Conway99.srg9_group_forms_false, Conway99.srg9_elementary_false, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+17:16:05  Running Lean paranoid kernel on solution
+17:16:24  Lean paranoid kernel accepts the solution
+17:16:24  Running lean4lean kernel on solution
+17:16:45  checked 26553 declarations
+17:16:45  lean4lean kernel accepts the solution
+17:16:45  Running nanoda kernel on solution
+17:16:49  nanoda kernel accepts the solution
+17:16:49  Running con-leche kernel on solution
+17:16:50  con-leche: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+17:16:50  con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+17:17:02  con-leche: accepted 26552 declarations (--verified)
+17:17:02  con-leche kernel accepts the solution
+17:17:02  Running con-ron kernel on solution
+17:17:03  con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+17:17:03  con-ron: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
+17:17:19  con-ron: accepted 26552 declarations (--verified)
+17:17:20  con-ron kernel accepts the solution
+17:17:20  Running Lean default kernel on solution
+17:17:36  Lean default kernel accepts the solution
+17:17:36  Your solution is okay!
+17:17:36  exit=0

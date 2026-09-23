@@ -90,3 +90,28 @@
   jour ; 6 pages. Sauvegarde de la version précédente : `pdf/preuve_c3_v2_avant_lemme_fix.tex`.
 - Statut : corollaire 3 (aucun automorphisme d'ordre 3) : DÉRIVÉ + vérifié par machine, sans entrée extérieure.
   Aucune relecture humaine indépendante à ce jour.
+
+## Consolidation de l'énoncé Lean (2026-09-23, 16:30–17:30)
+- Demande de l'utilisateur : qu'il ne reste aucun doute sur « l'énoncé Lean dit bien ce qu'on croit », avant une relecture
+  humaine éventuelle.
+- Incident préalable (16:11–16:23) : `lake env leanchecker C3formal` rejoue les 22 modules en parallèle, chacun avec sa
+  copie de Mathlib : environ 8 Go de RAM sur 15,4. Arrêt sur « failed to read file …olean », un échec de chargement faute de
+  mémoire, pas un verdict sur la preuve (`logs/leanchecker.log`). Toutes les exécutions suivantes passent par un lanceur
+  qui plafonne la RAM réelle du job à 4000 Mo et l'arrête au-delà.
+- `c3formal/Challenge.lean` : l'énoncé seul. Il n'importe que trois modules de Mathlib, ne contient aucune définition, et
+  ses preuves sont `sorry`. Quatre formes : graphe (`srg99_aut_cube`), groupe (`srg99_no_orderOf_three`,
+  `srg99_three_not_dvd_card_aut`), élémentaire (`srg99_elementary` : matrice booléenne sur `Fin 99` et `List.countP`, sans
+  Mathlib). Trois tests de non-vacuité sur srg(9, 4, 1, 2), avec la tour 3 × 3 et le décalage des lignes, d'ordre 3.
+- `c3formal/Solution.lean` : les mêmes énoncés, démontrés à partir de `C3.no_order3`. Forme élémentaire : `graphOf`
+  (matrice → `SimpleGraph`, comptages `List.countP` → `IsSRGWith`) et `autOf` (σ³ = id ⇒ automorphisme). Formes groupe :
+  `pow_three`, `orderOf`, théorème de Cauchy (`exists_prime_orderOf_dvd_card'`). Faits sur la tour 3 × 3 : `decide`.
+- `lake comparator --paranoid` (outil intégré à Lake 4.35 ; configuration `c3formal/comparator.json`), machine d'origine,
+  sans bac à sable (Windows) : **« Your solution is okay! »**. Les énoncés et les définitions sont identiques ; les
+  axiomes sont `propext`, `Quot.sound` et `Classical.choice` ; l'export (26 582 déclarations, 145 Mo, preuve et toutes ses
+  dépendances) est accepté par le noyau de Lean, `leanchecker-paranoid`, `lean4lean`, `nanoda`, `con-leche` et `con-ron`.
+  Journal : `logs/comparateur_local_2026-09-23.log`. Premier essai arrêté par mon plafond sur la mémoire *engagée* (voir
+  `logs/con-leche_local_2026-09-23.log`) ; RAM réelle maximale de la vérification complète : 1,2 Go.
+- Vérification avec bac à sable sur machine Linux neuve : `.github/workflows/lean-verify.yml` (GitHub Actions).
+- Document pour le relecteur : `AUDIT_ENONCE.md`.
+- Statut : l'énoncé Lean est contrôlé par machine (énoncé isolé, comparateur, six noyaux, non-vacuité). Le résultat
+  mathématique reste DÉRIVÉ + vérifié par machine ; aucune relecture humaine indépendante à ce jour.
