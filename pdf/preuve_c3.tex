@@ -31,7 +31,7 @@
 \author{Rédaction : Claude (Opus 5.5), pour D.~Djematene}
 \date{23 septembre 2026 \\[4pt]
 \textcolor{red!60!black}{\textbf{Preuve candidate, non encore relue par un tiers.}}\\[2pt]
-\small Tous les énoncés sont vérifiés en Lean~4 / Mathlib (voir §6).}
+\small Tout est vérifié en Lean~4 / Mathlib (voir §6), sauf le corollaire~8, qui s'appuie sur des résultats publiés.}
 
 \begin{document}
 \maketitle
@@ -46,6 +46,8 @@ et le second vaut $1$, car seul le premier $7$ y intervient. Le cas d'un triangl
 observé que les coordonnées des points fixes sont divisibles par~3.
 Un comptage élémentaire (qui redémontre un résultat de Makhnev et Minakova) montre qu'un automorphisme d'ordre~3 a au plus trois
 points fixes ; il en résulte que $\Gamma$ n'a aucun automorphisme d'ordre~3.
+Le cas sans point fixe était le seul cas d'ordre premier laissé ouvert par la recherche sur ordinateur de Behbahani et Lam ;
+joint aux résultats publiés, on obtient que le groupe d'automorphismes de $\Gamma$ est trivial ou d'ordre~2.
 La preuve est de l'algèbre linéaire élémentaire sur $\Z$ et $\Z[\omega]$, sans calcul par ordinateur ; elle est entièrement
 vérifiée en Lean~4, à partir de la définition d'un graphe fortement régulier, sans aucune entrée extérieure.
 \end{abstract}
@@ -76,13 +78,30 @@ Soit $g\ne1$ avec $g^3=1$. Par le lemme~\ref{lem:fix} (§5), $g$ a au plus trois
 $\equiv 99\equiv0\pmod3$, car les autres sommets forment des orbites de taille~3 : il vaut donc $0$ ou $3$, et l'on conclut par le
 théorème~\ref{thm:libre} et la proposition~\ref{prop:triangle}. (Le lemme~\ref{lem:fix} est dû à Makhnev et Minakova \cite{MM04},
 sous la forme « les points fixes forment l'ensemble vide ou un triangle » ; le cas avec points fixes est aussi exclu, par une
-recherche sur ordinateur, dans \cite{B09,BL11}.)
+recherche sur ordinateur, dans \cite[th.~4.14]{B09} et \cite{BL11}.)
 \end{proof}
 
-\emph{Contexte.} Makhnev et Minakova montrent que $|\mathrm{Aut}(\Gamma)|$ divise $2\cdot 3^3\cdot 7\cdot 11$ ; Cesarz et Woldar
-\cite{CW23} montrent que si $2$ divise $|\mathrm{Aut}(\Gamma)|$, alors $|\mathrm{Aut}(\Gamma)|$ divise $6$. Le cas de l'ordre~3 sans
-point fixe restait ouvert. L'identité trace--rang d'Ishida \cite{I26} y impose exactement six orbites triangulaires. L'argument
-ci-dessous exploite l'invariant suivant, le \emph{discriminant}, et retrouve ce $\tau=6$ au passage (remarque~\ref{rem:tau}).
+\paragraph{Contexte.} L'existence d'un $\srg(99,14,1,2)$ est un problème ouvert ; c'est l'un des cinq problèmes à 1\,000 dollars de
+Conway \cite{Co}. Voir \cite{W84} pour une première étude de ce graphe et \cite{BVM22} pour le cadre général. Sur le groupe
+$G=\mathrm{Aut}(\Gamma)$, on savait ceci.
+\begin{itemize}[leftmargin=*,nosep]
+\item Makhnev et Minakova \cite{MM04}, par la théorie des caractères : $|G|$ divise $2\cdot3^3\cdot7\cdot11$, et un
+automorphisme d'ordre~3 fixe soit aucun sommet, soit les trois sommets d'un triangle.
+\item Behbahani et Lam \cite{B09,BL11}, par une recherche sur ordinateur (matrices d'orbites) : seuls $2$ et $3$ peuvent diviser
+$|G|$, et un automorphisme d'ordre~3 n'a aucun point fixe \cite[th.~4.14]{B09}. Le cas d'un automorphisme d'ordre~3 sans point
+fixe est le seul que ce calcul n'a pas tranché \cite[table~21]{B09}.
+\item Crnković et Maksimović \cite{CM20}, par ordinateur : $\Gamma$ n'admet aucun groupe d'automorphismes d'ordre $6$ ou $9$.
+\item Makhnev \cite[cor.~2.4]{Mak10} : si $2$ divise $|G|$, alors $|G|$ divise $42$. Cesarz et Woldar \cite{CW25}, sans
+ordinateur : si $7$ divise $|G|$, alors $G\simeq\Z/7\Z$ ; par suite, si $2$ divise $|G|$, alors $|G|$ divise $6$.
+\item Ishida \cite[prop.~8.7]{I26}, par une identité trace--rang : un automorphisme d'ordre~3 sans point fixe a exactement six
+orbites qui induisent un triangle.
+\end{itemize}
+Réunis, ces résultats donnent $|G|\in\{1,2,3\}$ : le seul cas encore ouvert était un automorphisme d'ordre~3 sans point fixe.
+Il est encore déclaré non résolu dans \cite{TS26}, après une tentative par solveur CP-SAT (voir aussi \cite{K26} pour une
+approche par solveur SAT sans hypothèse de symétrie). Le théorème~\ref{thm:libre} le ferme ; la proposition~\ref{prop:triangle}
+et le lemme~\ref{lem:fix} redémontrent, sans ordinateur, le cas avec points fixes. Le corollaire~\ref{cor:aut} (§5) en tire les
+conséquences pour $|G|$. L'argument exploite l'invariant suivant, le \emph{discriminant}, et retrouve au passage le nombre six
+d'Ishida (remarque~\ref{rem:tau}).
 
 %====================================================================
 \section{Réduction à un énoncé sur des matrices}
@@ -103,7 +122,8 @@ Q=A_0+A_1+A_2\in M_{33}(\Z),\qquad M=A_0+\omega A_1+\omega^2A_2\in M_{33}(\Z[\om
 \end{lemma}
 \begin{proof}
 Pour une matrice $X$ indexée par les sommets et commutant avec $g$, posons $X_b[U,V]=X[(U,0),(V,b)]$ et
-$\Phi(X)=\sum_b X_b\,x^b\in M_{33}\bigl(\Z[x]/(x^3-1)\bigr)$. On a $(XY)_b=\sum_c X_cY_{b-c}$, donc $\Phi$ est un morphisme d'anneaux,
+$\Phi(X)=\sum_b X_b\,x^b$, élément de $M_{33}\bigl(\Z[x]/(x^3-1)\bigr)$. On a ${(XY)_b=\sum_c X_cY_{b-c}}$, donc $\Phi$ est un
+morphisme d'anneaux,
 avec $\Phi(I)=I$ et $\Phi(J)=(1+x+x^2)J$. Appliquer $\Phi$ à \eqref{eq:srg}, puis évaluer en $x=1$ et en $x=\omega$
 ($1+\omega+\omega^2=0$), donne les équations de (i) et (ii). Les sommes de lignes de $Q$ sont les degrés, d'où $Q\one=14\one$.
 On a $Q^{\mathsf T}=\sum_b A_{-b}=Q$ et $M^*=\sum_b\bar\omega^{\,b}A_{-b}=M$. Le point (iii) vient de $1-\omega^2=(1-\omega)(1+\omega)$.
@@ -128,7 +148,7 @@ réduction modulo~3, et $\rho(\bar z)=\rho(z)$. Pour une matrice $X$, on note $\
 \paragraph{Étape 1 (identités).}
 Soit $V=\ker(Q-3I)\subset\Q^{33}$.
 (a) Si $x\in V$, alors $\one^{\mathsf T}x=0$ : en effet $14\,\one^{\mathsf T}x=\one^{\mathsf T}Qx=3\,\one^{\mathsf T}x$.
-(b) La matrice entière symétrique $N=11(Q+4I)-6J$ vérifie $(Q-3I)N=0$ et $Nx=77x$ pour $x\in V$.
+(b) La matrice entière symétrique $N=11(Q+4I)-6J$ vérifie ${(Q-3I)N=0}$ et $Nx=77x$ pour $x\in V$.
 En effet, $(Q-3I)(Q+4I)=Q^2+Q-12I=6J$ et $(Q-3I)J=11J$, donc $(Q-3I)N=66J-66J=0$ ; si $x\in V$, $(Q+4I)x=7x$ et $Jx=0$.
 (c) La matrice hermitienne $N'=M+4I$ vérifie $(M-3I)N'=M^2+M-12I=0$ et $N'y=7y$ pour $y\in\ker(M-3I)$.
 (d) Comme $Q$ est symétrique avec $Q\one=14\one$, on a $QJ=JQ=14J$ ; sur $\one^\perp$, $Q^2+Q=12I$, donc $14$ est valeur propre
@@ -142,7 +162,8 @@ $n\times r$ dont les colonnes forment une base de $L$ ($r$ est la dimension du n
 $C$ de taille $r\times n$ telle que $CB=I_r$ ; alors $BCv=v$ pour tout $v\in L$. On applique ceci :
 \begin{itemize}[nosep]
 \item à $L=\ker_\Z(Q-3I)$ : $(B,C,r)$, $G=B^{\mathsf T}B$, $d=\det G>0$ ;
-\item à $L'=\ker_{\Z[\omega]}(M-3I)$ : $(B',C',r')$, $G'=B'^*B'$, hermitienne définie positive, $d'=\det G'>0$ ;
+\item à $L'=\ker_{\Z[\omega]}(M-3I)$ : $(B',C',r')$ et $G'=B'^*B'$, matrice hermitienne définie positive de déterminant
+${d'=\det G'>0}$ ;
 comme $d'$ est réel et appartient à $\Z[\omega]$, $d'\in\Z$ ;
 \item à $L_W=\ker_\Z\bigl((Q-3I)(Q-14I)\bigr)$, de rang $r+1$ : $(B_W,C_W)$, $G_W=B_W^{\mathsf T}B_W$.
 \end{itemize}
@@ -229,7 +250,7 @@ $2(\bar Q+I)=\bar B_1\bar K\bar B_1^{\mathsf T}$ et $\bar K=2\,\bar C_1(\bar Q+I
 $\det\tilde G\equiv d'\equiv1\pmod3$.
 \item \emph{Le premier 11.} $W=\ker_\Z\bigl((\tilde A-3I)(\tilde A-14I)\bigr)$ contient $L$ et $\one$ et est de rang $r+1$ (sur
 $\{w^{\mathsf T}x=0\}$, $\tilde A^2+\tilde A=12I$). La matrice $N_W=9(\tilde A+4I)-\one w^{\mathsf T}$ vaut $63$ fois le projecteur
-sur $W\otimes\Q$ ; avec $X_W=N_W\Delta$, le calcul du point~2 donne $G_WK_W=189\,I$ pour $G_W=B_W^{\mathsf T}DB_W$, donc
+sur $W\otimes\Q$ ; avec $X_W=N_W\Delta$, le calcul du point~2 donne $G_WK_W=189\,I$ pour ${G_W=B_W^{\mathsf T}DB_W}$, donc
 $11\nmid\det G_W$. Comme $w^{\mathsf T}B=0$, la matrice de Gram (pour $D$) de $[B\,|\,\one]$ est
 $\mathrm{diag}(3\tilde G,\,\one^{\mathsf T}D\one)=\mathrm{diag}(3\tilde G,99)$ ; comme à l'étape~4,
 $3^r\cdot99\cdot\det\tilde G=\det(T)^2\det G_W$. Donc $b$ est impair et $\det\tilde G\equiv2\pmod3$, ce qui contredit le
@@ -237,7 +258,7 @@ point~3. \qed
 \end{enumerate}
 
 %====================================================================
-\section{Les points fixes (corollaire~\ref{cor:tout})}
+\section{Les points fixes (corollaire~\ref{cor:tout}) et l'ordre de $\mathrm{Aut}(\Gamma)$}
 
 \begin{lemma}\label{lem:fix}
 Soit $g\ne1$ un automorphisme de $\Gamma$ tel que $g^3=1$. Alors $g$ a au plus trois points fixes.
@@ -264,6 +285,27 @@ fixe est $x$ ou l'un de ses deux voisins fixes : $|F|\le3$. \qedhere
 \end{enumerate}
 \end{proof}
 
+Joint aux résultats publiés rappelés au §1, le corollaire~\ref{cor:tout} donne ceci.
+
+\begin{corollary}\label{cor:aut}
+Supposons que $\Gamma$ existe, et soit $G=\mathrm{Aut}(\Gamma)$.
+\begin{enumerate}[label=(\roman*),nosep]
+\item Avec \cite{MM04} et \cite{CW25}, obtenus sans ordinateur : $|G|\in\{1,2,7,11\}$.
+\item Avec en plus la recherche sur ordinateur de \cite{B09,BL11} : $|G|\in\{1,2\}$, c'est-à-dire que $G$ est trivial ou
+isomorphe à $\Z/2\Z$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+Par le corollaire~\ref{cor:tout}, $G$ n'a aucun élément d'ordre~3, donc $3\nmid|G|$ (théorème de Cauchy).
+(i) Par \cite{MM04}, $|G|$ divise alors $2\cdot7\cdot11$. Si $7$ divise $|G|$, alors $G\simeq\Z/7\Z$ \cite{CW25}. Si $2$ divise
+$|G|$, alors $|G|$ divise $6$ \cite{CW25}, donc $|G|=2$. Sinon, $|G|$ divise $11$.
+(ii) Par \cite{BL11}, $|G|$ est alors une puissance de~$2$ ; si elle n'est pas~$1$, elle divise~$6$ \cite{CW25}, donc vaut~$2$.
+\end{proof}
+
+Un rapport du programme MIT PRIMES \cite{LM14}, dont nous n'avons pas vérifié les preuves, exclut aussi l'ordre~$11$ par un
+argument élémentaire ; le point~(i) deviendrait alors $|G|\in\{1,2,7\}$. Le corollaire~\ref{cor:aut} n'est pas formalisé :
+les résultats de \cite{MM04,B09,BL11,CW25} sont admis.
+
 %====================================================================
 \section{Remarques}
 
@@ -286,8 +328,9 @@ $T(n)$, $n\in\{6,7,9,10,12,13,15,18,21\}$, munis d'une action libre d'ordre~3 (u
 et sur environ 1\,650 réseaux invariants aléatoires, avec un recalcul indépendant ; le test échoue bien lorsque le projecteur
 n'est pas 3-entier. La forme « $d=$ (premiers de $\theta-\theta'$) $\times$ (premiers de $\langle\one,\one\rangle$) » est
 observée exactement sur $T(15)$, $T(18)$ et $T(21)$.
-\item \textbf{Vérification formelle.} Tous les énoncés sont vérifiés en Lean~4 (Mathlib \texttt{v4.35.0-rc2}), sans
-\texttt{sorry}, à partir de la définition de Mathlib d'un graphe fortement régulier (\texttt{SimpleGraph.\allowbreak IsSRGWith}) :
+\item \textbf{Vérification formelle.} Tous les énoncés, sauf le corollaire~\ref{cor:aut}, sont vérifiés en Lean~4 \cite{dMU21}
+avec Mathlib \cite{Mat20} (version \texttt{v4.35.0-rc2}), sans \texttt{sorry}, à partir de la définition de Mathlib d'un graphe
+fortement régulier (\texttt{SimpleGraph.\allowbreak IsSRGWith}) :
 \begin{itemize}[leftmargin=1.2em,nosep]
 \item \texttt{C3.no\_order3} : tout automorphisme $\sigma$ tel que $\sigma^3=1$ est l'identité (corollaire~\ref{cor:tout},
 sans \cite{MM04}) ;
@@ -296,23 +339,67 @@ sans \cite{MM04}) ;
 \item \texttt{C3.no\_order3\_fix\_le3} (au plus trois points fixes) ;
 \item \texttt{C3.no\_pair} (théorème~\ref{thm:matrices}) et \texttt{C3.Tri.no\_triangle\_pair} (§4), les versions matricielles.
 \end{itemize}
-Tous ne dépendent que des axiomes standard \texttt{propext}, \texttt{Classical.choice} et \texttt{Quot.sound}, et n'emploient que
-des définitions de Mathlib : un relecteur n'a à contrôler que l'énoncé de \texttt{C3.no\_order3}. Sources : dossier
-\texttt{c3formal/}.
+Tous ne dépendent que des axiomes standard \texttt{propext}, \texttt{Classical.choice} et \texttt{Quot.sound}.
+L'énoncé final est isolé dans le fichier \texttt{c3formal/\allowbreak Challenge.lean}, qui n'importe que Mathlib et ne contient
+aucune définition. Il y est écrit sous quatre formes : graphe ; aucun élément d'ordre~3 dans $\mathrm{Aut}(\Gamma)$ ; $3$ ne
+divise pas $|\mathrm{Aut}(\Gamma)|$ ; matrice d'adjacence booléenne sur $\{0,\dots,98\}$, sans bibliothèque de graphes. Trois
+tests de non-vacuité l'accompagnent : les mêmes formules, avec $(9,4,1,2)$ au lieu de $(99,14,1,2)$, sont démontrées fausses
+(le graphe de la tour $3\times3$ est un $\srg(9,4,1,2)$ qui a un automorphisme d'ordre~3). L'outil \texttt{lake comparator} de
+Lean~4.35 contrôle que les preuves (\texttt{c3formal/\allowbreak Solution.lean}, déduites de \texttt{C3.no\_order3})
+démontrent exactement ces énoncés, avec ces seuls axiomes, et qu'elles sont acceptées, avec toutes leurs dépendances jusqu'au
+c\oe ur de Lean (plus de $26\,500$ déclarations), par le noyau de Lean et par cinq autres vérificateurs livrés avec Lean : \texttt{leanchecker-paranoid},
+\texttt{lean4lean} \cite{Car24}, \texttt{nanoda} \cite{Nan}, \texttt{con-leche} et \texttt{con-ron}. Verdict : accepté, sur la
+machine d'origine et, dans le bac à sable de l'outil, sur une machine Linux neuve (GitHub Actions). Un relecteur n'a donc à
+contrôler que \texttt{c3formal/\allowbreak Challenge.lean}. Sources : dossier \texttt{c3formal/} ; détails et journaux :
+\texttt{AUDIT\_ENONCE.md}.
 \item \textbf{À relire en priorité (preuve papier).} L'étape~2 (facteur direct sur $\Z[\omega]$), l'étape~4 (valuation 11-adique),
-l'étape~5 (réduction), au §4 le point~1, et le lemme~\ref{lem:fix}.
+l'étape~5 (réduction), au §4 le point~1, et le lemme~\ref{lem:fix}. Le corollaire~\ref{cor:aut} repose en outre sur
+\cite{MM04,B09,BL11,CW25}, que nous n'avons pas revérifiés.
 \end{itemize}
 
-{\small
-\begin{thebibliography}{MM04}
-\bibitem[B09]{B09} M.~Behbahani, \emph{On strongly regular graphs}, thèse, Concordia University, 2009.
-\bibitem[BL11]{BL11} M.~Behbahani, C.~Lam, \emph{Strongly regular graphs with non-trivial automorphisms}, Discrete Math.\ 311 (2011).
+{\small\raggedright
+\begin{thebibliography}{BVM22}
+\bibitem[B09]{B09} M.~Behbahani, \emph{On strongly regular graphs}, thèse de doctorat, Concordia University, Montréal, 2009.
+\bibitem[BL11]{BL11} M.~Behbahani, C.~Lam, \emph{Strongly regular graphs with non-trivial automorphisms}, Discrete Math.\
+\textbf{311} (2011), n\textsuperscript{o}~2--3, 132--144,
+\href{https://doi.org/10.1016/j.disc.2010.10.005}{doi:10.1016/j.disc.2010.10.005}.
 \bibitem[Br]{Br} A.\,E.~Brouwer, \emph{Parameters of strongly regular graphs}, tables en ligne,
-\url{https://aeb.win.tue.nl/graphs/srg/srgtab.html}.
-\bibitem[CW23]{CW23} P.\,G.~Cesarz, A.\,J.~Woldar, \emph{On the automorphism group of a putative Conway 99-graph},
-arXiv:2308.02978, 2023.
-\bibitem[I26]{I26} Y.~Ishida, \emph{No involutions in the missing Moore graph}, arXiv:2606.29183v2, 2026.
-\bibitem[MM04]{MM04} A.\,A.~Makhnev, I.\,M.~Minakova, Diskretnaya Matematika 16(1) (2004), 95--104.
+\url{https://aeb.win.tue.nl/graphs/srg/srgtab.html}, consultées en septembre 2026.
+\bibitem[BVM22]{BVM22} A.\,E.~Brouwer, H.~Van~Maldeghem, \emph{Strongly Regular Graphs}, Encyclopedia of Mathematics and its
+Applications~\textbf{182}, Cambridge University Press, 2022,
+\href{https://doi.org/10.1017/9781009057226}{doi:10.1017/9781009057226}.
+\bibitem[Car24]{Car24} M.~Carneiro, \emph{Lean4Lean: Verifying a typechecker for Lean, in Lean}, arXiv:2403.14064, 2024
+(version~3, 2025).
+\bibitem[CM20]{CM20} D.~Crnković, M.~Maksimović, \emph{Construction of strongly regular graphs having an automorphism group of
+composite order}, Contrib.\ Discrete Math.\ \textbf{15} (2020), n\textsuperscript{o}~1, 22--41,
+\href{https://doi.org/10.55016/ojs/cdm.v15i1.62323}{doi:10.55016/ojs/cdm.v15i1.62323}.
+\bibitem[Co]{Co} J.\,H.~Conway, \emph{Five \$1,000 problems (update 2017)}, OEIS Foundation,
+\url{https://oeis.org/A248380/a248380.pdf}.
+\bibitem[CW25]{CW25} P.\,G.~Cesarz, A.\,J.~Woldar, \emph{On the automorphism group of a putative Conway 99-graph}, Algebr.\
+Comb.\ \textbf{8} (2025), n\textsuperscript{o}~2, 379--398, \href{https://doi.org/10.5802/alco.418}{doi:10.5802/alco.418} ;
+arXiv:2308.02978.
+\bibitem[dMU21]{dMU21} L.~de~Moura, S.~Ullrich, \emph{The Lean~4 theorem prover and programming language}, dans
+\emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput.\ Sci., Springer, 2021, 625--635,
+\href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+\bibitem[I26]{I26} Y.~Ishida, \emph{No involutions in the missing Moore graph}, arXiv:2606.29183v2, juillet 2026.
+\bibitem[K26]{K26} A.~Keramatipour, \emph{Approaching the Conway-99 problem using SAT solvers}, arXiv:2604.23037v2, avril 2026.
+\bibitem[LM14]{LM14} S.~Lou, M.~Murin, \emph{On the strongly regular graph of parameters $(99,14,1,2)$}, rapport MIT PRIMES,
+2014, \url{https://math.mit.edu/research/highschool/primes/materials/2014/Lou-Murin.pdf}.
+\bibitem[Mak10]{Mak10} A.\,A.~Makhnev, \emph{On automorphisms of distance-regular graphs}, J.\ Math.\ Sci.\ \textbf{166} (2010),
+n\textsuperscript{o}~6, 733--742.
+\bibitem[Mat20]{Mat20} The mathlib Community, \emph{The Lean mathematical library}, dans \emph{Proceedings of the 9th ACM SIGPLAN
+International Conference on Certified Programs and Proofs (CPP~2020)}, ACM, 2020, 367--381,
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824}.
+\bibitem[MM04]{MM04} A.\,A.~Makhnev, I.\,M.~Minakova, \emph{On automorphisms of strongly regular graphs with parameters
+$\lambda=1$, $\mu=2$}, Diskret.\ Mat.\ \textbf{16} (2004), n\textsuperscript{o}~1, 95--104,
+\href{https://doi.org/10.4213/dm144}{doi:10.4213/dm144} ; trad.\ anglaise : Discrete Math.\ Appl.\ \textbf{14} (2004),
+n\textsuperscript{o}~2, 201--210, \href{https://doi.org/10.1515/156939204872374}{doi:10.1515/156939204872374}.
+\bibitem[Nan]{Nan} \emph{nanoda}, vérificateur de types externe pour Lean~4, \url{https://github.com/ammkrn/nanoda_lib}.
+\bibitem[TS26]{TS26} A.~Thakkar, S.~Severini, \emph{A forced-structure reduction and verifiable bounds for Conway's 99-graph},
+arXiv:2608.11211v2, 18~septembre 2026.
+\bibitem[W84]{W84} H.\,A.~Wilbrink, \emph{On the $(99,14,1,2)$ strongly regular graph}, dans \emph{Papers dedicated to
+J.\,J.~Seidel} (P.\,J.~de~Doelder, J.~de~Graaf, J.\,H.~van~Lint, éd.), EUT Report 84-WSK-03, Eindhoven University of
+Technology, 1984, 342--355.
 \end{thebibliography}
 }
 

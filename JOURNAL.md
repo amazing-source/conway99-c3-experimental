@@ -122,3 +122,9 @@
   7 ∣ |Aut| ⇒ Aut ≅ ℤ₇ exclut 77), mais {1, 2, 7, 11} sans ordinateur, et {1, 2} avec Behbahani–Lam.
 - Statut : l'énoncé Lean est contrôlé par machine (énoncé isolé, comparateur, six noyaux, non-vacuité). Le résultat
   mathématique reste DÉRIVÉ + vérifié par machine ; aucune relecture humaine indépendante à ce jour.
+- PDF mis à jour (7 pages) : paragraphe « Contexte » complet (Makhnev–Minakova, Behbahani–Lam avec le « ? » de la table 21,
+  Crnković–Maksimović, Makhnev 2010, Cesarz–Woldar publié en 2025, Ishida, Thakkar–Severini, Keramatipour, Conway, Wilbrink,
+  Brouwer–Van Maldeghem) ; nouveau corollaire 8 (|Aut| ∈ {1, 2, 7, 11} sans ordinateur, {1, 2} avec Behbahani–Lam), placé
+  après le lemme 7 pour ne décaler aucun numéro cité dans les fichiers Lean ; section « Vérification formelle » avec le
+  comparateur et les six vérificateurs ; 18 références, toutes vérifiées (DOI via Crossref, arXiv). Compilation Tectonic sans
+  aucun avertissement de mise en page ni référence non résolue.
