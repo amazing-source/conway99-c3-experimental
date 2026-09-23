@@ -116,5 +116,9 @@
   `lake comparator --paranoid` : **« Your solution is okay! »**, six vérificateurs, 26 552 déclarations comme en local.
   Journal : `logs/github_actions_run_35880776817.log`.
 - Document pour le relecteur : `AUDIT_ENONCE.md`.
+- Littérature revérifiée le 2026-09-23 (`AUDIT_ENONCE.md`, section 9). Behbahani 2009, th. 4.14 : ordre 3 ⇒ aucun point
+  fixe ; la table 21 laisse « ? » pour ce cas. Thakkar–Severini (v2 du 18 septembre 2026) le déclarent encore inconnu.
+  Aucune source n'exclut l'ordre 3. Correction : la conséquence n'est pas |Aut| ∈ {1, 2, 7, 11, 77} (Cesarz–Woldar :
+  7 ∣ |Aut| ⇒ Aut ≅ ℤ₇ exclut 77), mais {1, 2, 7, 11} sans ordinateur, et {1, 2} avec Behbahani–Lam.
 - Statut : l'énoncé Lean est contrôlé par machine (énoncé isolé, comparateur, six noyaux, non-vacuité). Le résultat
   mathématique reste DÉRIVÉ + vérifié par machine ; aucune relecture humaine indépendante à ce jour.

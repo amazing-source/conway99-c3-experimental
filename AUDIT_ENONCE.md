@@ -158,9 +158,10 @@ pour environ 1 Go de RAM réelle. C'était un manque de ressources, pas un rejet
 
 - **Lire `Challenge.lean`** et vérifier que ses énoncés disent bien ce qu'on veut. Les sections 3 et 4 ci-dessus en
   donnent les clés ; quelques minutes.
-- **Les résultats publiés utilisés au-delà de Lean.** Avec Makhnev–Minakova (|Aut Γ| divise 2·3³·7·11) et Cesarz–Woldar
-  (si |Aut Γ| est pair, il divise 6), on obtient |Aut Γ| ∈ {1, 2, 7, 11, 77}. Ces deux résultats ne sont pas formalisés
-  ici.
+- **Les résultats publiés utilisés au-delà de Lean** (section 9), qui ne sont pas formalisés ici. Avec Makhnev–Minakova
+  (|Aut Γ| divise 2·3³·7·11) et Cesarz–Woldar (si |Aut Γ| est pair, il divise 6 ; si 7 le divise, Aut Γ ≅ ℤ₇), tous deux
+  sans ordinateur, on obtient |Aut Γ| ∈ {1, 2, 7, 11}. Si l'on admet aussi le calcul par ordinateur de Behbahani–Lam
+  (seuls 2 et 3 peuvent diviser |Aut Γ|), on obtient |Aut Γ| ∈ {1, 2} : Aut Γ est trivial ou ℤ₂.
 - **La preuve mathématique lisible** (`pdf/preuve_c3.pdf`) sert à la compréhension et à une éventuelle publication. Sa
   correction ne conditionne pas celle du théorème Lean.
 
@@ -177,3 +178,23 @@ lake comparator --paranoid          # attendu : « Your solution is okay! »
 
 Le même contrôle tourne sur GitHub Actions, sur une machine Linux neuve, à chaque modification de `c3formal/`
 (`.github/workflows/lean-verify.yml`).
+
+## 9. État de la littérature sur les automorphismes (vérifié le 2026-09-23)
+
+| référence | résultat sur Aut(Γ) | méthode |
+|---|---|---|
+| Makhnev–Minakova, 2004 | \|Aut Γ\| divise 2·3³·7·11 ; un automorphisme d'ordre 3 fixe l'ensemble vide ou un triangle | caractères |
+| Behbahani, thèse 2009 (th. 4.14) ; Behbahani–Lam, Discrete Math. 2011 | seuls 2 et 3 peuvent diviser \|Aut Γ\| ; un automorphisme d'ordre 3 n'a pas de point fixe. Le cas « ordre 3 sans point fixe » est marqué « ? » (table 21 de la thèse) : non tranché | ordinateur |
+| Lou–Murin, rapport MIT PRIMES, 2014 | pas d'automorphisme d'ordre 11, 13, ni d'ordre premier > 14 | élémentaire |
+| Crnković–Maksimović, Contrib. Discrete Math. 2020 | aucun groupe d'automorphismes d'ordre 6 ou 9 (ℤ₆, S₃, ℤ₉, E₉) ; un ℤ₃ seul n'est pas exclu | ordinateur |
+| Cesarz–Woldar, Algebraic Combinatorics 2025 | si 2 divise \|Aut Γ\|, il divise 6 ; si 7 le divise, Aut Γ ≅ ℤ₇ | sans ordinateur |
+| Ishida, arXiv:2606.29183 (juillet 2026) | ordre 3 : Fix = ∅ et a₁ = 18, ou Fix = triangle et a₁ = 6 ; non exclu | identité trace–rang |
+| Thakkar–Severini, arXiv:2608.11211 (v2, 18 septembre 2026) | « The fixed-point-free ℤ3 model, with 33 orbits, likewise remained unknown within 1800 seconds » | CP-SAT |
+
+Avant ce travail, en réunissant ces résultats (dont ceux obtenus par ordinateur), |Aut Γ| ∈ {1, 2, 3}, et le seul cas
+ouvert était un automorphisme d'ordre 3 sans point fixe. Aucune source trouvée ne l'exclut. Le théorème formalisé ici
+l'exclut, sans calcul sur ordinateur, et exclut aussi, sans ordinateur, le cas avec points fixes. D'où |Aut Γ| ∈ {1, 2}
+(section 7).
+
+Limite de cette recherche : arXiv, moteurs de recherche, revues en ligne et une requête en russe. Un travail non indexé,
+en cours d'évaluation, ou publié seulement dans une revue russe non numérisée pourrait avoir échappé.
