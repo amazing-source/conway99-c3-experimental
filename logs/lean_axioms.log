@@ -1,0 +1,7 @@
+'C3.no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C3.step5' depends on axioms: [propext, Classical.choice, Quot.sound]
+C3.no_pair : ∀ (Q : Matrix (Fin 33) (Fin 33) ℤ) (M : Matrix (Fin 33) (Fin 33) Eis),
+  Q.transpose = Q →
+    ((Q.mulVec fun x => 1) = fun x => 14) →
+      Q * Q + Q = 12 • 1 + 6 • C3.J 33 →
+        M.conjTranspose = M → M * M + M = 12 • 1 → M.map ⇑Eis.rho = Q.map ⇑C3.φ3 → False

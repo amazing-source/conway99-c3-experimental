@@ -1,0 +1,302 @@
+⚠ [1791/1880] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1880] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/1880] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/2161] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/2161] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2214] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2214] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2208/2214] Replayed C3formal.SaturatedGen
+⚠ [2210/2214] Replayed C3formal.TriangleMain
+  hQs
+  hsq
+⚠ [2212/2214] Replayed C3formal.TriangleStep4
+warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+⚠ [2213/2214] Replayed C3formal.Bridge
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+✖ [2214/2214] Building C3formal.TriangleBridge (9.6s)
+warning: C3formal/TriangleBridge.lean:136:8: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+warning: C3formal/TriangleBridge.lean:143:8: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+warning: C3formal/TriangleBridge.lean:153:8: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+warning: C3formal/TriangleBridge.lean:157:8: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+error: C3formal/TriangleBridge.lean:225:13: typeclass instance problem is stuck
+  AddCommMonoid ?m.1488
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: C3formal/TriangleBridge.lean:219:34: unsolved goals
+case im
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+x : Fin 32 × ZMod 3 ⊕ Fin 3
+V : Fin 32
+⊢ ((Aω * Ew) x V).im = ((Ew * M) x V).im
+error: C3formal/TriangleBridge.lean:240:29: unsolved goals
+case im
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+hAEw : Aω * Ew = Ew * M
+U V : Fin 32
+⊢ ((Rw * Ew) U V).im = (1 U V).im
+error: C3formal/TriangleBridge.lean:244:37: unsolved goals
+case im
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+hAEw : Aω * Ew = Ew * M
+hREw : Rw * Ew = 1
+U V : Fin 32
+⊢ ((Rw * (Jω * Ew)) U V).im = (0 U V).im
+error: C3formal/TriangleBridge.lean:249:59: unsolved goals
+case pos
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+hAEw : Aω * Ew = Ew * M
+hREw : Rw * Ew = 1
+hRJEw : Rw * (Jω * Ew) = 0
+h : Aω * Aω + Aω = (12 • 1).map ⇑(Int.castRingHom Eis) + (2 • J).map ⇑(Int.castRingHom Eis)
+x y : Fin 32 × ZMod 3 ⊕ Fin 3
+hxy : x = y
+⊢ 12 y y + 2.re = Eis.re 14
+case neg
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+hAEw : Aω * Ew = Ew * M
+hREw : Rw * Ew = 1
+hRJEw : Rw * (Jω * Ew) = 0
+h : Aω * Aω + Aω = (12 • 1).map ⇑(Int.castRingHom Eis) + (2 • J).map ⇑(Int.castRingHom Eis)
+x y : Fin 32 × ZMod 3 ⊕ Fin 3
+hxy : ¬x = y
+⊢ 12 x y = 0
+case im
+A : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hshift :
+  ∀ (U V : Fin 32) (b c : ZMod 3), A (Sum.inl (U, b + 1)) (Sum.inl (V, c + 1)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hshift' : ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3), A (Sum.inl (U, b + 1)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+htri : ∀ (s t : Fin 3), A (Sum.inr s) (Sum.inr t) = if s = t then 0 else 1
+hsym : ∀ (x y : Fin 32 × ZMod 3 ⊕ Fin 3), A y x = A x y
+hk :
+  ∀ (U V : Fin 32) (b c k : ZMod 3), A (Sum.inl (U, b + k)) (Sum.inl (V, c + k)) = A (Sum.inl (U, b)) (Sum.inl (V, c))
+hk' :
+  ∀ (U : Fin 32) (b : ZMod 3) (t : Fin 3) (k : ZMod 3),
+    A (Sum.inl (U, b + k)) (Sum.inr t) = A (Sum.inl (U, b)) (Sum.inr t)
+J : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) ℤ
+hAA : A * A + A = 12 • 1 + 2 • J
+hJ : J = of fun x x_1 ↦ 1
+Q : Matrix (Fin 32) (Fin 32) ℤ
+hQ : Q = of fun U V ↦ ∑ b, A (Sum.inl (U, 0)) (Sum.inl (V, b))
+a : Matrix (Fin 32) (Fin 3) ℤ
+ha : a = of fun U t ↦ A (Sum.inl (U, 0)) (Sum.inr t)
+M : Matrix (Fin 32) (Fin 32) Eis
+hM : M = of fun U V ↦ ∑ b, ↑(A (Sum.inl (U, 0)) (Sum.inl (V, b))) * wpow b
+hAE : A * Em = Em * At Q a
+hRE : Rm * Em = 1
+hRJE : Rm * (J * Em) = Jw
+hAt : At Q a = Rm * (A * Em)
+hsq : At Q a * At Q a + At Q a = 12 • 1 + 2 • Jw
+hEm1 : (Em *ᵥ fun x ↦ 1) = fun x ↦ 1
+hrow : (At Q a *ᵥ fun x ↦ 1) = fun x ↦ 14
+hrev : ∀ (U V : Fin 32) (b : ZMod 3), A (Sum.inl (V, 0)) (Sum.inl (U, b)) = A (Sum.inl (U, 0)) (Sum.inl (V, -b))
+hQs : Qᵀ = Q
+hMh : Mᴴ = M
+Aω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hAω : Aω = A.map ⇑(Int.castRingHom Eis)
+Jω : Matrix (Fin 32 × ZMod 3 ⊕ Fin 3) (Fin 32 × ZMod 3 ⊕ Fin 3) Eis
+hJω : Jω = of fun x x_1 ↦ 1
+hAEw : Aω * Ew = Ew * M
+hREw : Rw * Ew = 1
+hRJEw : Rw * (Jω * Ew) = 0
+h : Aω * Aω + Aω = (12 • 1).map ⇑(Int.castRingHom Eis) + (2 • J).map ⇑(Int.castRingHom Eis)
+x y : Fin 32 × ZMod 3 ⊕ Fin 3
+⊢ (((12 • 1).map ⇑(Int.castRingHom Eis) + (2 • J).map ⇑(Int.castRingHom Eis)) x y).im =
+    ((12 • 1 + 2 • of fun x x_1 ↦ 1) x y).im
+Some required targets logged failures:
+- C3formal.TriangleBridge
+error: build failed

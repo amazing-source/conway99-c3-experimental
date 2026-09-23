@@ -1,0 +1,5 @@
+# Environnements tiers, régénérables à l'identique (versions épinglées, voir ENVIRONNEMENT.md) :
+# - environnement Python (paquets pip, liste exacte dans requirements.txt)
+/.venv/
+# - cache Lean/Mathlib et compilation (plusieurs Go ; commits exacts dans c3formal/lake-manifest.json)
+/c3formal/.lake/

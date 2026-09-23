@@ -1,0 +1,9 @@
+== T(6): n=15, spectrum {-2: 9, 2: 5, 8: 1}
+   lam= -2: E 3-integral=True  rank1=3 d1=10 {2: 1, 5: 1}  rank_w=3 dw=16 {2: 4}  d1 mod3=1 dw mod3=1  CONGRUENT
+   lam=  2: E 3-integral=False  rank1=1 d1=2 {2: 1}  rank_w=2 dw=16 {2: 4}  d1 mod3=2 dw mod3=1  NOT congruent
+== T(9): n=36, spectrum {-2: 27, 5: 8, 14: 1}
+   lam= -2: E 3-integral=True  rank1=9 d1=196 {2: 2, 7: 2}  rank_w=9 dw=343 {7: 3}  d1 mod3=1 dw mod3=1  CONGRUENT
+   lam=  5: E 3-integral=False  rank1=2 d1=147 {3: 1, 7: 2}  rank_w=3 dw=343 {7: 3}  d1 mod3=0 dw mod3=1  NOT congruent
+== T(12): n=66, spectrum {-2: 54, 8: 11, 20: 1}
+   lam= -2: E 3-integral=True  rank1=18 d1=5500 {2: 2, 5: 3, 11: 1}  rank_w=18 dw=10000 {2: 4, 5: 4}  d1 mod3=1 dw mod3=1  CONGRUENT
+   lam=  8: E 3-integral=False  rank1=3 d1=1000 {2: 3, 5: 3}  rank_w=4 dw=10000 {2: 4, 5: 4}  d1 mod3=1 dw mod3=1  CONGRUENT

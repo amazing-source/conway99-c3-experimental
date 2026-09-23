@@ -1,0 +1,21 @@
+⚠ [1791/1808] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1808] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1794/1808] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2199/2208] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2203/2208] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [2205/2208] Built C3formal.IntPart (11s)
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2206/2208] Built C3formal.Main (8.5s)
+warning: C3formal/Main.lean:1:1: * `-/`:
+✔ [2207/2208] Built C3formal (7.9s)
+Build completed successfully (2208 jobs).

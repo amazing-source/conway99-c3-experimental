@@ -1,0 +1,23 @@
+⚠ [1791/1918] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1918] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/1918] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/1918] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/1918] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2207] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2207] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2207/2207] Built C3formal.Bridge (8.6s)
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+Build completed successfully (2207 jobs).

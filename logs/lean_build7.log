@@ -1,0 +1,80 @@
+⚠ [1794/1928] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2199/2208] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2203/2208] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+✖ [2205/2208] Building C3formal.IntPart (10s)
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+error: C3formal/IntPart.lean:167:32: Unknown constant `Int.prime_iff_natAbs_prime.mpr`
+warning: C3formal/IntPart.lean:172:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+error: C3formal/IntPart.lean:177:32: Unknown identifier `smul_mulVec_assoc`
+error: C3formal/IntPart.lean:250:36: failed to synthesize instance of type class
+  Unique (Fin r)
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: C3formal/IntPart.lean:249:54: unsolved goals
+Q : Matrix (Fin 33) (Fin 33) ℤ
+hQs : Qᵀ = Q
+hQ1 : (Q *ᵥ fun x ↦ 1) = fun x ↦ 14
+hQQ : Q * Q + Q = 12 • 1 + 6 • J 33
+r : ℕ
+B : Matrix (Fin 33) (Fin r) ℤ
+C : Matrix (Fin r) (Fin 33) ℤ
+hCB : C * B = 1
+hXB : (Q - 3 • 1) * B = 0
+hBC : ∀ (v : Fin 33 → ℤ), (Q - 3 • 1) *ᵥ v = 0 → B *ᵥ C *ᵥ v = v
+hdvd : (Bᵀ * B).det ∣ 77 ^ r
+hQJ : Q * J 33 = 14 • J 33
+hJQ : J 33 * Q = 14 • J 33
+hJJ : J 33 * J 33 = 33 • J 33
+hQQ' : Q * Q = 12 • 1 + 6 • J 33 - Q
+hQB : Q * B = 3 • B
+hJB : J 33 * B = 0
+hP2' : (Q - 3 • 1) * (Q - 14 • 1) = 6 • J 33 - 18 • Q + 54 • 1
+rW : ℕ
+BW : Matrix (Fin 33) (Fin rW) ℤ
+CW : Matrix (Fin rW) (Fin 33) ℤ
+hCBW : CW * BW = 1
+hXBW : (6 • J 33 - 18 • Q + 54 • 1) * BW = 0
+hBCW : ∀ (v : Fin 33 → ℤ), (6 • J 33 - 18 • Q + 54 • 1) *ᵥ v = 0 → BW *ᵥ CW *ᵥ v = v
+hJBW : J 33 * BW = 3 • ((Q - 3 • 1) * BW)
+NW : Matrix (Fin 33) (Fin 33) ℤ := ⋯
+hNW : NW = 3 • (Q + 4 • 1) - J 33
+hXNW : (6 • J 33 - 18 • Q + 54 • 1) * NW = 0
+hNWB : NW * BW = 21 • BW
+hNWt : NWᴴ = NW
+hGKW : BWᵀ * BW * (CW * NW * CWᵀ) = 21 • 1
+hdetW : (BWᵀ * BW).det * (CW * NW * CWᵀ).det = 21 ^ rW
+h11W : ¬11 ∣ (BWᵀ * BW).det
+hQones : Q *ᵥ ones = 14 • ones
+hP2ones : (6 • J 33 - 18 • Q + 54 • 1) *ᵥ ones = 0
+B1 : Matrix (Fin 33) (Fin r ⊕ Unit) ℤ := ⋯
+hB1 : B1 = B.fromCols (replicateCol Unit ones)
+hP2B : (6 • J 33 - 18 • Q + 54 • 1) * B = 0
+hXB1 : (6 • J 33 - 18 • Q + 54 • 1) * B1 = 0
+hB1eq : BW * CW * B1 = B1
+T : Matrix (Fin rW) (Fin r ⊕ Unit) ℤ := ⋯
+hT : T = CW * B1
+hB1T : B1 = BW * T
+Y : Matrix (Fin 33) (Fin rW) ℤ := ⋯
+hY : Y = 33 • BW - J 33 * BW
+hXJ : (Q - 3 • 1) * J 33 = 11 • J 33
+hXY : (Q - 3 • 1) * Y = 0
+hBCY : B * C * Y = Y
+S : Matrix (Fin r ⊕ Unit) (Fin rW) ℤ := ⋯
+hS : S = (C * Y).fromRows (of fun x j ↦ ∑ i, BW i j)
+hB1S : B1 * S = 33 • BW
+hTS : T * S = 33 • 1
+h33ne : (33 • 1).det ≠ 0
+hrW_le : rW ≤ r + 1
+hBt1 : Bᵀ * replicateCol Unit ones = 0
+ht1B : (replicateCol Unit ones)ᵀ * B = 0
+h11 : (replicateCol Unit ones)ᵀ * replicateCol Unit ones = of fun x x_1 ↦ 33
+hG1 : B1ᵀ * B1 = fromBlocks (Bᵀ * B) 0 0 (of fun x x_1 ↦ 33)
+⊢ Unique (Fin r)
+Some required targets logged failures:
+- C3formal.IntPart
+error: build failed

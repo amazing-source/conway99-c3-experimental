@@ -1,0 +1,8 @@
+T(6) lam=-2: F3-form rank=3 disc=1  | lattice rank=3 d1%3=1 dw%3=1  MATCH
+T(9) lam=-2: F3-form rank=9 disc=1  | lattice rank=9 d1%3=1 dw%3=1  MATCH
+T(12) lam=-2: F3-form rank=18 disc=1  | lattice rank=18 d1%3=1 dw%3=1  MATCH
+T(15) lam=-2: F3-form rank=30 disc=1  | lattice rank=30 d1%3=1 dw%3=1  MATCH
+T(18) lam=-2: F3-form rank=45 disc=1  | lattice rank=45 d1%3=1 dw%3=1  MATCH
+T(7) lam=3: F3-form rank=2 disc=1 | lattice rank=2 d1%3=1 dw%3=1 MATCH
+T(10) lam=6: F3-form rank=3 disc=2 | lattice rank=3 d1%3=2 dw%3=2 MATCH
+T(13) lam=9: F3-form rank=4 disc=1 | lattice rank=4 d1%3=1 dw%3=1 MATCH

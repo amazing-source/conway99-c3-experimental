@@ -1,0 +1,70 @@
+
+
+error: C3formal/NumberTheory.lean:23:30: unsolved goals
+D T G r : ℕ
+hD : 0 < D
+hdvd : D ∣ 77 ^ r
+hG : ¬11 ∣ G
+h : 33 * D = T ^ 2 * G
+⊢ Nat.Prime 11
+error: C3formal/NumberTheory.lean:24:28: unsolved goals
+D T G r : ℕ
+hD : 0 < D
+hdvd : D ∣ 77 ^ r
+hG : ¬11 ∣ G
+h : 33 * D = T ^ 2 * G
+hp11 : Nat.Prime 11
+⊢ Nat.Prime 7
+warning: C3formal/NumberTheory.lean:25:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+error: C3formal/NumberTheory.lean:47:24: Application type mismatch: The argument
+  ?m.432
+has type
+  11 ^ s * T0 ≠ 0
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  padicValNat.pow 2 ?m.432
+error: C3formal/NumberTheory.lean:55:48: unsolved goals
+G r : ℕ
+hG : ¬11 ∣ G
+hp11 : Nat.Prime 11
+hp7 : Nat.Prime 7
+this : Fact (Nat.Prime 11)
+hGpos : 0 < G
+e D0 : ℕ
+hD0 : ¬11 ∣ D0
+hD : 0 < 11 ^ e * D0
+hdvd : 11 ^ e * D0 ∣ 77 ^ r
+s T0 : ℕ
+hT0 : ¬11 ∣ T0
+hTpos : 0 < 11 ^ s * T0
+h : 33 * (11 ^ e * D0) = (11 ^ s * T0) ^ 2 * G
+hD0pos : 0 < D0
+hT0pos : 0 < T0
+h33 : padicValNat 11 33 = 1
+v1 : padicValNat 11 (33 * (11 ^ e * D0)) = 1 + e
+v2 : padicValNat 11 ((11 ^ s * T0) ^ 2 * G) = 2 * s
+hes : 1 + e = 2 * s
+he : Odd e
+hcop : D0.Coprime (11 ^ r)
+⊢ 77 ^ r = (7 * 11) ^ r
+error: C3formal/NumberTheory.lean:87:43: unsolved goals
+d k : ℤ
+r : ℕ
+hd : 0 < d
+h : d * k = 7 ^ r
+hdvd : d.natAbs ∣ 7 ^ r
+⊢ Nat.Prime 7
+⚠ [2202/2204] Built C3formal.EisComplex (107s)
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+
+
+Some required targets logged failures:
+- C3formal.NumberTheory
+error: build failed

@@ -1,0 +1,28 @@
+⚠ [1791/2075] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/2075] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/2075] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/2075] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/2075] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2212] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2212] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2208/2212] Replayed C3formal.SaturatedGen
+⚠ [2210/2212] Replayed C3formal.TriangleMain
+  hQs
+  hsq
+⚠ [2212/2212] Built C3formal.TriangleStep4 (11s)
+warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+Build completed successfully (2212 jobs).

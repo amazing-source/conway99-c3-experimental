@@ -1,0 +1,72 @@
+⚠ [1791/1833] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1833] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/1833] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/2175] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/2175] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2242] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2242] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2208/2242] Replayed C3formal.SaturatedGen
+⚠ [2210/2242] Replayed C3formal.TriangleMain
+  hQs
+  hsq
+⚠ [2212/2242] Replayed C3formal.TriangleStep4
+warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+⚠ [2213/2242] Replayed C3formal.Bridge
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2214/2242] Replayed C3formal.TriangleBridge
+warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2240/2242] Replayed C3formal.Graph
+⚠ [2241/2242] Replayed C3formal.TriangleGraph
+warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2242/2242] Built C3formal.FixLemma (8.0s)
+warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/FixLemma.lean:103:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/FixLemma.lean:119:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/FixLemma.lean:315:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/FixLemma.lean:359:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:374:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:382:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:390:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Build completed successfully (2242 jobs).

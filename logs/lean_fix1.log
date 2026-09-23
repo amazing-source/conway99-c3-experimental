@@ -1,0 +1,121 @@
+⚠ [1791/1868] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1868] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/1868] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/1935] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/1935] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2204/2228] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2205/2228] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2207/2228] Replayed C3formal.SaturatedGen
+⚠ [2209/2228] Replayed C3formal.TriangleMain
+  hQs
+  hsq
+⚠ [2211/2228] Replayed C3formal.TriangleStep4
+warning: C3formal/TriangleStep4.lean:1:1: * `-/`:
+warning: C3formal/TriangleStep4.lean:7:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/TriangleStep4.lean:54:5: Variable name `hCB` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+⚠ [2212/2228] Replayed C3formal.Bridge
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2213/2228] Replayed C3formal.TriangleBridge
+warning: C3formal/TriangleBridge.lean:1:1: * `-/`:
+warning: C3formal/TriangleBridge.lean:232:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [2240/2242] Replayed C3formal.Graph
+⚠ [2241/2242] Replayed C3formal.TriangleGraph
+warning: C3formal/TriangleGraph.lean:1:1: * `-/`:
+warning: C3formal/TriangleGraph.lean:160:100: This line exceeds the 100 character limit, please shorten it!
+✖ [2242/2242] Building C3formal.FixLemma (8.9s)
+warning: C3formal/FixLemma.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+error: C3formal/FixLemma.lean:120:44: Application type mismatch: The argument
+  h1
+has type
+  ⟨↑w, ⋯⟩ = ⟨↑w', ⋯⟩
+but is expected to have type
+  w = w'
+in the application
+  congrArg Subtype.val h1
+error: C3formal/FixLemma.lean:127:10: Function expected at
+  G.loopless
+but this term has type
+  Std.Irrefl G.Adj
+  u.1
+error: C3formal/FixLemma.lean:221:19: Function expected at
+  G.loopless
+but this term has type
+  Std.Irrefl G.Adj
+  x
+error: C3formal/FixLemma.lean:294:37: unsolved goals
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+x : V
+hx : σ x = x
+h8 : 8 ≤ nfix σ x
+hle : ∀ (y : V), σ y = y → nfix σ y ≤ 8
+hkey : 15 * #(fixF σ) ≤ 99 + ∑ y ∈ fixF σ, nfix σ y
+A : Finset V
+hA : A = {v | G.Adj x v ∧ σ v = v}
+hAcard : #A = nfix σ x
+hmemA : ∀ (v : V), v ∈ A ↔ G.Adj x v ∧ σ v = v
+S : Finset V
+hS : S = fixF σ \ insert x A
+hxA : x ∉ A
+hsubF : insert x A ⊆ fixF σ
+hFeq : fixF σ = insert x A ∪ S
+hdisj : Disjoint (insert x A) S
+hFcard : #(fixF σ) = #A + 1 + #S
+hsum : ∑ y ∈ fixF σ, nfix σ y = nfix σ x + ∑ u ∈ A, nfix σ u + ∑ y ∈ S, nfix σ y
+hmemS : ∀ y ∈ S, σ y = y ∧ y ≠ x ∧ ¬G.Adj x y
+hAb : ∀ u ∈ A, nfix σ u ≤ 2 + #({y ∈ S | G.Adj u y})
+hSb : ∀ y ∈ S, #({u ∈ A | G.Adj u y}) ≤ 2
+hdc : ∑ u ∈ A, #({y ∈ S | G.Adj u y}) = ∑ y ∈ S, #({u ∈ A | G.Adj u y})
+⊢ #A * 2 + #S * 2 = #A * 2 + 2 * #S
+warning: C3formal/FixLemma.lean:313:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/FixLemma.lean:357:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:372:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:380:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: C3formal/FixLemma.lean:388:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Some required targets logged failures:
+- C3formal.FixLemma
+error: build failed

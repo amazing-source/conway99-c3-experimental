@@ -1,0 +1,80 @@
+hsumAA :
+  ∀ (R : Type) [inst : CommRing R] (φ : ZMod 3 → R) (U V : Fin 33),
+    ∑ d, ↑((A * A) (U, 0) (V, d)) * φ d + ∑ d, ↑(A (U, 0) (V, d)) * φ d = (12 * if U = V then φ 0 else 0) + 2 * ∑ d, φ d
+Q : Matrix (Fin 33) (Fin 33) ℤ := of fun U V ↦ ∑ b, A (U, 0) (V, b)
+hQ : Q = of fun U V ↦ ∑ b, A (U, 0) (V, b)
+M : Matrix (Fin 33) (Fin 33) Eis := of fun U V ↦ ∑ b, ↑(A (U, 0) (V, b)) * wpow b
+hM : M = of fun U V ↦ ∑ b, ↑(A (U, 0) (V, b)) * wpow b
+hrev : ∀ (U V : Fin 33) (b : ZMod 3), A (V, 0) (U, b) = A (U, 0) (V, -b)
+U V : Fin 33
+hUV : ¬U = V
+h :
+  ∑ x,
+        (A (U, 0) (x, 0) * A (x, 0) (V, 0) + A (U, 0) (x, 0) * A (x, 0) (V, 1) + A (U, 0) (x, 0) * A (x, 0) (V, 2) +
+            (A (U, 0) (x, 1) * A (x, 0) (V, 0) + A (U, 0) (x, 1) * A (x, 0) (V, 1) +
+              A (U, 0) (x, 1) * A (x, 0) (V, 2)) +
+          (A (U, 0) (x, 2) * A (x, 0) (V, 0) + A (U, 0) (x, 2) * A (x, 0) (V, 1) + A (U, 0) (x, 2) * A (x, 0) (V, 2))) +
+      (A (U, 0) (V, 0) + A (U, 0) (V, 1) + A (U, 0) (V, 2)) =
+    6
+a✝ :
+  ∑ j, (A (U, 0) (j, 0) + A (U, 0) (j, 1) + A (U, 0) (j, 2)) * (A (j, 0) (V, 0) + A (j, 0) (V, 1) + A (j, 0) (V, 2)) +
+      (A (U, 0) (V, 0) + A (U, 0) (V, 1) + A (U, 0) (V, 2)) <
+    6
+⊢ False
+failed
+error: C3formal/Bridge.lean:135:4: Type mismatch
+  Finset.sum_congr rfl fun b x ↦ mul_comm (?m.605 b) (?m.606 b)
+has type
+  ∑ b ∈ ?m.593, ?m.605 b * ?m.606 b = ∑ b ∈ ?m.593, ?m.606 b * ?m.605 b
+but is expected to have type
+  (Mᴴ U V).im = (M U V).im
+error: C3formal/Bridge.lean:143:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (12 * if U = V then wpow 0 else 0) + 2 * 0
+in the target expression
+  (∑ j, (∑ b, ↑(A (U, 0) (j, b)) * wpow b) * ∑ b, ↑(A (j, 0) (V, b)) * wpow b + ∑ b, ↑(A (U, 0) (V, b)) * wpow b).re =
+    (12 * if U = V then 1 else 0).re
+case hMM.re
+A : Matrix (Fin 33 × ZMod 3) (Fin 33 × ZMod 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+hshift : ∀ (U V : Fin 33) (b c : ZMod 3), A (U, b + 1) (V, c + 1) = A (U, b) (V, c)
+hk : ∀ (U V : Fin 33) (b c k : ZMod 3), A (U, b + k) (V, c + k) = A (U, b) (V, c)
+hsym : ∀ (x y : Fin 33 × ZMod 3), A y x = A x y
+hAAe :
+  ∀ (U V : Fin 33) (d : ZMod 3), (A * A) (U, 0) (V, d) + A (U, 0) (V, d) = (12 * if U = V ∧ 0 = d then 1 else 0) + 2
+hsumAA :
+  ∀ (R : Type) [inst : CommRing R] (φ : ZMod 3 → R) (U V : Fin 33),
+    ∑ d, ↑((A * A) (U, 0) (V, d)) * φ d + ∑ d, ↑(A (U, 0) (V, d)) * φ d = (12 * if U = V then φ 0 else 0) + 2 * ∑ d, φ d
+Q : Matrix (Fin 33) (Fin 33) ℤ := of fun U V ↦ ∑ b, A (U, 0) (V, b)
+hQ : Q = of fun U V ↦ ∑ b, A (U, 0) (V, b)
+M : Matrix (Fin 33) (Fin 33) Eis := of fun U V ↦ ∑ b, ↑(A (U, 0) (V, b)) * wpow b
+hM : M = of fun U V ↦ ∑ b, ↑(A (U, 0) (V, b)) * wpow b
+hrev : ∀ (U V : Fin 33) (b : ZMod 3), A (V, 0) (U, b) = A (U, 0) (V, -b)
+U V : Fin 33
+h :
+  ∑ x, ∑ x_1, ∑ x_2, ↑(A (U, 0) (x, x_1)) * ↑(A (x, 0) (V, x_2)) * (wpow x_1 * wpow x_2) +
+      ∑ d, ↑(A (U, 0) (V, d)) * wpow d =
+    (12 * if U = V then wpow 0 else 0) + 2 * 0
+⊢ (∑ j, (∑ b, ↑(A (U, 0) (j, b)) * wpow b) * ∑ b, ↑(A (j, 0) (V, b)) * wpow b + ∑ b, ↑(A (U, 0) (V, b)) * wpow b).re =
+    (12 * if U = V then 1 else 0).re
+Full error:
+  function expected
+    A (U, 0)
+warning: C3formal/Bridge.lean:124:48: This simp argument is unused:
+  add_zero
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_id, mul_one, sum_zmod3] at h
+warning: C3formal/Bridge.lean:126:40: This simp argument is unused:
+  Finset.sum_mul
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_apply, Matrix.mul_apply, hQ, Matrix.of_apply, Matrix.smul_apply, Matrix.one_apply, J,
+    smul_eq_mul, Finset.mul_sum, sum_zmod3] at h ⊢
+warning: C3formal/Bridge.lean:126:56: This simp argument is unused:
+  Finset.mul_sum
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_apply, Matrix.mul_apply, hQ, Matrix.of_apply, Matrix.smul_apply, Matrix.one_apply, J,
+    smul_eq_mul, Finset.sum_mul, sum_zmod3] at h ⊢
+Some required targets logged failures:
+- C3formal.Bridge
+error: build failed

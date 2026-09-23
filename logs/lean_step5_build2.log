@@ -1,0 +1,5 @@
+⚠ [1792/1792] Built C3formal.Step5 (18s)
+warning: C3formal/Step5.lean:54:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+Build completed successfully (1792 jobs).

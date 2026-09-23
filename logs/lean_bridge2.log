@@ -1,0 +1,51 @@
+⚠ [1791/2057] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/2057] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/2057] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/2057] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/2057] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2207] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2207] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+✖ [2207/2207] Building C3formal.Bridge (8.4s)
+error: C3formal/Bridge.lean:85:4: Type mismatch: After simplification, term
+  this
+ has type
+  (A * A) (U, 0) (V, d) + A (U, 0) (V, d) = 12 (U, 0) (V, d) + 2
+but is expected to have type
+  (A * A) (U, 0) (V, d) + A (U, 0) (V, d) = (if U = V ∧ 0 = d then 12 else 0) + 2
+error: C3formal/Bridge.lean:94:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ x ∈ ?m.315, (?m.317 x + ?m.318 x)
+in the target expression
+  ∑ x, ((12 * if U = V ∧ 0 = x then 1 else 0) + 2) * φ x = (12 * if U = V then φ 0 else 0) + 2 * ∑ d, φ d
+A : Matrix (Fin 33 × ZMod 3) (Fin 33 × ZMod 3) ℤ
+hAs : Aᵀ = A
+hA1 : (A *ᵥ fun x ↦ 1) = fun x ↦ 14
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+hshift : ∀ (U V : Fin 33) (b c : ZMod 3), A (U, b + 1) (V, c + 1) = A (U, b) (V, c)
+hk : ∀ (U V : Fin 33) (b c k : ZMod 3), A (U, b + k) (V, c + k) = A (U, b) (V, c)
+hsym : ∀ (x y : Fin 33 × ZMod 3), A y x = A x y
+hAAe :
+  ∀ (U V : Fin 33) (d : ZMod 3), (A * A) (U, 0) (V, d) + A (U, 0) (V, d) = (12 * if U = V ∧ 0 = d then 1 else 0) + 2
+R : Type
+inst✝ : CommRing R
+φ : ZMod 3 → R
+U V : Fin 33
+⊢ ∑ x, ((12 * if U = V ∧ 0 = x then 1 else 0) + 2) * φ x = (12 * if U = V then φ 0 else 0) + 2 * ∑ d, φ d
+warning: C3formal/Bridge.lean:156:36: This simp argument is unused:
+  Matrix.one_apply
+Hint: Omit it from the simp argument list.
+  [apply] simp [hUV, Matrix.smul_apply]
+Some required targets logged failures:
+- C3formal.Bridge
+error: build failed

@@ -1,0 +1,9 @@
+== T(7) sigma=3-cycles+1 fixed point: n=21, spectrum {-2: 14, 3: 6, 10: 1}
+   lam= -2: E 3-integral=False  rank1=4 d1=25 {5: 2}  rank_w=5 dw=25 {5: 2}  d1 mod3=1 dw mod3=1  CONGRUENT
+   lam=  3: E 3-integral=True  rank1=2 d1=175 {5: 2, 7: 1}  rank_w=2 dw=25 {5: 2}  d1 mod3=1 dw mod3=1  CONGRUENT
+== T(10) sigma=3-cycles+1 fixed point: n=45, spectrum {-2: 35, 6: 9, 16: 1}
+   lam= -2: E 3-integral=False  rank1=11 d1=768 {2: 8, 3: 1}  rank_w=12 dw=512 {2: 9}  d1 mod3=0 dw mod3=2  NOT congruent
+   lam=  6: E 3-integral=True  rank1=3 d1=1280 {2: 8, 5: 1}  rank_w=3 dw=512 {2: 9}  d1 mod3=2 dw mod3=2  CONGRUENT
+== T(13) sigma=3-cycles+1 fixed point: n=78, spectrum {-2: 65, 9: 12, 22: 1}
+   lam= -2: E 3-integral=False  rank1=21 d1=29282 {2: 1, 11: 4}  rank_w=22 dw=14641 {11: 4}  d1 mod3=2 dw mod3=1  NOT congruent
+   lam=  9: E 3-integral=True  rank1=4 d1=190333 {11: 4, 13: 1}  rank_w=4 dw=14641 {11: 4}  d1 mod3=1 dw mod3=1  CONGRUENT

@@ -1,0 +1,1138 @@
+No involutions in the missing Moore graph
+Yawara Ishida
+A.I. System Research, Inc., Kyoto, Japan
+yawara@aisr.dev
+Abstract
+The existence of a Moore graph of degree57is the last open case
+in the Hoffman–Singleton classification of Moore graphs of diameter
+two. We prove that such a graph, if one exists, has no involutory
+automorphisms; consequently its automorphism group has odd order.
+The proof relies on a new trace–rank identity, valid for every finite
+graph and obtained from the Brauer quotient ofp-permutation lattices:
+the trace of an automorphism of prime orderp on a spectral summand
+whose projection idempotent preservesp-adic permutation lattice equals
+the rank, over the residue field of characteristicp, of the corresponding
+idempotent restricted to the fixed vertices. For strongly regular graphs,
+this upgrades the classical character-value congruences for prime-order
+automorphisms to exact rank equalities. As further applications, the
+identity yields new restrictions on automorphisms of odd prime order
+of the hypothetical Moore graph, and it sharpens known automorphism
+analyses of other hypothetical strongly regular graphs.
+1 Introduction
+Moore graphs are the extremal graphs for the degree–diameter problem:
+regular graphs whose order attains the Moore bound for their degree and
+diameter. We refer to the surveys of Miller–Širáň [26] and Dalfó [12] for
+general background. In diameter two, the theorem of Hoffman and Singleton
+shows that the degree of such a graph can only be
+2,3,7,57;
+the first three cases are the pentagon, the Petersen graph, and the Hoffman–
+Singleton graph, while the case of degree57remains open [16]. For diameter
+greater than two, Bannai–Ito [2] and Damerell [13] independently proved
+that the only Moore graphs are the odd cycles, so the degree-57graph is the
+1
+arXiv:2606.29183v2  [math.CO]  8 Jul 2026
+unique Moore graph whose existence is undecided. The hypothetical graph in
+the last case is often called the missing Moore graph. It would be a strongly
+regular graph with parameters [16, 7]
+(v,k,λ,µ) = (3250,57,0,1).
+Recent work on the existence question includes the study of integral invariants
+such as the critical group [15], structural constraints on the hypothetical
+graph [28, 29], and computational search [30, 31, 32].
+Even in the absence of an existence proof, the possible automorphisms
+of the missing Moore graph are subject to strong restrictions. Higman’s
+unpublished argument, as recorded in Brouwer–Haemers and discussed in
+Cameron’s text on permutation groups, shows that such a graph cannot
+be vertex-transitive [7, 9]. Makhnev–Paduchikh studied the fixed-point
+subgraphs of automorphisms and the case of even group order [24, 25]; Mačaj–
+Širáň proved that the order of the automorphism group is at most375if that
+order is odd and at most110if it is even [19]; and Kováčiková, in a doctoral
+thesis, refined the resulting restrictions for automorphisms of order7[17].
+The main result of this paper eliminates the even-order case altogether.
+Theorem 1.1.LetΓbe a Moore graph of diameter two and degree57. Then
+Aut(Γ)contains no element of order2.
+Consequently, if the missing Moore graph exists, its automorphism group
+has odd order (Corollary 6.1).
+The proof is based on a trace–rank identity for idempotent summands
+of permutation lattices. Letx be an automorphism of prime orderp of a
+finite graph∆, let F be its set of fixed vertices, and letO be a complete
+discrete valuation ring of residue characteristicp, with field of fractionsK,
+maximal ideal m, and residue fieldκ. IfE is an idempotent endomorphism
+of the vertex latticeOV(∆) commuting with the action ofx, with image
+L=EO V(∆), then
+tr
+(
+x|K⊗ OL
+)
+= rankκ
+(
+E[F] modm
+)
+,
+where E[F]is the principal submatrix ofE on the fixed vertices (Corollary
+4.2). The identity is obtained by passing to the Brauer quotient of the
+p-permutation latticeL, reviewed in Section 3; in particular it applies to
+every spectral idempotent of the adjacency matrix that preserves thep-adic
+vertex lattice.
+For strongly regular graphs the identity becomes especially concrete. The
+spectral idempotents are linear combinations
+Eθ =α θI+β θA+γ θJ,
+2
+and wheneverEθ preserves the lattice, the identity reads
+αθa0(x) +βθa1(x) +γθv= rank κ
+(
+(αθIF +βθAF +γθJF) modm
+)
+,
+wherevis the number of vertices and
+ai(x) =|{u∈V(∆) :d(u,x(u)) =i}|
+are the displacement counts ofx, d denoting the graph distance (Proposition
+4.4). Thus the ordinary character value on the left, whose integrality is the
+source of the classical congruences fora1(x)[ 19, 14], is not merely constrained:
+it is equal to an explicit modular rank determined by the fixed-point subgraph
+(Remark 4.6). Rationality of the eigenvalues is not required: ifEθ is defined
+only over a finite extension ofQp, the same argument is carried out over the
+valuation ring of that extension (Remark 4.5).
+For the missing Moore graph the non-principal eigenvalues are7and
+−8. Section 5 computes the two corresponding spectral idempotents and
+determines the primes at which each preserves thep-adic vertex lattice; at
+p= 2, only the summand for the eigenvalue−8is available. Combining the
+resulting rank equality with the fixed-point theorem for involutions — the
+fixed subgraph of an involutiont is the starK1,55 (Theorem 2.1) — forces a
+negative value of the counta1(t), a contradiction. This proves Theorem 1.1
+(Section 6).
+The same comparison yields new restrictions for automorphisms of odd
+prime order (Section 7). For the primes at which the known fixed-point
+alternatives are precise enough, we obtain the following.
+Theorem 1.2.LetΓbe a Moore graph of diameter two and degree57, and
+let x∈Aut (Γ)be an automorphism of prime orderp∈{ 7, 11, 13, 19}. Then
+a0(x)anda 1(x)satisfy the following restrictions:
+p a0(x) a1(x)
+7 2,9,16,23,30,37 7a0(x) + 35
+11 5 55
+13 0 65
+19 1 57
+Forp = 7, Theorem 1.2 recovers a theorem of Kováčiková [17, Theorem
+5.1] whose proof rests on computer-assisted counts of induced subgraphs; the
+derivation given here uses neither the computer search nor the tabulated
+bounds of [19, Lemma 12] (see Section 7.1 for a detailed comparison). For
+p = 11,13, and19, Theorem 1.2 selects the smallest of the values ofa1(x)
+3
+allowed by the table of Mačaj–Širáň [19, Lemma 12], which appears to be
+new. The remaining odd primes that can occur as orders of automorphisms
+ofΓare3and5(Lemma 2.2): for these, neither spectral idempotent ofΓis
+defined over thep-adic integers, and the method of this paper gives nothing.
+The trace–rank identity is independent of the Moore graph parameters.
+Beyond the missing Moore graph, Section 8 applies it to sharpen known
+automorphism analyses of five hypothetical strongly regular graphs, replacing
+character congruences by exact displacement counts.
+2 Known facts on the missing Moore graph
+Throughout the paper,Γdenotes a Moore graph of diameter two and degree
+57, andV (Γ)denotes its vertex set. The graph is finite, simple, undirected,
+and regular.
+2.1 Parameters and spectrum
+The Moore bound gives
+|V(Γ)|= 1 + 57 2 = 3250,
+and the diameter-two Moore graph condition implies thatΓis strongly regular.
+A strongly regular graph with parameters(v,k,λ,µ )is a k-regular graph
+on v vertices in which any two adjacent vertices have exactlyλ common
+neighbours and any two distinct non-adjacent vertices have exactlyµ common
+neighbours. ForΓthese parameters are [16, 7]
+(v,k,λ,µ) = (3250,57,0,1);
+hereλ = 0becauseΓis triangle-free, and µ = 1because any two non-adjacent
+vertices have a unique common neighbour. LetA be its adjacency matrix
+and letJbe the all-one matrix. Then
+A2 +A= 56I+J.(1)
+Consequently the spectrum ofAis
+Spec(A) ={57 1,7 1729,(−8) 1520}.(2)
+This spectral calculation is standard for Moore graphs and strongly regular
+graphs with these parameters [16, 7].
+4
+2.2 Fixed-point structure
+The fixed-point calculation for involutions is part of Higman’s unpublished
+argument and was further used by Makhnev–Paduchikh in their study of
+Γ. For an automorphismg, write Fix(g)for the subgraph induced by the
+vertices fixed byg. We need the following precise form.
+Theorem 2.1(Higman–Makhnev–Paduchikh).Let t∈Aut (Γ)be an involu-
+tion. Then
+Fix(t)∼=K1,55.
+In particular,tfixes exactly56vertices.
+The assertion that an involution fixes exactly56vertices, and that its fixed
+vertices form a star, is proved in Cameron’s account of Higman’s argument [9,
+proof of Theorem 3.13]; the count is also contained in the proof of Brouwer–
+Haemers [7, Proposition 11.5.2]. The star statement is recorded explicitly by
+Makhnev–Paduchikh [24, Lemma 4], who attribute the result to Higman and
+cite Cameron’s account for its proof; it recurs in the fixed-point alternative of
+their later paper [25, Proposition 1]. We use only this fixed-point statement
+and not any classification of possible automorphism groups.
+For automorphisms of odd prime order we use the following alternative,
+due to Makhnev–Paduchikh [24, Lemma 3] and stated in the form below
+as Lemma 4 of Mačaj–Širáň [19], here phrased for a single automorphism.
+In [19] each case carries a divisibility condition on the order of the group,
+which for a group of prime orderp amounts to the memberships stated below;
+the underlying six-fold alternative for fixed-point subgraphs goes back to
+Aschbacher’s analysis [1].
+Lemma 2.2(Makhnev–Paduchikh; Mačaj–Širáň).Let x∈Aut (Γ)have odd
+prime orderp. Then one of the following holds:
+(1)Fix(x)is empty andp∈{5,13};
+(2)Fix(x)is a single vertex andp∈{3,19};
+(3)Fix(x)is a starK 1,1+7ℓ withℓ≥0andp= 7;
+(4)Fix(x)is a pentagon andp∈{5,11};
+(5)Fix(x)is the Petersen graph andp= 3;
+(6)Fix(x)is the Hoffman–Singleton graph andp= 5.
+5
+We also record the elementary properties of the displacement counts
+ai(x)defined in the introduction: they are non-negative integers,a0(x)is the
+number of vertices ofFix(x), and
+a0(x) +a 1(x) +a 2(x) = 3250.
+Our notation agrees with that of [19] and [17].
+3 A trace formula forp-permutation lattices
+We record the module-theoretic terminology used below. LetO be a complete
+discrete valuation ring with maximal ideal m, residue field κ = O/m of
+characteristicp> 0, and field of fractionsK of characteristic0, and letG
+be a finite group. AnOG-module is a module over the group algebraOG.
+An OG-lattice is anOG-module which is finitely generated and free as an
+O-module. A permutationOG-lattice is anOG-lattice admitting anO-basis
+permuted byG.
+An OG-lattice is called p-permutation if its restriction to a Sylowp-
+subgroup ofG is a permutation lattice. Equivalently, it admits anO-basis
+permuted by a Sylowp-subgroup. We shall use the standard characterization
+that direct summands of permutationOG-lattices arep-permutation; see
+Lassueur [18, Proposition–Definition 4.2]. The Brauer quotient and its basis
+description for permutation modules are used in the form given by Broué
+and by Bouc–Thévenaz [5, 4].
+We use this material for
+G=C p =⟨x⟩, x p = 1,
+cyclic of prime order equal to the residue characteristicpofO. In this case,
+a p-permutation OCp-lattice is simply anOCp-lattice admitting anO-basis
+permuted byCp, becauseCp is its own Sylowp-subgroup. For anOCp-lattice
+N, put
+N=κ⊗ ON∼=N/mN.
+We write
+N(Cp) =N
+Cp/
+TrCp
+1 (N),(3)
+where
+TrCp
+1 (v) =v+x(v) +···+x p−1(v)
+is the relative trace from the trivial subgroup toCp. ThusN(Cp)is the usual
+Brauer quotient of theκCp-module N at the subgroupCp, written so as to
+record the latticeNfrom which it comes.
+6
+The following observation shows that, for a lattice with a basis permuted
+byCp, the ordinary trace in characteristic zero and the Brauer quotient in
+characteristicpcount the same fixed basis elements.
+Lemma 3.1.LetNbe ap-permutationOC p-lattice. Then
+tr (x|K⊗ ON) = dimκN(Cp),
+where the integer on the right is regarded as an element ofK.
+Proof. Since N is p-permutation andCp is its own Sylowp-subgroup, N has
+an O-basisX permuted byCp. AsCp has prime order, theCp-orbits onX
+have size one orp.
+A fixed basis element contributes1to the trace ofx on K⊗ ON. An
+orbit of sizep, on whichx acts as ap-cycle, contributes the trace of the
+permutation matrix of ap-cycle, which is0. Hence the left-hand side counts
+the fixed elements ofX.
+After reduction modulom, the imageX ofX is aκ-basis ofN permuted
+byCp. If{b,x (b),...,x p−1(b)} is an orbit of sizep inX, then the invariant
+vectors supported on it are spanned by
+b+x( b) +···+x p−1(b) = TrCp
+1 (b),
+which vanishes inN(Cp). If b∈X is fixed byCp, its image survives in
+the quotient. The images of the fixed elements ofX therefore form a basis
+of N(Cp), as in the standard basis description of the Brauer quotient for
+permutation modules [4, Proposition 2.5(4)]. Hence the right-hand side also
+counts the fixed elements ofX.
+4 The trace–rank identity
+Throughout this section,O is a complete discrete valuation ring as in Section
+3, with maximal idealm, residue fieldκ of characteristicp> 0, and field of
+fractionsKof characteristic0.
+4.1 Idempotent summands of permutation lattices
+LetXbe a finite set, letxbe a permutation ofXof orderp, and let
+M=O X
+be the corresponding permutationOCp-lattice, whereCp =⟨x⟩, and write
+M=κ⊗ OM. LetF⊆Xbe the set of fixed points ofx.
+7
+The Brauer quotient ofM has a basis indexed by the fixed points. Indeed,
+if w∈X is fixed byx, then the imageew of the standard basis vector is
+Cp-invariant and survives inM(Cp). Ifw is not fixed, itsCp-orbit has sizep,
+and the invariant vectors supported on this orbit are spanned by the orbit
+sum
+ew +ex(w) +···+ exp−1(w) = TrCp
+1 (ew),
+which is zero in the Brauer quotient. Hence
+M(Cp)∼=κF.(4)
+Theorem 4.1.In the situation above, letE∈End O(M)be an idempotent
+commuting with the action ofCp, set L = EM, and letE[F]denote the
+principal submatrix of the matrix ofE in the standard basis ofM on the rows
+and columns indexed byF. Then
+tr
+(
+x|K⊗ OL
+)
+= rankκ
+(
+E[F] modm
+)
+,
+the integer on the right being regarded as an element ofK.
+Proof. SinceM is free over the discrete valuation ringO, the imageL =EM
+of the idempotentE is anOCp-lattice, and it is a direct summand of the
+permutationOCp-latticeM. By the characterization ofp-permutation lattices
+recalled in Section 3,L is therefore ap-permutationOCp-lattice, and Lemma
+3.1 gives
+tr
+(
+x|K⊗ OL
+)
+= dimκL(Cp).
+It remains to compute this dimension. The reductionE maps Cp-fixed
+vectors toCp-fixed vectors and relative traces to relative traces, because
+E commutes with the action ofCp; therefore E induces an idempotent
+endomorphismE(C p)ofM(C p). Since
+M=L⊕(1−E)M
+as OCp-lattices, and since the Brauer quotient is additive on direct sums,
+this decomposition induces
+M(Cp) =L(C p)⊕((1−E)M)(C p),
+andE(C p)is the projection onto the first summand. Hence
+imE(Cp) =L(C p).(5)
+Under the identification(4), the matrix ofE(Cp)is E[F] modm . To see
+this, applyE to ew for a fixed pointw. SinceE commutes with the action
+8
+of x and x(w) = w, the coefficients ofEew are constant on eachCp-orbit;
+the component supported on an orbit of sizep is therefore a scalar multiple
+of the orbit sum, i.e. a relative trace, and disappears in the Brauer quotient.
+Thus only the coordinates at fixed points remain. Combining this with (5),
+dimκL(Cp) = rankκ
+(
+E[F] modm
+)
+.
+4.2 Automorphisms of finite graphs
+Now let∆be a finite simple graph with vertex setV (∆), adjacency matrix
+A, and all-one matrixJ, and letx∈Aut (∆). As in the introduction, write
+a0(x)for the number of vertices fixed byxand
+a1(x) =
+{u∈V(∆) :u∼x(u)}
+.
+The permutation matrixT of x, defined byTeu =ex(u), commutes withA
+and withJ, and satisfies
+tr(T) =a 0(x),tr(TA) =a 1(x),tr(TJ) =|V(∆)|.(6)
+Forx of prime orderp with fixed vertex setF, we writeAF, IF, JF for
+the principal submatrices ofA, I, J on the rows and columns indexed byF;
+thusAF is the adjacency matrix of the fixed-point subgraphFix(x).
+Theorem 4.1, applied to the vertex set, takes the following form; recall
+that the primepis the residue characteristic ofO.
+Corollary 4.2(Finite graphs).Let x∈Aut (∆)have prime order p, with
+fixed vertex setF, letE∈End O
+(
+OV(∆))
+be an idempotent commuting with
+T, and putL=EO V(∆). Then
+tr
+(
+x|K⊗ OL
+)
+= tr(TE) = rankκ
+(
+E[F] modm
+)
+,
+whereE[F]is the principal submatrix ofE on the rows and columns indexed
+byF. In particular, this applies to every spectral idempotent ofA whose
+matrix entries lie inO.
+Proof. An endomorphism ofOV(∆) commutes with the action ofCp =⟨x⟩
+if and only if it commutes withT, so the equality of the two outer terms
+is Theorem 4.1 applied to the finite setX = V (∆). For the first equality,
+the summandsL and(1 −E )OV(∆) are T-invariant, andTE vanishes on
+the second and agrees withT on the first, so tr(TE ) = tr
+(
+x|K⊗ O L
+)
+.
+Finally,T commutes with every spectral idempotent ofA: sinceTAT−1 =A,
+conjugation byT preserves each eigenspace ofA, and therefore fixes each
+projection onto one eigenspace along the others.
+9
+Remark4.3.If E = f(A)with f(t) = Pn
+i=0citi ∈O [t], then tr(TE ) =Pn
+i=0ciwi(x), where
+wi(x) = tr(TAi) =
+X
+u∈V(∆)
+(Ai)u,x(u)
+counts the walks of length i from a vertex to its image under x — so
+w0(x) =a 0(x)andw 1(x) =a 1(x)by (6) — and Corollary 4.2 becomes
+nX
+i=0
+ciwi(x) = rankκ
+( nX
+i=0
+ci (Ai)[F] modm
+)
+.
+The principal submatrix(Ai)[F]records walks in the ambient graph∆whose
+endpoints are fixed byx; it is not, in general, thei-th power of the adjacency
+matrix of the fixed-point subgraph. For the strongly regular graphs considered
+next, the relevant idempotents are linear combinations ofI, A, andJ, so the
+rank side is computed fromIF,AF,JF alone.
+4.3 Strongly regular graphs
+Let∆be a connected non-complete strongly regular graph with parameters
+(v,k,λ,µ ), as defined in Section 2, with adjacency matrixA and all-one
+matrixJ, so that
+A2 = (k−µ)I+ (λ−µ)A+µJ.
+Since∆is connected and regular, k is a simple eigenvalue ofA whose
+eigenspace is spanned by the all-one vector, and since∆is not complete, the
+non-principal eigenvalues
+r,s= (λ−µ)±
+p
+(λ−µ) 2 + 4(k−µ)
+2 , r>s,
+are distinct. Forθ∈{r,s} , writeθ′ for the other non-principal eigenvalue, so
+that θ′ =λ−µ−θ . Over any field containingθ, the spectral idempotent for
+θis
+Eθ = A−θ ′I− k−θ′
+v J
+θ−θ ′ =α θI+β θA+γ θJ, α θ,βθ,γθ∈Q(θ).(7)
+Indeed, using J1= v1and Jw = 0for w orthogonal to1, the middle
+expression acts as the identity on theθ-eigenspace and as zero on the other
+two eigenspaces; moreoverEr +Es =I−J/v , the remaining summandJ/v
+being the projection onto thek-eigenspace.
+10
+Proposition 4.4(Strongly regular graphs).Let∆be a connected non-
+complete strongly regular graph with parameters(v,k,λ,µ ), and let x∈
+Aut(∆)have prime order p, with fixed vertex setF. Fix θ∈{r,s} , letK
+be a finite extension ofQp containing αθ, βθ, γθ, and letO be its ring of
+integers, with maximal idealm and residue fieldκ. Assume thatEθ preserves
+the latticeOV(∆) — equivalently, that the entries ofEθ lie inO. Then
+αθa0(x) +βθa1(x) +γθv= rank κ
+(
+(αθIF +βθAF +γθJF) modm
+)
+.
+Proof. The ringO is a complete discrete valuation ring with field of fractions
+K of characteristic0and residue fieldκ of characteristicp, so the conventions
+of this section apply to it. The idempotentEθ commutes withT, being a
+linear combination ofI, A, andJ, each of which commutes withT, and by
+hypothesis it lies inEndO
+(
+OV(∆))
+. Corollary 4.2 applied toE=E θ gives
+tr(TEθ) = rankκ
+(
+Eθ[F] modm
+)
+;
+by (6) the left-hand side equalsαθa0(x) +βθa1(x) +γθv, and Eθ[F] =
+αθIF +βθAF +γθJF.
+Remark4.5.When r ands are integers one may takeK = Qp andO = Zp, so
+that κ = Fp. The hypothesis thatEθ preserve ZV(∆)
+p is then thep-integrality
+of the rational numbersαθ, βθ, γθ — equivalently, of the three entry values
+αθ +γθ (diagonal), βθ +γθ (adjacent pairs), andγθ (non-adjacent pairs) —
+and it is decided by their denominators: the proposition may be used at every
+prime p dividing none of them, and the reduction on the right-hand side
+may be carried out after multiplying by any integer prime top that clears
+the denominators, without changing the rank. This is the form used in all
+applications below. Whenr and s are irrational one takes forK the field
+Qp(θ), which isQp itself or a quadratic extension of it according to whether
+(λ−µ )2 + 4(k−µ )is a square in Qp, and the rank is taken over its residue
+field.
+Remark4.6.The left-hand side of Proposition 4.4 is an ordinary character
+value, and its a priori integrality is the source of the classical congruences
+for a1(x): in the integral-eigenvalue case these are precisely the Benson-type
+congruences of De Winter–Kamischke–Wang [14, Theorem 1], and for the
+missing Moore graph they are the congruences of Mačaj–Širáň [19, Lemma
+3]. Proposition 4.4 refines the congruence to an exact rank equality whenever
+Eθ is integral atp.
+11
+5 The spectral summands of the missing Moore
+graph
+We return to the missing Moore graph. Throughout this section,Γis a Moore
+graph of diameter two and degree57,x∈Aut (Γ)is an automorphism of
+prime orderpwith permutation matrixTand fixed vertex setF, and
+M=Z V(Γ)
+p
+is the vertex permutation lattice, as in Section 4 withO=Zp.
+The graphΓis a connected non-complete strongly regular graph whose
+non-principal eigenvaluesr = 7and s =−8are integral, by (2), so its
+spectral idempotents are given by(7) with rational coefficients. Substituting
+(v,k ) = (3250, 57)and( θ,θ′) = (−8, 7), respectively(7,− 8), and clearing
+denominators gives the explicit forms
+E−8 = 455I−65A+J
+975 ,975 = 3·5 2·13,(8)
+and
+E7 = 400I+ 50A−J
+750 ,750 = 2·3·5 3;(9)
+equivalently, the coefficients of these idempotents with respect to the basisI,
+A, J−I−A of the adjacency algebra are recorded as rows of the matrixQ
+in [19, Theorem 1].
+If p does not divide975, formula(8) exhibits E−8 as an endomorphism
+of the Zp-module M; likewiseE7 is an endomorphism ofM wheneverp does
+not divide750. These conditions are sharp: at a pair of distinct non-adjacent
+vertices, the entry of455I− 65A +J is1and the entry of400 I + 50A−J
+is−1, so neither numerator matrix is divisible by any prime. Summarizing,
+E−8 is defined overZp if and only if
+p /∈{3,5,13},
+andE 7 is defined overZp if and only if
+p /∈{2,3,5}.
+Inparticular, forp = 2only E−8 isavailableandfor p = 13only E7 isavailable,
+while forp∈{ 7, 11, 19} both are. Forp∈{ 3, 5} neither idempotent is defined
+over Zp; this is why the primes3and5remain untouched by the method of
+this paper.
+12
+Fix a primep and letE be one ofE−8, E7, assumed defined overZp,
+and write θ for the corresponding eigenvalue. Since E is an idempotent
+commuting withT(being a linear combination ofI,A, andJ), the image
+Lθ =EM(10)
+is a summand of the kind studied in Section 4: ap-permutation ZpCp-lattice
+whose scalar extensionQp⊗ZpLθ is precisely theθ-eigenspace ofA, by the
+spectral decomposition in (2).
+By (6), tr(T ) = a0(x), tr(TA ) = a1(x), and tr(TJ ) = 3250. From the
+explicit forms (8) and (9),
+tr(TE−8) = 7a0(x)−a 1(x) + 50
+15 ,(11)
+tr(TE 7) = 8a0(x) +a 1(x)−65
+15 .(12)
+Both right-hand sides are rational character values and make sense for every
+primep; the quantity(12)is denotedχ1(x)by Mačaj–Širáň, and its integrality
+already yields the congruencea1(x)≡ 7a0(x) + 5 (mod 15)[ 19, Lemma 3].
+Compare Remark 4.6. Proposition 4.4 specializes as follows.
+Proposition 5.1.Let x∈Aut (Γ)have prime order p, letF be its set of
+fixed vertices, and letAF be the adjacency matrix of the fixed-point subgraph.
+Ifp /∈{3,5,13}, then
+7a0(x)−a 1(x) + 50
+15 = rankFp
+(
+455IF−65AF +JF
+)
+.
+Ifp /∈{2,3,5}, then
+8a0(x) +a 1(x)−65
+15 = rankFp
+(
+400IF + 50AF−JF
+)
+.
+Proof.ForE −8 the coefficients in Proposition 4.4 are
+(α,β,γ) =
+(
+455
+975,− 65
+975, 1
+975
+)
+,
+whose denominators involve exactly the primes3,5,13. For p /∈{3, 5, 13}
+the proposition applies withK = Qp, as in Remark 4.5; its left-hand side
+equals (11), and, since975is a unit in Zp, the rank on its right-hand side
+may be computed from the numerator matrix455IF− 65AF +JF. The
+second statement follows in the same way fromE7, whose coefficients have
+denominator750with prime divisors2,3,5.
+13
+Note that the two left-hand sides in Proposition 5.1 sum to
+(
+7a0(x)−a 1(x) + 50
+)
++
+(
+8a0(x) +a 1(x)−65
+)
+15 =a 0(x)−1,
+reflecting the spectral decompositionI =E57 +E7 +E−8 withE57 =J/3250
+and tr(TE 57) = 1. The two right-hand sides satisfy the corresponding relation:
+when both idempotents are defined overZp — that is, forp /∈{2, 3, 5, 13}
+— the reductions ofE−8[F]and E7[F]modulo p are the matrices of the
+orthogonal idempotents induced byE−8 and E7 on FF
+p , as in the proof of
+Theorem 4.1, so their ranks add up to the rank of the reduction of
+E−8[F] +E 7[F] =IF−JF/3250;
+and that rank equalsa0(x)− 1, because the⟨x⟩-orbits on the vertex set have
+size1or p, so thata0(x)≡ 3250̸≡ 0 ( modp )and the reduction ofJF/3250
+is an idempotent of rank one. Consequently, when both idempotents are
+defined over Zp, the two equalities of Proposition 5.1 determine one another,
+and either one suffices to pin downa1(x)once the fixed-point subgraph is
+known. Forp = 2only the first equality is available, and forp = 13only the
+second.
+6 No involutions
+In this section we prove Theorem 1.1. Lett∈Aut (Γ)be an involution. We
+apply Proposition 5.1 withx =t and p = 2; as noted in Section 5, only the
+summand L−8 is available at the prime2, because750is even. Integrality
+of the ordinary character values alone does not eliminate the involution:
+Cameron remarks that an involution with56fixed points “does not seem so
+easy to eliminate by this method” [9, remark following Theorem 3.13]. The
+rank equality of Proposition 5.1 does.
+By Theorem 2.1,Fix(t)∼=K1,55, soa0(t) = 56. Since455and65are odd,
+the matrix455IF−65AF +JF reduces modulo2to
+IF +AF +JF.
+Order the vertices ofF so that the centre of the star comes first. Then over
+F2,
+AF =
+(01 T
+10
+)
+,
+14
+where1has length55. Hence
+IF +AF +JF =
+(0 0
+0I 55 +J 55
+)
+(13)
+overF 2. Since55is odd,
+ker(I55 +J 55) =⟨1⟩.
+Indeed, if(I 55 +J 55)v= 0, then
+v= (1 Tv)1,
+and1itself lies in the kernel because55≡1 (mod 2). Therefore
+rankF2
+(
+455IF−65AF +JF
+)
+= rankF2(I55 +J 55) = 54.(14)
+By Proposition 5.1 and (14),
+7·56−a 1(t) + 50
+15 = 54,that is,a 1(t) =−368.
+This contradicts the non-negativity of the counta1(t). Therefore no involution
+texists inAut(Γ), and Theorem 1.1 is proved.
+Corollary 6.1.If a Moore graph of diameter two and degree57exists, then
+its automorphism group has odd order.
+Proof. By Cauchy’s theorem, a finite group of even order contains an element
+of order2. This is ruled out by Theorem 1.1.
+7 Restrictions for automorphisms of odd prime or-
+der
+In this section we prove Theorem 1.2. Throughout, x∈Aut (Γ)is an
+automorphism of prime orderp∈{ 7, 11, 13, 19} andF is its set of fixed
+vertices. Lemma 2.2 determines the fixed-point subgraph in each case, because
+exactly one of its six alternatives allows each of these primes: forp = 7, case
+(3), so Fix(x)is a star K1,m with m =a0(x)− 1≡ 1 ( mod 7); forp = 11,
+case (4), so Fix(x)is a pentagon and a0(x) = 5; for p = 13, case (1), so
+Fix(x)is empty anda0(x) = 0; and forp = 19, case (2), soFix(x)is a single
+vertex anda0(x) = 1. Forp = 7,11, and19, both equalities of Proposition
+5.1 are available, and we use the first. This loses no information: by the
+observation at the end of Section 5, the two equalities determine one another
+when both idempotents are defined overZp, their ranks summing toa0(x)−1.
+Forp = 13, only the second equality is available. The four subsections below
+establish the four rows of the table in Theorem 1.2.
+15
+7.1 Automorphisms of order 7
+Let p = 7. Both spectral idempotents are defined overZ7, since975≡ 2and
+750≡1 (mod 7). By Lemma 2.2,Fix(x)is a starK 1,m withm=a 0(x)−1
+leaves anda 0(x)≡2 (mod 7).
+We compute the rank appearing in the first equality of Proposition 5.1.
+Modulo7we have455≡0and−65≡5, so
+455IF−65AF +JF≡5AF +JF (mod 7).
+Order the vertices ofF so that the centre of the star comes first. Then over
+F7,
+5AF +JF =uu T, u= (1,−1,...,−1) T,
+as one checks entry by entry: both sides have entry1on the diagonal and
+between two leaves, and entry5 + 1 = 6≡− 1between the centre and a leaf.
+Hence the matrix has rank1, and Proposition 5.1 gives
+7a0(x)−a 1(x) + 50
+15 = 1,that is,a 1(x) = 7a0(x) + 35.
+The exact value ofa1(x)now feeds back into an elementary count which
+bounds a0(x)itself. The powers x,x2, andx3 also have order7and the same
+fixed star, so the equality just proved applies to each of them:
+|Sk|=a 1(xk) = 7a0(x) + 35, S k ={v∈V(Γ) :v∼x k(v)}, k= 1,2,3.
+Applying the automorphismx−k shows thatv∼x k(v)if and only if v∼
+x7−k(v), so the three setsS1, S2, S3 account for all six non-trivial powers
+of x. A vertexv lying in anySk is not fixed by any non-trivial power ofx
+(such a power generates⟨x⟩, and a fixed vertex is not adjacent to itself), so
+the seven verticesxi(v),0 ≤i≤ 6, are pairwise distinct. Triangle-freeness
+now makes the three sets pairwise disjoint:
+• ifv∈S 1∩S 2, then{v, x(v), x2(v)} is a triangle, the edgex(v)∼x 2(v)
+being the image ofv∼x(v)underx;
+• if v∈S 1∩S 3, thenv∈S 1∩S 4 and{v, x(v), x4(v)} is a triangle, the
+edgex(v)∼x 4(v)being the image ofv∼x 3(v)underx;
+• if v∈S 2∩S 3, then{v, x3(v), x5(v)} is a triangle: v∼x 3(v)since
+v∈S 3, v∼x 5(v)since v∈S 2 =S5, andx3(v)∼x 5(v)is the image of
+v∼x 2(v)underx 3.
+16
+Moreover, eachSk is disjoint from the neighbourhood of the fixed star: if
+u∈F , v∼u , andv∼x k(v), then applyingxk to v∼u gives xk(v)∼u ,
+and{u, v, xk(v)} is a triangle. Finally, letv1,...,v m be the leaves of the
+star. Two leaves are non-adjacent, and their unique common neighbour is
+the centre of the star, which is fixed; hence the setsN(vi)\F are pairwise
+disjoint, and each has exactly57− 1 = 56elements, because the only fixed
+neighbour of a leaf is the centre.
+The sets S1, S2, S3,F, and N(vi)\F for i = 1,...,m are therefore
+pairwise disjoint subsets ofV(Γ), whence
+3
+(
+7a0(x) + 35
+)
++a 0(x) + 56
+(
+a0(x)−1
+)
+≤3250,
+that is,78 a0(x) + 49≤ 3250, so a0(x)≤ 41. Combined with a0(x)≡ 2
+(mod 7)this gives
+a0(x)∈{2,9,16,23,30,37},
+with the corresponding valuesa1(x)∈{ 49, 98, 147, 196, 245, 294}. This proves
+the rowp= 7of Theorem 1.2.
+For comparison, atp = 7the table of [19, Lemma 12] allows the values
+on the left; Theorem 1.2 retains only those on the right:
+a0(x) a1(x)allowed by [19, Lemma 12] a1(x)by Theorem 1.2
+2 49 + 105k≤500 49
+9 98 + 105k≤500 98
+16 42 + 105k≤500 147
+23 91 + 105k≤500 196
+30 35 + 105k≤500 245
+37 84 + 105k≤392 294
+44 28 + 105k≤260 excluded
+51 77 excluded
+In each surviving row the exact value selects one member of the arithmetic
+progression; the rowsa0(x)∈{ 44, 51}, which [19, Lemma 12] leaves open
+(together with a rowa0(x) = 58that is already excluded there), disappear.
+The resulting list of pairs coincides with the theorem of Kováčiková [17,
+Theorem 5.1]. The proof there establishes, by computer-assisted counts of
+induced seven-vertex subgraphs ofΓ, that a1(x)must be divisible by49,
+and eliminates the rowsa0(x)∈{ 44, 51} by comparison with the bounds in
+the table above. (That7a0(x) + 35 = 7
+(
+a0(x) + 5
+)
+is indeed divisible by49
+follows froma0(x)≡ 2 ( mod 7).) The derivation given here uses neither the
+computer search nor the tabulated bounds; a form of the disjointness of the
+17
+sets Sk is already implicit in the proof of [19, Lemma 12], where it underlies
+the remark that an automorphism of order7can contribute to at most one
+third of the orbits not connected with the fixed star.
+7.2 Automorphisms of order 11
+Let p = 11, so that Fix(x)is a pentagon and a0(x) = 5. Both spectral
+idempotents are defined overZ11, since975≡ 7and750 ≡ 2 ( mod 11). Order
+the five fixed vertices cyclically along the pentagon, so that its adjacency
+matrix B is a circulant, as areI and J. Modulo11we have455 ≡ 4and
+−65≡1, so the matrix in the first equality of Proposition 5.1 is
+455IF−65AF +JF≡4I+B+J(mod 11).
+Since5divides11 − 1, the fieldF11 contains primitive fifth roots of unity;
+takeζ = 3, whose successive powers inF11 are9,5,4,1. Circulant matrices
+of size5are simultaneously diagonalized overF 11 by the five vectors
+wj = (1,ζj,ζ 2j,ζ 3j,ζ 4j)T, j= 0,...,4,
+on whichB acts byζj +ζ−j, andJ by5for j = 0and by0for j̸ = 0. The
+eigenvalues of4I +B +J onw0,...,w 4 are therefore4 + 2 + 5≡ 0for j = 0,
+4 + (3 + 4)≡ 0for j =±1, and4 + (9 + 5)≡ 7for j =±2; exactly two of
+the five are nonzero, so
+rankF11(4I+B+J) = 2.
+Proposition 5.1 gives
+7·5−a 1(x) + 50
+15 = 2,that is,a 1(x) = 55.
+Among the valuesa1(x)∈{ 55, 220, 385} allowed by [19, Lemma 12], only
+the smallest survives. This proves the rowp= 11of Theorem 1.2.
+7.3 Automorphisms of order 13
+Let p = 13, so that Fix(x)is empty and a0(x) = 0. Here13divides
+975 = 3 · 52· 13, soE−8 is not defined overZ13 and the first equality of
+Proposition 5.1 is not available. The idempotentE7 is defined overZ13, since
+750≡9 (mod 13).
+18
+SinceF is empty, the matrix400IF + 50AF−JF is the empty matrix and
+its rank is0; equivalently,M(C13) = 0by (4), soL7(C13) = 0. The second
+equality of Proposition 5.1 gives
+8·0 +a 1(x)−65
+15 = 0,that is,a 1(x) = 65.
+Among the valuesa1(x)∈{ 65, 260, 455} allowed by [19, Lemma 12], only the
+smallest survives. This proves the rowp= 13of Theorem 1.2.
+Substituting a0(x) = 0and a1(x) = 65into (11) gives tr(TE−8) =−1,
+which is not the rank of any matrix: atp = 13the first equality of Proposition
+5.1 genuinely fails, not merely its proof, so the integrality hypotheses cannot
+be dropped.
+7.4 Automorphisms of order 19
+Let p = 19, so thatFix(x)is a single vertex anda0(x) = 1. Both spectral
+idempotents are defined overZ19, since975≡ 6and750 ≡ 9 ( mod 19). The
+matrix in the first equality of Proposition 5.1 is the1×1matrix
+455IF−65AF +JF = (456),456 = 24·19≡0 (mod 19),
+of rank0. The first equality of Proposition 5.1 gives
+7·1−a 1(x) + 50
+15 = 0,that is,a 1(x) = 57.
+Among the valuesa1(x)∈{ 57, 342} allowed by [19, Lemma 12], only the
+smallest survives. This proves the rowp = 19of Theorem 1.2 and completes
+the proof of the theorem.
+8 Further applications: sharpening automorphism
+analyses of hypothetical strongly regular graphs
+Automorphisms of hypothetical strongly regular graphs are a well-studied
+subject. Behbahani–Lam constrain automorphisms of prime order via orbit
+matrices [3]; Crnković–Maksimović extend the orbit-matrix method to groups
+of composite order [11]; De Winter–Kamischke–Wang derive Benson-type
+congruences from ordinary eigenvalue traces [14]; Cesarz–Woldar give a
+computer-free analysis of the putative Conway99-graph [10]; and a series
+of papers by Makhnev and his coauthors determines, for one parameter set
+at a time, the possible fixed-point subgraphs of automorphisms of prime
+19
+order by Higman’s character-theoretic method [20, 22, 23, 21, 27]. In this
+section we use Proposition 4.4 to sharpen analyses of the latter kind. Where
+a known fixed-point theorem determines the fixed subgraph but constrains
+the displacement counta1(x)only through the character congruences, the
+rank equality replaces the congruence by an exact value; for one parameter
+set the comparison moreover uncovers two arithmetic errors in the analysis of
+[22], one of which re-opens a case believed closed (Remark 8.5). The existence
+of each of the five parameter sets treated below is unresolved as of July 2026
+[6, 8].
+8.1 Rank equations
+Let∆be a strongly regular graph with parameters(v,k,λ,µ )and integral
+non-principal eigenvaluesr>s , and letx∈Aut (∆)have prime orderp, with
+fixed vertex setF. Substituting the coefficients of(7) into Proposition 4.4
+and clearing denominators gives the tworank equations
+a1(x) = (r−s)ρ r +sa 0(x)+(k−s), a 1(x) =ra 0(x)+(k−r)−(r−s)ρ s,
+(15)
+where ρθ = rankFp
+(
+Eθ[F] modp
+)
+; each equation is valid at every primep at
+which the entries of its idempotent arep-integral, and the reduction may be
+carried out after multiplying by any integer prime top (Remark 4.5). Every
+application below follows the same pattern: a known fixed-point theorem
+determines the isomorphism type ofFix(x), or reduces it to a short list; the
+rank ρθ of the resulting principal submatrix is computed; and(15) returns
+a1(x)exactly. Since the a priori integrality of the character value underlying
+(15) is precisely the classical congruence (Remark 4.6), and the cited analyses
+constraina1(x)through that congruence, the passage from congruence to rank
+is exactly where the sharpening occurs. Table 1 summarizes the outcome.
+8.2 The parameter set(162,21,0,3)
+A strongly regular graph withλ = 0and µ = 3is eitherK3,3 or has parameters
+(162, 21, 0, 3), and Makhnev–Nosov determined the possible fixed subgraphs
+of automorphisms of prime order of the latter [23]. The eigenvalues arer = 3
+ands=−6, with
+E3 = 2
+3I+ 1
+9A− 1
+54J, E −6 = 1
+3I− 1
+9A+ 1
+81J,
+so E3 is available at every primep /∈{2, 3} and E−6 at every primep̸ = 3,
+and (15) reads
+a1(x) = 9ρr−6a 0(x) + 27, a 1(x) = 3a0(x) + 18−9ρ s.
+20
+Table 1: Sharpenings obtained in this section. Each line gives one branch:
+the fixed subgraph, the constraint ona1(x)that the cited analysis leaves
+(“known”; a dash if no valid constraint is available), and the exact value
+produced by the rank equations(15) — or the impossibility of the branch.
+“Clebsch” denotes the uniquesrg(16, 5, 0, 2); for the name see Section 8.3.
+Sources:(162 , 21, 0, 3)[ 23];(352, 26, 0, 2)[ 22];(1276, 50, 0, 2)[ 27];(99, 14, 1, 2)
+[20];(640,243,66,108)[21].
+(v,k,λ,µ) p Fix(x) knowna 1(x) a1(x)here
+(162,21,0,3) 2 ∅ 162 impossible
+K1,3 — 12
+(162,21,0,3) 5 K2 15,60 15
+(352,26,0,2) 11 ∅ — (Remark 8.5) 22
+(352,26,0,2) 13 K1 — (Remark 8.5) 26
+(1276,50,0,2) 5 K1 ≡50 (mod 70) 50
+Clebsch ≡0 (mod 70) 70
+(1276,50,0,2) 29 ∅ 58,464,870,1276 58
+(99,14,1,2) 3 ∅ 18,39,60,81 18
+K3 6,27,48 6
+(640,243,66,108) 5 ∅ 240,480 240
+Proposition 8.1.Suppose a strongly regular graph∆with parameters
+(162, 21, 0, 3)exists, and let t∈Aut (∆)be an involution. Then Fix(t)∼=K1,3
+anda 1(t) = 12.
+Proof. By [23, Theorem, statement (1)], the fixed subgraph of an involution
+of∆is either empty or the starK1,3. If Fix(t) = ∅, the principal submatrix
+is empty, ρs = 0, and the second equation gives a1(t) = 18; but since
+µ = 3is odd, every vertex is adjacent to its image under a fixed-point-free
+involution [23, proof of Lemma 2.2], soa1(t) = 162— a contradiction. Hence
+Fix(t)∼=K1,3 and a0(t) = 4. MultiplyingE−6 by81gives the integer matrix
+27I− 9A +J, which reduces modulo2to I +A +J. OnK1,3, ordering the
+centre first, the row and column of the centre vanish overF2 and the block
+on the three leaves isJ3−I 3, whose rank overF2 is2. Thus ρs = 2and the
+second equation givesa1(t) = 12.
+Proposition 8.2.Suppose a strongly regular graph∆with parameters
+(162, 21, 0, 3)exists, and let x∈Aut (∆)have order5. Then Fix(x)∼= K2
+anda 1(x) = 15.
+Proof.Fix (x)∼=K2 by [23, Theorem, statement (3)], soa0(x) = 2. Multiply-
+ing E3 by54gives36 I + 6A−J , whose entries onK2 are35on the diagonal
+21
+and5off it — both divisible by5, so ρr = 0, and the first equation gives
+a1(x) = 15.
+At order7the identity recovers, in one line, the exact valuea1(x) = 21
+known from [23, Lemma 2.3]: the fixed subgraph is a single vertex, and the
+diagonal entry35of36I+ 6A−Jvanishes modulo7.
+8.3 The triangle-free parameter sets(352 , 26, 0, 2)and
+(1276,50,0,2)
+A strongly regular graph with λ = 0and µ = 2has k = u2 + 1and
+v = (u4 + 3u2 + 4)/2for a positive integeru; the parameter sets(352, 26, 0, 2)
+and(1276, 50, 0, 2)(u = 5and u = 7) are unresolved, with fixed-point analyses
+availableforboth[ 22,27]. Inboth, thefolded5-cube, theunique srg(16, 5, 0, 2)
+[8], occurs as a possible fixed subgraph; following [22, 27] we call it theClebsch
+graph(in [7, 8] that name denotes its complementsrg(16, 10, 6, 6)), and the
+following computation disposes of all ranks it contributes.
+Lemma 8.3.Let N =αI+βA+γJ withα,β,γ∈Z , whereA is the adjacency
+matrix of the Clebsch graphsrg(16, 5, 0, 2), and letp be an odd prime. Then
+N has eigenvaluesα + 5β + 16γ, α +β, α− 3β of multiplicities1,10,5,
+and rankFp(Nmodp )is the sum of the multiplicities of those eigenvalues not
+divisible byp.
+Proof. The Clebsch graph has spectrum51,1 10,(−3)5, and its three spectral
+idempotents
+1
+16J, E 1 = 3
+4I+ 1
+4A− 1
+8J, E −3 = 1
+4I− 1
+4A+ 1
+16J
+have entries with2-power denominators, hence arep-integral for every oddp.
+The lattice Z16
+p is therefore the direct sum of their images, of ranks1,10,5,
+on whichN acts as the three stated scalars; reducing modulop, the rank of
+Nis the sum of the ranks of the summands whose scalar is a unit.
+For(352,26,0,2)the eigenvalues arer= 4ands=−6, with
+E4 = 3
+5I+ 1
+10A− 1
+110J, E −6 = 2
+5I− 1
+10A+ 1
+160J,
+available atp /∈{2,5,11}andp /∈{2,5}respectively, and (15) reads
+a1(x) = 10ρr−6a 0(x) + 32, a 1(x) = 4a0(x) + 22−10ρ s.
+Makhnev–Nosov analysed the automorphisms of this graph in [22, §2]; their
+Theorem 2 asserts that the possible prime orders are2,5, and13, orders7
+and11being excluded by their Lemmas 2.5 and 2.2.
+22
+Proposition 8.4.Suppose a strongly regular graph∆with parameters
+(352,26,0,2)exists, and letx∈Aut(∆)have prime orderp∈{11,13}.
+(1) Ifp= 13, thenFix(x) ∼=K1 anda 1(x) = 26.
+(2) Ifp= 11, thenFix(x) =∅anda 1(xi) = 22fori= 1,...,10.
+Proof. By [22, §2] the fixed subgraph of an automorphism of odd prime order
+has order0,1,2,4,16, or56, and a0(x)≡ 352 ( modp ); forp = 13this
+forcesa 0(x) = 1, and forp= 11it forcesa 0(x) = 0.
+Forp = 13, multiplyingE−6 by160gives64 I− 16A +J, whose single
+diagonal entry on Fix(x)is65 ≡ 0 ( mod 13); so ρs = 0and the second
+equation givesa1(x) = 26. (The first equation, with the entry65of66I +
+11A−J, gives the same value.)
+Forp = 11only E−6 is available; the principal submatrix is empty,ρs = 0,
+and the second equation givesa1(x) = 22. Each power xi,1 ≤i≤ 10, is
+again an automorphism of order11, so the same value applies to it.
+Remark8.5.Proposition 8.4 corrects the analysis of [22] in two places. Both
+concern the integrality of the character value of [22, Lemma 2.1], which in
+our notation istr(xE−6) =
+(
+4a0(x)−a 1(x) + 22
+)
+/10.
+(i) Lemma 2.3(1) of [22] asserts thata1(xi) = 52for an automorphismx of
+order13. This value is impossible: ata0(x) = 1and a1(x) = 52the character
+value is not an integer. The proof there evaluates it as(−13w + 22)/10for
+a1(x) = 13w, omitting the term4a0(x) = 4; the correct integrality condition
+is w≡ 2 ( mod 10), satisfied by the actual valuew = 2of Proposition 8.4(1)
+and not byw= 4.
+(ii) Lemma 2.2 of [22] excludes automorphisms of order11altogether.
+Its proof derives, from the integrality ata0(x) = 0and a1(x) = 11w, the
+congruence w≡ 8 ( mod 10), hencea1(xi)≥ 88for each i and a count of at
+least40hendecagonal orbits among the32orbits — a contradiction. But the
+correct integrality condition isw≡ 2 ( mod 10), with minimal valuew = 2;
+by Proposition 8.4(2) the actual value isw = 2for every power, so exactly
+10of the32orbits are hendecagonal and the counting argument yields no
+contradiction. Automorphisms of order11therefore cannot be excluded
+by this route. Consequently, the fixed-point-free case atp = 11must be
+restored in Theorem 2 of [22], and the divisibility bound for the order of the
+automorphism group derived from it enlarged from2l· 52· 13to2 l· 52· 11· 13.
+The identity also confirms, independently, the exclusion of order7in
+[22, Lemma 2.5]: the counting above allowsa0(x)∈{ 2, 16} — a two-vertex
+clique, impossible sincex would act freely on the25remaining neighbours
+23
+of a fixed vertex, or the Clebsch graph [22, §2] — and in the Clebsch case
+Lemma 8.3 givesρs = 10, so the second equation returns the negative count
+a1(x) =−14.
+For(1276,50,0,2)the eigenvalues arer= 6ands=−8, with
+E6 = 4
+7I+ 1
+14A− 1
+308J, E −8 = 3
+7I− 1
+14A+ 1
+406J,
+available atp /∈{2,7,11}andp /∈{2,7,29}respectively, and (15) reads
+a1(x) = 14ρr−8a 0(x) + 58, a 1(x) = 6a0(x) + 44−14ρ s.
+Nosov determined the fixed subgraphs of automorphisms of odd prime order
+[27]; atp = 7both idempotents are excluded and the identity is silent, and
+at every other odd prime it gives the exact displacement count.
+Proposition 8.6.Suppose a strongly regular graph∆with parameters
+(1276, 50, 0, 2)exists, and let x∈Aut (∆)have odd prime order p̸ = 7.
+Then one of the following holds:
+(1)p= 3,Fix(x)is the Clebsch graph, anda 1(x) = 0;
+(2)p = 5, and eitherFix(x)∼=K1 anda1(x) = 50, or Fix(x)is the Clebsch
+graph anda 1(x) = 70;
+(3)p= 11,Fix(x) =∅, anda 1(x) = 44;
+(4)p= 29,Fix(x) =∅, anda 1(x) = 58.
+Proof. The fixed subgraphs in (1)–(4) are those of [27]; it remains to compute
+the ranks.
+Fortheemptyfixedsubgraphbothranksvanish, andtheequationavailable
+— the second atp = 11, the first atp = 29— gives a1(x) = 44and58
+respectively.
+Forp = 5and Fix(x)∼=K1, the diagonal entry of308E6 = 176I +22A−J
+on the fixed vertex is175≡ 0 ( mod 5), soρr = 0and the first equation gives
+a1(x) = 50.
+When Fix(x)is the Clebsch graph, the matrix308E6 = 176I +22AF−JF
+has eigenvalues270,198,110of multiplicities1,10,5by Lemma 8.3. Modulo
+5only198is a unit, soρr = 10and the first equation givesa1(x) = 70; modulo
+3only110is a unit, soρ r = 5and the first equation givesa1(x) = 0.
+Parts (2) and (4) sharpen the congruences of [27] to exact values; in the
+Clebsch case of part (2) the valuea1(x) = 0allowed by the congruence is
+24
+excluded, so some pentagonal orbit must occur. We note a misprint in the
+one-vertex case of [27, Lemma 2.2]: its proof establishesa1(x)≡ 50 ( mod 70),
+but the printed statement gives the pentagonal-orbit count as2(7t− 5)in
+place of2(7t + 5); the exact value50satisfies the congruence actually proved.
+Parts (1) and (3) recover known values:a1(x) = 0at p = 3is elementary in
+a triangle-free graph, anda1(x) = 44is the value of [27, Lemma 2.4].
+8.4 The putative Conway99-graph
+A strongly regular graph with parameters(99, 14, 1, 2)is known as a Conway
+99-graph; its existence is the subject of one of Conway’s thousand-dollar prize
+problems (see [10]). Makhnev–Minakova determined the fixed subgraphs
+of automorphisms of prime order [20], and Behbahani–Lam subsequently
+reduced the possible prime orders to2and3by an orbit-matrix computation
+[3]. The eigenvalues arer= 3ands=−4, with
+E3 = 4
+7I+ 1
+7A− 2
+77J, E −4 = 3
+7I− 1
+7A+ 1
+63J,
+available atp /∈{7,11}andp /∈{3,7}respectively, and (15) reads
+a1(x) = 7ρr−4a 0(x) + 18, a 1(x) = 3a0(x) + 11−7ρ s.
+Atp = 7both idempotents are excluded and the identity is silent; at the two
+prime orders that survive the computation of Behbahani–Lam it gives the
+following.
+Proposition 8.7.Suppose a Conway99-graph∆exists, and let x∈Aut (∆)
+have order3. Then either Fix(x) = ∅ and a1(x) = 18, or Fix(x)∼=K3 and
+a1(x) = 6.
+Proof. The two cases forFix(x)are those of [20]; only E3 is available at
+p = 3. In the empty caseρr = 0and the first equation givesa1(x) = 18. In
+the triangle casea0(x) = 3and AF =J3−I 3, so the principal submatrix of
+77E3 = 44I + 11A− 2J is33 I3 + 9J3≡ 0 ( mod 3); henceρr = 0and the
+first equation givesa1(x) = 6.
+At the remaining orders the identity recovers, in one line each, the known
+exact valuesa 1(t) = 14for an involution anda 1(x) = 11at order11[20].
+8.5 The parameter set(640,243,66,108)
+Makhnev–Nirova determined the possible fixed subgraphs of automorphisms
+of prime order of a hypothetical strongly regular graph with parameters
+25
+(640, 243, 66, 108)[ 21]. In the fixed-point-free case their theorem leaves
+p∈{2,5}. The eigenvalues arer= 3ands=−45, with
+E3 = 15
+16I+ 1
+48A− 3
+320J, E −45 = 1
+16I− 1
+48A+ 1
+128J,
+excluded at p∈{ 2, 3, 5} and p∈{ 2, 3} respectively: p = 5is the only
+prime at which the identity applies to this parameter set at all, and there
+it decides precisely the branch left open. The second rank equation reads
+a1(x) = 3a0(x) + 240−48ρ s.
+Proposition 8.8.Suppose a strongly regular graph∆with parameters
+(640, 243, 66, 108)exists, and let x∈Aut (∆)have order5with Fix(x) = ∅.
+Thena 1(x) = 240.
+Proof. The principal submatrix is empty, soρs = 0, and the equation above
+givesa 1(x) = 240.
+References
+[1] M. Aschbacher,The nonexistence of rank three permutation groups of
+degree 3250 and subdegree 57, J. Algebra19(1971), 538–540. https:
+//doi.org/10.1016/0021-8693(71)90087-1
+[2] E. Bannai and T. Ito,On finite Moore graphs, J. Fac. Sci. Univ.
+Tokyo Sect. IA Math.20(1973), 191–208. https://repository.dl.
+itc.u-tokyo.ac.jp/record/39795/files/jfs200201.pdf
+[3] M. Behbahani and C. Lam,Strongly regular graphs with non-trivial
+automorphisms, Discrete Math.311(2011), no. 2–3, 132–144. https:
+//doi.org/10.1016/j.disc.2010.10.005
+[4] S. Bouc and J. Thévenaz,The primitive idempotents of thep-permutation
+ring, J. Algebra323(2010), no. 10, 2905–2915. https://doi.org/10.
+1016/j.jalgebra.2009.11.036
+[5] M. Broué,On Scott modules andp-permutation modules: an approach
+through the Brauer morphism, Proc. Amer. Math. Soc.93(1985), no. 3,
+401–408.https://doi.org/10.1090/S0002-9939-1985-0773988-9
+[6] A. E. Brouwer,Parameters of strongly regular graphs, online tables,
+https://aeb.win.tue.nl/graphs/srg/srgtab.html, accessed 5 July
+2026.
+26
+[7] A. E. Brouwer and W. H. Haemers,Spectra of Graphs, Uni-
+versitext, Springer, New York, 2012. https://doi.org/10.1007/
+978-1-4614-1939-6
+[8] A. E. Brouwer and H. Van Maldeghem,Strongly Regular Graphs,
+Encyclopedia of Mathematics and its Applications, vol. 182, Cam-
+bridge University Press, Cambridge, 2022.https://doi.org/10.1017/
+9781009057226
+[9] P. J. Cameron,Permutation Groups, London Mathematical Society
+Student Texts, vol. 45, Cambridge University Press, Cambridge, 1999.
+https://doi.org/10.1017/CBO9780511623677
+[10] P. G. Cesarz and A. J. Woldar,On the automorphism group of a putative
+Conway 99-graph, Algebr. Comb.8(2025), no. 2, 379–398. https://
+doi.org/10.5802/alco.418
+[11] D. Crnković and M. Maksimović,Construction of strongly regular graphs
+having an automorphism group of composite order, Contrib. Discrete
+Math.15(2020), no. 1, 22–41. https://doi.org/10.55016/ojs/cdm.
+v15i1.62323
+[12] C. Dalfó,A survey on the missing Moore graph, Linear Algebra Appl.
+569(2019), 1–14.https://doi.org/10.1016/j.laa.2018.12.035
+[13] R. M. Damerell,On Moore graphs, Proc. Cambridge Philos. Soc.74
+(1973), no. 2, 227–236.https://doi.org/10.1017/S0305004100048015
+[14] S. De Winter, E. Kamischke, and Z. Wang,Automorphisms of strongly
+regular graphs with applications to partial difference sets, Des. Codes
+Cryptogr.79(2016), no. 3, 471–485. https://doi.org/10.1007/
+s10623-015-0109-z
+[15] J. E. Ducey,On the critical group of the missing Moore graph, Dis-
+crete Math.340(2017), no. 5, 1104–1109. https://doi.org/10.1016/
+j.disc.2016.10.001
+[16] A. J. Hoffman and R. R. Singleton,On Moore graphs with diameters
+2 and 3, IBM J. Res. Develop.4(1960), no. 5, 497–504.https://doi.
+org/10.1147/rd.45.0497
+[17] K. Kováčiková,Induced subgraphs in strongly regular graphs, PhD the-
+sis, Comenius University, Bratislava, 2015. arXiv:1812.05353.https:
+//arxiv.org/abs/1812.05353
+27
+[18] C. Lassueur,A tour of p-permutation modules and related classes of
+modules, Jahresber. Dtsch. Math.-Ver.125(2023), no. 3, 137–189.https:
+//doi.org/10.1365/s13291-023-00266-y
+[19] M. Mačaj and J. Širáň,Search for properties of the missing Moore graph,
+Linear Algebra Appl.432(2010), no. 9, 2381–2398. https://doi.org/
+10.1016/j.laa.2009.07.018
+[20] A. A. Makhnev and I. M. Minakova,On automorphisms of strongly
+regular graphs with parametersλ = 1, µ = 2, Discrete Math. Appl.14
+(2004), no. 2, 201–210; translated from Diskret. Mat.16(2004), no. 1,
+95–104.https://doi.org/10.1515/156939204872374
+[21] A. A. Makhnev and M. S. Nirova,On automorphisms of strongly regular
+graphs with parameters(640, 243, 66, 108), Dokl. Math.84(2011), no. 2,
+718–721; translated from Dokl. Akad. Nauk440(2011), no. 6, 743–746.
+https://doi.org/10.1134/S1064562411060378
+[22] A. A. Makhnev and V. V. Nosov,On automorphisms of strongly regular
+graphs with λ = 0, µ = 2, Sb. Math.195(2004), no. 3, 347–367;
+translated from Mat. Sb.195(2004), no. 3, 47–68.https://doi.org/
+10.1070/SM2004v195n03ABEH000808
+[23] A. A. Makhnev and V. V. Nosov,On automorphisms of strongly regular
+graphs withλ = 0and µ = 3, St. Petersburg Math. J.21(2010), no.
+5, 779–790; translated from Algebra i Analiz21(2009), no. 5, 138–154.
+https://doi.org/10.1090/S1061-0022-2010-01117-8
+[24] A. A. Makhnev and D. V. Paduchikh,Automorphisms of Aschbacher
+graphs, Algebra and Logic40(2001), no. 2, 69–74; translated from
+Algebra i Logika40(2001), no. 2, 125–134.https://doi.org/10.1023/
+A:1010217919915
+[25] A. A. Makhnev and D. V. Paduchikh,On the automorphism group of
+the Aschbacher graph, Proc. Steklov Inst. Math.267(2009), Suppl. 1,
+S149–S163; translated from Trudy Inst. Mat. i Mekh. UrO RAN15
+(2009), no. 2, 162–176.https://doi.org/10.1134/S0081543809070141
+[26] M. Miller and J. Širáň,Moore graphs and beyond: a survey of the
+degree/diameter problem, Electron. J. Combin.20(2013), no. 2, Dynamic
+Survey DS14v2.https://doi.org/10.37236/35
+28
+[27] V. V. Nosov,On automorphisms of a strongly regular graph with the
+parameters(1276, 50, 0, 2), Chebyshevskii Sb.17(2016), no. 3, 178–185.
+(Russian)https://www.mathnet.ru/eng/cheb505
+[28] P. Renteln,Some constraints on the missing Moore graph, Australas.
+J. Combin.77(2020), no. 3, 373–382. https://ajc.maths.uq.edu.au/
+pdf/77/ajc_v77_p373.pdf
+[29] P. Renteln,On the paper “Some constraints on the missing Moore graph”,
+Australas. J. Combin.79(2021), no. 1, 193–194.https://ajc.maths.
+uq.edu.au/pdf/79/ajc_v79_p193.pdf
+[30] D. H. Smith and R. Montemanni,The missing Moore graph as an
+optimization problem, EURO J. Comput. Optim.11(2023), 100060.
+https://doi.org/10.1016/j.ejco.2023.100060
+[31] D. H. Smith and R. Montemanni,Potential subgraphs of the missing
+Moore graph, Symmetry16(2024), no. 12, 1563.https://doi.org/10.
+3390/sym16121563
+[32] D. H. Smith and R. Montemanni,The Moore graph of diameter 2
+and degree 57 via cyclic derangements, Axioms15(2026), no. 5, 332.
+https://doi.org/10.3390/axioms15050332
+29

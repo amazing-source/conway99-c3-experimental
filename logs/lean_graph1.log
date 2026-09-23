@@ -1,0 +1,258 @@
+⚠ [1791/2016] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/2016] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/2016] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/2016] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/2016] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2204/2208] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2205/2208] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2206/2208] Replayed C3formal.Bridge
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+✖ [2233/2233] Building C3formal.Graph (9.5s)
+warning: C3formal/Graph.lean:28:0: automatically included section variable(s) unused in theorem `C3.iter_mod`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+warning: C3formal/Graph.lean:28:0: `iter_mod` does not use the following hypothesis in its type:
+  • [Fintype V] (#2)
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+warning: C3formal/Graph.lean:39:0: `sp_add` does not use the following hypothesis in its type:
+  • [Fintype V] (#2)
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+warning: C3formal/Graph.lean:44:0: automatically included section variable(s) unused in theorem `C3.sp_zero`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+warning: C3formal/Graph.lean:44:0: `sp_zero` does not use the following hypothesis in its type:
+  • [Fintype V] (#2)
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+warning: C3formal/Graph.lean:46:0: automatically included section variable(s) unused in theorem `C3.sp_one`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+warning: C3formal/Graph.lean:46:0: `sp_one` does not use the following hypothesis in its type:
+  • [Fintype V] (#2)
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+error: C3formal/Graph.lean:53:23: Type mismatch: After simplification, term
+  hfree v
+ has type
+  Not (σ v = v)
+but is expected to have type
+  Not ((⇑σ)^[ZMod.val 1] v = v)
+error: C3formal/Graph.lean:55:32: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq V ((⇑σ)^[ZMod.val 2] v) v
+but is expected to have type
+  @Eq V (σ (σ v)) v
+warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+warning: C3formal/Graph.lean:49:0: `sp_eq_self` does not use the following hypothesis in its type:
+  • [Fintype V] (#2)
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+error: C3formal/Graph.lean:85:21: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  sp σ b' (Quotient.out o')
+in the target expression
+  Quotient.out o' = sp σ (-b') (sp σ b (Quotient.out o))
+V : Type u_1
+inst✝¹ : Fintype V
+inst✝ : DecidableEq V
+σ : V ≃ V
+hV : Fintype.card V = 99
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+S : Setoid V := orbitSetoid h3
+O : Type u_1 := Quotient S
+φ : O × ZMod 3 → V := fun p ↦ sp σ p.2 (Quotient.out p.1)
+o : O
+b : ZMod 3
+o' : O
+b' : ZMod 3
+h : sp σ b (Quotient.out o) = sp σ b' (Quotient.out o')
+⊢ Quotient.out o' = sp σ (-b') (sp σ b (Quotient.out o))
+error: C3formal/Graph.lean:106:16: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  sp σ (?a + ?b) ?v
+in the target expression
+  (Equiv.ofBijective (fun p ↦ sp σ p.2 (Quotient.out p.1)) ⋯) (F U, 1 + b) =
+    σ ((Equiv.ofBijective (fun p ↦ sp σ p.2 (Quotient.out p.1)) ⋯) (F U, b))
+V : Type u_1
+inst✝¹ : Fintype V
+inst✝ : DecidableEq V
+σ : V ≃ V
+hV : Fintype.card V = 99
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+S : Setoid V := orbitSetoid h3
+O : Type u_1 := Quotient S
+φ : O × ZMod 3 → V := fun p ↦ sp σ p.2 (Quotient.out p.1)
+hinj : Function.Injective φ
+hsurj : Function.Surjective φ
+E : O × ZMod 3 ≃ V := Equiv.ofBijective φ ⋯
+hO : Fintype.card O = 33
+F : Fin 33 ≃ O := (Fintype.equivFinOfCardEq hO).symm
+U : Fin 33
+b : ZMod 3
+⊢ (Equiv.ofBijective (fun p ↦ sp σ p.2 (Quotient.out p.1)) ⋯) (F U, 1 + b) =
+    σ ((Equiv.ofBijective (fun p ↦ sp σ p.2 (Quotient.out p.1)) ⋯) (F U, b))
+Full error:
+  Application type mismatch: The argument
+    ⟨hinj, hsurj⟩
+  has type
+    Function.Injective φ ∧ Function.Surjective φ
+  but is expected to have type
+    Function.Bijective fun p ↦ sp σ p.2 (Quotient.out p.1)
+  in the application
+    Equiv.ofBijective (fun p ↦ sp σ p.2 (Quotient.out p.1)) ⋯
+warning: C3formal/Graph.lean:105:4: This simp argument is unused:
+  Equiv.ofBijective_apply
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Equiv.trans_apply, Equiv.prodCongr_apply, Prod.map, Equiv.refl_apply, E, φ]
+warning: C3formal/Graph.lean:71:0: `exists_relabel` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+error: C3formal/Graph.lean:127:4: unsolved goals
+case pos
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+h : A * A = 14 • 1 + 1 • A + 2 • SimpleGraph.adjMatrix ℤ Gᶜ
+v : V
+⊢ 14 v v + ∑ u ∈ G.neighborFinset v, 1 v u + ∑ u ∈ Gᶜ.neighborFinset v, 2 v u = 14
+error: C3formal/Graph.lean:129:4: unsolved goals
+case pos
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+h : A * A = 14 • 1 + 1 • A + 2 • SimpleGraph.adjMatrix ℤ Gᶜ
+v w : V
+hvw : ¬v = w
+hadj : G.Adj v w
+⊢ 14 v w + ∑ u ∈ G.neighborFinset w, 1 v u + ∑ u ∈ Gᶜ.neighborFinset w, 2 v u + 1 = 2
+case neg
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+h : A * A = 14 • 1 + 1 • A + 2 • SimpleGraph.adjMatrix ℤ Gᶜ
+v w : V
+hvw : ¬v = w
+hadj : ¬G.Adj v w
+⊢ 14 v w + ∑ u ∈ G.neighborFinset w, 1 v u + ∑ u ∈ Gᶜ.neighborFinset w, 2 v u = 2
+error: C3formal/Graph.lean:136:4: Type mismatch: After simplification, term
+  this
+ has type
+  ↑(G.degree (e x)) = 14
+but is expected to have type
+  (A *ᵥ (fun x ↦ 1) ∘ ⇑e.symm) (e x) = 14
+error: C3formal/Graph.lean:137:29: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  submatrix ?A + submatrix ?B
+in the target expression
+  (A * A).submatrix ⇑e ⇑e + A.submatrix ⇑e ⇑e = 12 • 1 + 2 • of fun x x_1 ↦ 1
+case hAA
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+⊢ (A * A).submatrix ⇑e ⇑e + A.submatrix ⇑e ⇑e = 12 • 1 + 2 • of fun x x_1 ↦ 1
+error: C3formal/Graph.lean:140:2: unsolved goals
+case hshift
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+U V' : Fin 33
+b c : ZMod 3
+⊢ (if G.Adj (σ.toEquiv (e (U, b))) (σ.toEquiv (e (V', c))) then 1 else 0) =
+    if G.Adj (e (U, b)) (e (V', c)) then 1 else 0
+warning: C3formal/Graph.lean:124:35: This simp argument is unused:
+  SimpleGraph.compl_adj
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_apply, Matrix.smul_apply, Matrix.one_apply, hA, SimpleGraph.adjMatrix_apply,
+    Matrix.of_apply, smul_eq_mul, nsmul_eq_mul]
+warning: C3formal/Graph.lean:141:69: This simp argument is unused:
+  σ.map_adj_iff
+Hint: Omit it from the simp argument list.
+  [apply] simp only [submatrix_apply, he, hA, SimpleGraph.adjMatrix_apply]
+warning: C3formal/Graph.lean:110:0: `no_free_order3` does not use the following hypothesis in its type:
+  • [DecidableEq V] (#3)
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+Some required targets logged failures:
+- C3formal.Graph
+error: build failed

@@ -1,0 +1,12 @@
+Validation T(n):
+   T(n) wrongly excluded: 0
+srg(99,14,1,2): (3, -4, 54, 44) [(3, 'EXCLUDED', 11)]
+
+Feasible srg (v <= 1300, k <= (v-1)/2) where the criterion EXCLUDES a free C3 action: 7
+   srg(99,14,1,2)  eig 3^54, -4^44  theta=3  J-product=11
+   srg(105,52,21,30)  eig 2^84, -11^20  theta=2  J-product=5
+   srg(105,52,29,22)  eig 10^20, -3^84  theta=-3  J-product=5
+   srg(261,52,11,10)  eig 7^116, -6^144  theta=-6  J-product=29
+   srg(714,248,97,80)  eig 24^153, -7^560  theta=24  J-product=14
+   srg(1221,610,279,330)  eig 5^1110, -56^110  theta=5  J-product=11
+   srg(1221,610,329,280)  eig 55^110, -6^1110  theta=-6  J-product=11

@@ -1,0 +1,47 @@
+✔ [1790/1791] Built C3formal.Eis (74s)
+✖ [1791/1791] Building C3formal.Step5 (36s)
+trace: .> LEAN_PATH=C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\build\lib\lean c:\Users\RESEARCHER\.elan\toolchains\leanprover--lean4---v4.35.0-rc2\bin\lean.exe C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\C3formal\Step5.lean -o C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\build\lib\lean\C3formal\Step5.olean -i C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\build\lib\lean\C3formal\Step5.ilean -c C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\build\ir\C3formal\Step5.c --setup C:\Users\RESEARCHER\Desktop\c3_experimental\c3formal\.lake\build\ir\C3formal\Step5.setup.json --json
+warning: C3formal/Step5.lean:19:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+error: C3formal/Step5.lean:73:35: failed to synthesize instance of type class
+  IsDomain (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: C3formal/Step5.lean:80:37: failed to synthesize instance of type class
+  IsDomain (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+warning: C3formal/Step5.lean:115:18: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: C3formal/Step5.lean:120:18: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+error: C3formal/Step5.lean:160:4: `simp` made no progress
+error: C3formal/Step5.lean:165:4: `simp` made no progress
+error: C3formal/Step5.lean:185:27: failed to synthesize instance of type class
+  IsReduced (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: C3formal/Step5.lean:198:37: failed to synthesize instance of type class
+  IsReduced (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: C3formal/Step5.lean:202:10: failed to synthesize instance of type class
+  IsLeftCancelMulZero (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: C3formal/Step5.lean:204:4: failed to synthesize instance of type class
+  IsRightCancelMulZero (ZMod 3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Some required targets logged failures:
+- C3formal.Step5
+error: build failed
+
+real	3m11.590s
+user	0m0.217s
+sys	0m0.296s

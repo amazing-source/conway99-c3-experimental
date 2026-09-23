@@ -1,0 +1,75 @@
+⚠ [1791/1958] Replayed C3formal.Step5
+warning: C3formal/Step5.lean:1:1: * `-/`:
+⚠ [1793/1958] Replayed C3formal.Saturated
+warning: C3formal/Saturated.lean:1:1: * `-/`:
+⚠ [1804/1958] Replayed C3formal.NumberTheory
+warning: C3formal/NumberTheory.lean:1:1: * `-/`:
+⚠ [1886/1958] Replayed C3formal.IntPart
+warning: C3formal/IntPart.lean:1:1: * `-/`:
+warning: C3formal/IntPart.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:188:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/IntPart.lean:246:100: This line exceeds the 100 character limit, please shorten it!
+⚠ [1887/1958] Replayed C3formal.EisEuclid
+warning: C3formal/EisEuclid.lean:1:1: * `-/`:
+⚠ [2205/2233] Replayed C3formal.EisComplex
+warning: C3formal/EisComplex.lean:1:1: * `-/`:
+⚠ [2206/2233] Replayed C3formal.Main
+warning: C3formal/Main.lean:1:1: * `-/`:
+⚠ [2207/2233] Replayed C3formal.Bridge
+warning: C3formal/Bridge.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+warning: C3formal/Bridge.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+✖ [2233/2233] Building C3formal.Graph (8.1s)
+error: C3formal/Graph.lean:143:2: unsolved goals
+case hAA
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+hsub : A.submatrix ⇑e ⇑e * A.submatrix ⇑e ⇑e + A.submatrix ⇑e ⇑e = (A * A + A).submatrix ⇑e ⇑e
+x y : Fin 33 × ZMod 3
+⊢ 12 (e x) (e y) = 12 x y
+error: C3formal/Graph.lean:152:69: Unknown constant `RelIso.coe_toEquiv`
+error: C3formal/Graph.lean:151:2: unsolved goals
+case hshift
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+G : SimpleGraph V
+inst✝ : DecidableRel G.Adj
+hG : G.IsSRGWith 99 14 1 2
+σ : G ≃g G
+h3 : ∀ (v : V), σ (σ (σ v)) = v
+hfree : ∀ (v : V), σ v ≠ v
+e : Fin 33 × ZMod 3 ≃ V
+he : ∀ (U : Fin 33) (b : ZMod 3), e (U, b + 1) = σ.toEquiv (e (U, b))
+A : Matrix V V ℤ := SimpleGraph.adjMatrix ℤ G
+hA : A = SimpleGraph.adjMatrix ℤ G
+hAA : A * A + A = 12 • 1 + 2 • of fun x x_1 ↦ 1
+U V' : Fin 33
+b c : ZMod 3
+⊢ (if G.Adj (σ.toEquiv (e (U, b))) (σ.toEquiv (e (V', c))) then 1 else 0) =
+    if G.Adj (e (U, b)) (e (V', c)) then 1 else 0
+warning: C3formal/Graph.lean:150:10: This simp argument is unused:
+  Matrix.one_apply
+Hint: Omit it from the simp argument list.
+warning: C3formal/Graph.lean:150:28: This simp argument is unused:
+  e.injective.eq_iff
+Hint: Omit it from the simp argument list.
+warning: C3formal/Graph.lean:153:6: This simp argument is unused:
+  SimpleGraph.Iso.map_adj_iff
+Hint: Omit it from the simp argument list.
+Some required targets logged failures:
+- C3formal.Graph
+error: build failed

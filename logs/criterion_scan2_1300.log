@@ -1,0 +1,12 @@
+srg(99,14,1,2): [(3, 'EXCLUDED', 11, (1, 1, 2), ['free', 'K1', 'cliques'])]
+feasible parameter sets where the criterion applies: 108
+order-3 automorphisms with beta=0 EXCLUDED for 9 (set, theta):
+   srg(99,14,1,2) r=3 s=-4 theta=3 J-prod=11 E=(a,b,c) mod 3=(1, 1, 2)  beta=0 possible for: ['free', 'K1', 'cliques']
+   srg(105,52,21,30) r=2 s=-11 theta=2 J-prod=5 E=(a,b,c) mod 3=(2, 1, 0)  beta=0 possible for: ['free']
+   srg(105,52,29,22) r=10 s=-3 theta=-3 J-prod=5 E=(a,b,c) mod 3=(1, 2, 1)  beta=0 possible for: ['free']
+   srg(261,52,11,10) r=7 s=-6 theta=-6 J-prod=29 E=(a,b,c) mod 3=(1, 2, 1)  beta=0 possible for: ['free']
+   srg(714,248,97,80) r=24 s=-7 theta=24 J-prod=14 E=(a,b,c) mod 3=(1, 1, 2)  beta=0 possible for: ['free', 'K1', 'cliques']
+   srg(722,103,12,15) r=8 s=-11 theta=-11 J-prod=2 E=(a,b,c) mod 3=(2, 2, 1)  beta=0 possible for: ['K1', 'cliques']
+   srg(1148,481,210,195) r=26 s=-11 theta=-11 J-prod=164 E=(a,b,c) mod 3=(2, 2, 1)  beta=0 possible for: ['K1', 'cliques']
+   srg(1221,610,279,330) r=5 s=-56 theta=5 J-prod=11 E=(a,b,c) mod 3=(2, 1, 0)  beta=0 possible for: ['free']
+   srg(1221,610,329,280) r=55 s=-6 theta=-6 J-prod=11 E=(a,b,c) mod 3=(1, 2, 1)  beta=0 possible for: ['free']

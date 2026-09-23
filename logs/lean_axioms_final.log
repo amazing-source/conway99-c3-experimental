@@ -1,0 +1,17 @@
+'C3.no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C3.no_free_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_free_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → (∀ (v : V), σ v ≠ v) → False
+'C3.Tri.no_triangle_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C3.no_triangle_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_triangle_order3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } = 3 → False
+'C3.no_order3_fix_le3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_order3_fix_le3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } ≤ 3 → False
+'C3.no_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → ∀ (v : V), σ v = v
